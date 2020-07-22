@@ -62,7 +62,7 @@ class LoginForm extends React.Component {
 
                     <br/>
 
-                    <input id="login-submit" type="submit" value="Log In" />
+                    <input className="login-submit" type="submit" value="Log In" />
 
                     {this.renderErrors()}
 
