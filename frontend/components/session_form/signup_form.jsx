@@ -37,9 +37,9 @@ class SignupForm extends React.Component {
 
     render() {
         return (
-            <div className="signup-form-container">
+            <div className="login-form-container">
 
-                <form className="signup-form" onSubmit={this.handleSubmit}>
+                <form className="login-form" onSubmit={this.handleSubmit}>
                     <h1>Sign Up</h1>
 
                     <label>Email:
@@ -62,7 +62,7 @@ class SignupForm extends React.Component {
 
                     <br/>
 
-                    <input id="signup-submit" type="submit" value="Sign Up" />
+                    <input className="login-submit" type="submit" value="Sign Up" />
 
                     {this.renderErrors()}
 
