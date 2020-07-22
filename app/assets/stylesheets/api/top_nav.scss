@@ -1,0 +1,16 @@
+.nav {
+    background-color: #A3AEA5;
+    height: 75px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.nav button {
+    height: 75px;
+    background-color: #999999;
+    border: none;
+}
+
+.nav-logged-in {
+    display: flex;
+}
