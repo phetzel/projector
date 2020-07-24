@@ -5,7 +5,7 @@ import { AuthRoute, ProtectedRoute } from '../util/route_util';
 
 import Modal from './modal/modal';
 import NavContainer from './nav/nav_container';
-import Search from './search/search';
+import SearchContainer from './search/search_container';
 
 const App = () => (
     <div>
@@ -13,7 +13,7 @@ const App = () => (
         <NavContainer />
 
         <Switch>
-            <Route exact path="/" component={Search} />
+            <Route exact path="/" component={SearchContainer} />
         </Switch>
     </div>
 );

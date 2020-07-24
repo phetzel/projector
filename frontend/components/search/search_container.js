@@ -1,7 +1,7 @@
 import { connect } from 'react-redux';
 
 import { fetchShows } from '../../actions/show_actions';
-import ShowIndex from './show_index';
+import Search from './search';
 import { asArray } from '../../reducers/selectors';
 
 const mSTP = state => ({
@@ -15,4 +15,4 @@ const mDTP = dispatch => ({
 export default connect(
     mSTP,
     mDTP
-)(ShowIndex);
+)(Search);
