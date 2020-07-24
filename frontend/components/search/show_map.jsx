@@ -1,5 +1,7 @@
 import React from 'react';
 
+import MarkerManager from '../../util/marker_manager';
+
 class ShowMap extends React.Component {
     componentDidMount() {
         const mapOptions = {
@@ -9,6 +11,12 @@ class ShowMap extends React.Component {
 
         const map = this.refs.map;
         this.map = new google.maps.Map(map, mapOptions);
+        this.MarkerManager = new MarkerManager(this.map);
+        this.MarkerManager.updateMarkers(this.props.shows);
+    }
+
+    componentDidUpdate() {
+        this.MarkerManager.updateMarkers(this.props.shows);
     }
 
     render() {

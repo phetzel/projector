@@ -1,12 +1,12 @@
 import React from 'react';
 
-import ShowIndexContainer from './show_index_container';
+import ShowIndex from './show_index';
 import ShowMap from './show_map';
 
-const Search = () => (
+const Search = ({ shows, fetchShows }) => (
     <div className="search">
-        <ShowIndexContainer />
-        <ShowMap />
+        <ShowMap shows={shows} />
+        <ShowIndex shows={shows} fetchShows={fetchShows} />
     </div>
 );
 
