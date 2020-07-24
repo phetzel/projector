@@ -1552,3 +1552,77 @@ Migrating to AddDescToShows (20200724050334)
   ↳ bin/rails:9
   [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
   ↳ bin/rails:9
+Started GET "/" for ::1 at 2020-07-24 00:35:36 -0700
+  [1m[35m (2.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/philliphetzel/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.4.3/lib/active_record/log_subscriber.rb:98
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (3.6ms)
+Completed 200 OK in 445ms (Views: 440.4ms | ActiveRecord: 0.0ms)
+
+
+  [1m[35m (1.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:10
+  [1m[36mShow Load (2.7ms)[0m  [1m[34mSELECT "shows".* FROM "shows"[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (2.4ms)[0m  [1m[31mROLLBACK[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (2.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:10
+  [1m[36mShow Load (2.1ms)[0m  [1m[34mSELECT "shows".* FROM "shows"[0m
+  ↳ db/seeds.rb:11
+  [1m[36mShow Create (7.8ms)[0m  [1m[32mINSERT INTO "shows" ("id", "movie_id", "date", "time", "created_at", "updated_at", "lat", "lng") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["id", 1], ["movie_id", 1], ["date", "2020-10-10"], ["time", "00:00:00"], ["created_at", "2020-07-24 07:47:05.184177"], ["updated_at", "2020-07-24 07:47:05.184177"], ["lat", 37.81798], ["lng", -122.27822]]
+  ↳ db/seeds.rb:13
+  [1m[36mShow Create (0.4ms)[0m  [1m[32mINSERT INTO "shows" ("id", "movie_id", "date", "time", "created_at", "updated_at", "lat", "lng") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["id", 2], ["movie_id", 1], ["date", "2020-10-10"], ["time", "10:00:00"], ["created_at", "2020-07-24 07:47:05.197466"], ["updated_at", "2020-07-24 07:47:05.197466"], ["lat", 37.810805], ["lng", -122.291081]]
+  ↳ db/seeds.rb:22
+  [1m[36mShow Create (0.4ms)[0m  [1m[32mINSERT INTO "shows" ("id", "movie_id", "date", "time", "created_at", "updated_at", "lat", "lng") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["id", 3], ["movie_id", 1], ["date", "2020-10-10"], ["time", "20:00:00"], ["created_at", "2020-07-24 07:47:05.199717"], ["updated_at", "2020-07-24 07:47:05.199717"], ["lat", 37.810881], ["lng", -122.296499]]
+  ↳ db/seeds.rb:31
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:10
+Started GET "/" for ::1 at 2020-07-24 01:04:01 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 516ms (Views: 511.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2020-07-24 01:05:25 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 430ms (Views: 426.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/shows" for ::1 at 2020-07-24 01:06:03 -0700
+Processing by Api::ShowsController#index as JSON
+  [1m[36mShow Load (6.8ms)[0m  [1m[34mSELECT "shows".* FROM "shows"[0m
+  ↳ app/controllers/api/shows_controller.rb:5
+Completed 200 OK in 40ms (Views: 15.4ms | ActiveRecord: 18.7ms)
+
+
+Started GET "/api/shows/1" for ::1 at 2020-07-24 01:06:53 -0700
+Processing by Api::ShowsController#show as JSON
+  Parameters: {"id"=>"1"}
+  [1m[36mShow Load (0.4ms)[0m  [1m[34mSELECT  "shows".* FROM "shows" WHERE "shows"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/shows_controller.rb:9
+Completed 200 OK in 5ms (Views: 0.6ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/" for ::1 at 2020-07-24 01:16:05 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 497ms (Views: 493.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2020-07-24 01:16:19 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 420ms (Views: 417.2ms | ActiveRecord: 0.0ms)
+
+
