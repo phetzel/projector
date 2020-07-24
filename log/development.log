@@ -1626,3 +1626,250 @@ Processing by StaticPagesController#root as HTML
 Completed 200 OK in 420ms (Views: 417.2ms | ActiveRecord: 0.0ms)
 
 
+Started GET "/" for ::1 at 2020-07-24 01:18:13 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 104ms (Views: 99.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/api/session" for ::1 at 2020-07-24 01:20:47 -0700
+Processing by Api::SessionsController#create as JSON
+  Parameters: {"user"=>{"email"=>"123456", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (2.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "123456"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:11
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/user.rb:26
+  [1m[36mUser Exists (0.8ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["email", "123456"], ["id", 5], ["LIMIT", 1]]
+  ↳ app/models/user.rb:26
+  [1m[36mUser Update (7.2ms)[0m  [1m[33mUPDATE "users" SET "session_token" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["session_token", "nonnwQrGBkAMXnjOGe3tIQ"], ["updated_at", "2020-07-24 08:20:48.195189"], ["id", 5]]
+  ↳ app/models/user.rb:26
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/user.rb:26
+  Rendering api/users/show.json.jbuilder
+  Rendered api/users/_user.json.jbuilder (0.7ms)
+  Rendered api/users/show.json.jbuilder (4.8ms)
+Completed 200 OK in 301ms (Views: 13.0ms | ActiveRecord: 25.0ms)
+
+
+Started DELETE "/api/session" for ::1 at 2020-07-24 01:21:19 -0700
+Processing by Api::SessionsController#destroy as JSON
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "nonnwQrGBkAMXnjOGe3tIQ"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/user.rb:26
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["email", "123456"], ["id", 5], ["LIMIT", 1]]
+  ↳ app/models/user.rb:26
+  [1m[36mUser Update (0.5ms)[0m  [1m[33mUPDATE "users" SET "session_token" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["session_token", "OPev4U55rjaOk--rwPJwlw"], ["updated_at", "2020-07-24 08:21:19.212800"], ["id", 5]]
+  ↳ app/models/user.rb:26
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/user.rb:26
+  Rendering api/users/show.json.jbuilder
+  Rendered api/users/_user.json.jbuilder (0.3ms)
+  Rendered api/users/show.json.jbuilder (1.8ms)
+Completed 200 OK in 16ms (Views: 8.4ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/" for ::1 at 2020-07-24 01:35:35 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 88ms (Views: 84.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2020-07-24 01:37:14 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 435ms (Views: 433.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/shows" for ::1 at 2020-07-24 01:37:15 -0700
+Processing by Api::ShowsController#index as JSON
+  [1m[36mShow Load (1.9ms)[0m  [1m[34mSELECT "shows".* FROM "shows"[0m
+  ↳ app/controllers/api/shows_controller.rb:5
+Completed 200 OK in 5ms (Views: 2.7ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/" for ::1 at 2020-07-24 01:42:33 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 63ms (Views: 59.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/shows" for ::1 at 2020-07-24 01:42:34 -0700
+Processing by Api::ShowsController#index as JSON
+  [1m[36mShow Load (15.2ms)[0m  [1m[34mSELECT "shows".* FROM "shows"[0m
+  ↳ app/controllers/api/shows_controller.rb:5
+Completed 200 OK in 18ms (Views: 2.8ms | ActiveRecord: 15.2ms)
+
+
+Started GET "/" for ::1 at 2020-07-24 01:42:36 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 40ms (Views: 37.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/shows" for ::1 at 2020-07-24 01:42:37 -0700
+Processing by Api::ShowsController#index as JSON
+  [1m[36mShow Load (11.5ms)[0m  [1m[34mSELECT "shows".* FROM "shows"[0m
+  ↳ app/controllers/api/shows_controller.rb:5
+Completed 200 OK in 14ms (Views: 2.6ms | ActiveRecord: 11.5ms)
+
+
+Started GET "/" for ::1 at 2020-07-24 01:42:43 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 54ms (Views: 51.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/shows" for ::1 at 2020-07-24 01:42:44 -0700
+Processing by Api::ShowsController#index as JSON
+  [1m[36mShow Load (0.4ms)[0m  [1m[34mSELECT "shows".* FROM "shows"[0m
+  ↳ app/controllers/api/shows_controller.rb:5
+Completed 200 OK in 2ms (Views: 1.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for ::1 at 2020-07-24 01:44:25 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 52ms (Views: 48.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/shows" for ::1 at 2020-07-24 01:44:25 -0700
+Processing by Api::ShowsController#index as JSON
+  [1m[36mShow Load (24.0ms)[0m  [1m[34mSELECT "shows".* FROM "shows"[0m
+  ↳ app/controllers/api/shows_controller.rb:5
+Completed 200 OK in 27ms (Views: 2.7ms | ActiveRecord: 24.0ms)
+
+
+Started GET "/" for ::1 at 2020-07-24 01:45:12 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 450ms (Views: 447.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/shows" for ::1 at 2020-07-24 01:45:13 -0700
+Processing by Api::ShowsController#index as JSON
+  [1m[36mShow Load (37.5ms)[0m  [1m[34mSELECT "shows".* FROM "shows"[0m
+  ↳ app/controllers/api/shows_controller.rb:5
+Completed 200 OK in 41ms (Views: 2.8ms | ActiveRecord: 37.5ms)
+
+
+Started GET "/" for ::1 at 2020-07-24 01:45:47 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 480ms (Views: 477.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/shows" for ::1 at 2020-07-24 01:45:48 -0700
+Processing by Api::ShowsController#index as JSON
+  [1m[36mShow Load (5.6ms)[0m  [1m[34mSELECT "shows".* FROM "shows"[0m
+  ↳ app/controllers/api/shows_controller.rb:5
+Completed 200 OK in 8ms (Views: 2.4ms | ActiveRecord: 5.6ms)
+
+
+Started GET "/" for ::1 at 2020-07-24 01:45:51 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 45ms (Views: 42.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/shows" for ::1 at 2020-07-24 01:45:51 -0700
+Processing by Api::ShowsController#index as JSON
+  [1m[36mShow Load (1.6ms)[0m  [1m[34mSELECT "shows".* FROM "shows"[0m
+  ↳ app/controllers/api/shows_controller.rb:5
+Completed 200 OK in 4ms (Views: 2.2ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/" for ::1 at 2020-07-24 01:47:03 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 427ms (Views: 423.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/shows" for ::1 at 2020-07-24 01:47:04 -0700
+Processing by Api::ShowsController#index as JSON
+  [1m[36mShow Load (122.1ms)[0m  [1m[34mSELECT "shows".* FROM "shows"[0m
+  ↳ app/controllers/api/shows_controller.rb:5
+Completed 200 OK in 124ms (Views: 1.9ms | ActiveRecord: 122.1ms)
+
+
+Started GET "/" for ::1 at 2020-07-24 01:48:03 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 419ms (Views: 416.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/shows" for ::1 at 2020-07-24 01:48:03 -0700
+Processing by Api::ShowsController#index as JSON
+  [1m[36mShow Load (0.5ms)[0m  [1m[34mSELECT "shows".* FROM "shows"[0m
+  ↳ app/controllers/api/shows_controller.rb:5
+Completed 200 OK in 3ms (Views: 1.8ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for ::1 at 2020-07-24 01:48:06 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 41ms (Views: 38.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/shows" for ::1 at 2020-07-24 01:48:06 -0700
+Processing by Api::ShowsController#index as JSON
+  [1m[36mShow Load (1.4ms)[0m  [1m[34mSELECT "shows".* FROM "shows"[0m
+  ↳ app/controllers/api/shows_controller.rb:5
+Completed 200 OK in 5ms (Views: 3.3ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/" for ::1 at 2020-07-24 01:49:09 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 421ms (Views: 418.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/shows" for ::1 at 2020-07-24 01:49:10 -0700
+Processing by Api::ShowsController#index as JSON
+  [1m[36mShow Load (10.9ms)[0m  [1m[34mSELECT "shows".* FROM "shows"[0m
+  ↳ app/controllers/api/shows_controller.rb:5
+Completed 200 OK in 14ms (Views: 3.3ms | ActiveRecord: 10.9ms)
+
+
+Started GET "/" for ::1 at 2020-07-24 01:49:13 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 56ms (Views: 53.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/shows" for ::1 at 2020-07-24 01:49:14 -0700
+Processing by Api::ShowsController#index as JSON
+  [1m[36mShow Load (31.2ms)[0m  [1m[34mSELECT "shows".* FROM "shows"[0m
+  ↳ app/controllers/api/shows_controller.rb:5
+Completed 200 OK in 35ms (Views: 3.8ms | ActiveRecord: 31.2ms)
+
+
+Started GET "/" for ::1 at 2020-07-24 01:49:29 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 442ms (Views: 439.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/shows" for ::1 at 2020-07-24 01:49:30 -0700
+Processing by Api::ShowsController#index as JSON
+  [1m[36mShow Load (6.2ms)[0m  [1m[34mSELECT "shows".* FROM "shows"[0m
+  ↳ app/controllers/api/shows_controller.rb:5
+Completed 200 OK in 8ms (Views: 1.9ms | ActiveRecord: 6.2ms)
+
+
