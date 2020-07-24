@@ -1,16 +1,20 @@
 import React from "react";
+import { Route, Switch } from 'react-router-dom';
 
 import { AuthRoute, ProtectedRoute } from '../util/route_util';
 
 import Modal from './modal/modal';
 import NavContainer from './nav/nav_container';
-import ShowIndexContainer from './shows_index/show_index_container';
+import Search from './search/search';
 
 const App = () => (
     <div>
         <Modal /> 
         <NavContainer />
-        <ShowIndexContainer />
+
+        <Switch>
+            <Route exact path="/" component={Search} />
+        </Switch>
     </div>
 );
 
