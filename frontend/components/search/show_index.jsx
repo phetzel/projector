@@ -6,10 +6,6 @@ class ShowIndex extends React.Component {
 
     }
 
-    componentDidMount() {
-        this.props.fetchShows();
-    }
-
     render() {
         const { shows } = this.props;
         console.log(shows);
