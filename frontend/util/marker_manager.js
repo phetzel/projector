@@ -5,9 +5,16 @@ export default class MarkerManager {
     }
 
     updateMarkers(shows) {
+        const showsObj = {};
+        shows.forEach(show => showsObj[show.id] = show);
+
         shows
             .filter(show => !this.markers[show.id])
             .forEach(newShow => this.createMarkerFromShow(newShow))
+
+        Object.keys(this.markers)
+            .filter(showId => !showsObj[showId])
+            .forEach((showId) => this.removeMarker(this.markers[showId]))
     }
 
     createMarkerFromShow(show) {
@@ -19,5 +26,10 @@ export default class MarkerManager {
         })
 
         this.markers[marker.showId] = marker;
+    }
+
+    removeMarker(marker) {
+        this.markers[marker.showId].setMap(null);
+        delete this.markers[marker.showId];
     }
 }
