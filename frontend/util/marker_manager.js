@@ -1,6 +1,7 @@
 export default class MarkerManager {
-    constructor(map) {
+    constructor(map, handleClick) {
         this.map = map;
+        this.handleClick = handleClick;
         this.markers = {};
     }
 
@@ -10,7 +11,7 @@ export default class MarkerManager {
 
         shows
             .filter(show => !this.markers[show.id])
-            .forEach(newShow => this.createMarkerFromShow(newShow))
+            .forEach(newShow => this.createMarkerFromShow(newShow, this.handleClick))
 
         Object.keys(this.markers)
             .filter(showId => !showsObj[showId])
@@ -25,6 +26,7 @@ export default class MarkerManager {
             showId: show.id
         })
 
+        marker.addListener('click', () => this.handleClick(show));
         this.markers[marker.showId] = marker;
     }
 

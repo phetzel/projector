@@ -6,6 +6,8 @@ import { AuthRoute, ProtectedRoute } from '../util/route_util';
 import Modal from './modal/modal';
 import NavContainer from './nav/nav_container';
 import SearchContainer from './search/search_container';
+import ShowShowContainer from './show_show/show_show_container';
+import ShowForm from './show_form/show_form_container';
 
 const App = () => (
     <div>
@@ -14,6 +16,8 @@ const App = () => (
 
         <Switch>
             <Route exact path="/" component={SearchContainer} />
+            <Route exact path="/shows/:showId" component={ShowShowContainer} />
+            <ProtectedRoute exact path="/shows/new" component={ShowForm} />
         </Switch>
     </div>
 );
