@@ -1,3 +1,3 @@
-json.extract! show, :id, :movie_id, :date, :time, :lat, :lng , :desc
+json.extract! show, :id, :movie_id, :date, :lat, :lng , :desc
 
 

@@ -1,7 +1,13 @@
 class Api::ShowsController < ApplicationController
 
     def index
-        @shows = bounds ? Show.in_bounds(bounds) : Show.all
+        shows = bounds ? Show.in_bounds(bounds) : Show.all
+
+        # if params[:startDate] && params[:endDate]
+        #     shows = shows.where(date: date_range)
+        # end 
+
+        @shows = shows
         render json: @shows
     end 
 
@@ -26,7 +32,6 @@ class Api::ShowsController < ApplicationController
         params.require(:show).permit(
             :movie_id,
             :date,
-            :time,
             :lat,
             :lng,
             :desc
@@ -36,4 +41,8 @@ class Api::ShowsController < ApplicationController
     def bounds 
         params[:bounds]
     end 
+
+    def date_range
+        (params[:startDate]..params[:endDate])
+    end
 end

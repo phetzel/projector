@@ -1,6 +1,5 @@
 import { connect } from 'react-redux';
 
-
 import { asArray } from '../../reducers/selectors';
 import { updateFilter } from '../../actions/filter_actions';
 import Search from './search';
