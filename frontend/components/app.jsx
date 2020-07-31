@@ -16,8 +16,8 @@ const App = () => (
 
         <Switch>
             <Route exact path="/" component={SearchContainer} />
-            <Route exact path="/shows/:showId" component={ShowShowContainer} />
             <ProtectedRoute exact path="/shows/new" component={ShowForm} />
+            <Route exact path="/shows/:showId" component={ShowShowContainer} />
         </Switch>
     </div>
 );

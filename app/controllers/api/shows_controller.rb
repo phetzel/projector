@@ -7,20 +7,20 @@ class Api::ShowsController < ApplicationController
         #     shows = shows.where(date: date_range)
         # end 
 
-        @shows = shows
-        render json: @shows
+        @shows = shows.includes(:movie)
+        render :index
     end 
 
     def show
         @show = Show.find(params[:id])
-        render json: @show
+        render :show
     end
 
     def create
         @show = Show.new(show_params)
 
         if @show.save
-            render json: @show
+            render :show
         else 
             render json: @show.errors.full_messages, status: 422
         end 

@@ -10,7 +10,7 @@ const getCoordsObj = latLng => ({
 
 class ShowMap extends React.Component {
     componentDidMount() {
-        const { single, shows, showId, fetchShow } = this.props;
+        const { single, shows, showId, fetchShow, fetchMovies } = this.props;
 
         let mapOptions;
         if (single) {
@@ -37,6 +37,7 @@ class ShowMap extends React.Component {
         if (single) {
             fetchShow(showId);
         } else {
+            fetchMovies();
             this.registerListeners();
             this.MarkerManager.updateMarkers(shows);
         }

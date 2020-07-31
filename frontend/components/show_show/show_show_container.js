@@ -2,6 +2,7 @@ import { connect } from 'react-redux';
 
 import { selectShow } from '../../reducers/selectors';
 import { fetchShow } from '../../actions/show_actions';
+import { fetchMovie } from '../../actions/movie_actions';
 import ShowShow from './show_show';
 
 const mSTP = (state, { match }) => {
@@ -14,7 +15,8 @@ const mSTP = (state, { match }) => {
 };
 
 const mDTP = dispatch => ({
-    fetchShow: id => dispatch(fetchShow(id))
+    fetchShow: id => dispatch(fetchShow(id)),
+    fetchMovie: id => dispatch(fetchMovie(id))
 });
 
 export default connect(

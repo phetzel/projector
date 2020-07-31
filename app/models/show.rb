@@ -1,6 +1,8 @@
 class Show < ApplicationRecord
     validates  :movie_id, :date, :lat, :lng, presence: true
 
+    belongs_to :movie
+
   def self.in_bounds(bounds)
     self.where("lat < ?", bounds[:northEast][:lat])
       .where("lat > ?", bounds[:southWest][:lat])
