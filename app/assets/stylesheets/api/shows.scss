@@ -1,3 +1,28 @@
 // Place all the styles related to the api/shows controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+//Show show
+
+.show-show {
+    display: flex;
+}
+
+.show-detail-container {
+    margin: 50px;
+}
+
+.show-detail h1 {
+    font-size: 25px;
+    margin-bottom: 20px;
+}
+
+.show-detail h6 {
+    font-size: medium;
+    margin-bottom: 10px;
+}
+
+.show-deatil p {
+    font-size: smaller;
+    margin-bottom: 10px;
+}

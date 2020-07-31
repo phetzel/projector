@@ -10,7 +10,7 @@ const ShowShow = ({ show, showId, fetchShow }) => {
     };
 
     return(
-        <div>
+        <div className="show-show">
             <ShowMap 
                 shows={shows}
                 showId={showId}
