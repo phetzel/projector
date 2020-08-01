@@ -31,6 +31,7 @@ class Api::ShowsController < ApplicationController
     def show_params 
         params.require(:show).permit(
             :movie_id,
+            :time,
             :date,
             :lat,
             :lng,
