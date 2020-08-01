@@ -8,6 +8,7 @@ class ShowForm extends React.Component {
 
         this.state = {
             movie_id: "1",
+            time: '',
             date: '',
             desc: '',
             lat: this.coords.lat,
@@ -35,12 +36,22 @@ class ShowForm extends React.Component {
     }
 
     render() {
-        const { date, desc, lat, lng } = this.state;
+        const { time, date, desc, lat, lng } = this.state;
 
         return (
             <div className="show-form-container">
                 
                 <form className="show-form" onSubmit={this.handleSubmit}>
+
+                    <label className="show-field">
+                        Time
+                        <input
+                            type="text"
+                            value={time}
+                            onChange={this.update('time')}
+                            className="show-field"
+                        />
+                    </label>
                     
 
                     <label className="show-field">
@@ -58,7 +69,7 @@ class ShowForm extends React.Component {
                     <label className="show-field">
                         Description
                         <input
-                            type="text"
+                            type="textfield"
                             value={desc}
                             onChange={this.update('desc')}
                             className="show-field"

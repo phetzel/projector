@@ -1,5 +1,5 @@
 class Show < ApplicationRecord
-    validates  :movie_id, :date, :lat, :lng, presence: true
+    validates  :movie_id, :time, :date, :lat, :lng, presence: true
 
     belongs_to :movie
 

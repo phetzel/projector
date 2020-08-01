@@ -13,16 +13,26 @@
 }
 
 .show-detail h1 {
-    font-size: 25px;
+    font-size: 50px;
     margin-bottom: 20px;
+    color: #0A1B09;
 }
 
 .show-detail h6 {
-    font-size: medium;
-    margin-bottom: 10px;
+    font-size: 25px;
+    margin: 10px 0;
+    color: #224768;
 }
 
-.show-deatil p {
-    font-size: smaller;
-    margin-bottom: 10px;
+.show-detail p {
+    font-size: 15px;
+    margin-left: 15px;
+}
+
+.show-detail-when {
+    display: flex;
+}
+
+.show-detail-time {
+    margin-left: 50px;
 }
