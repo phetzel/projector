@@ -13,7 +13,7 @@ ActiveRecord::Base.transaction do
     Show.create!(
         id: "1",
         movie_id: "1",
-        date: "2020-10-10",
+        date: "2020-8-3",
         time: "12:00:00",
         lat: "37.817980",
         lng: "-122.278220"
@@ -22,7 +22,7 @@ ActiveRecord::Base.transaction do
     Show.create!(
         id: "2",
         movie_id: "1",
-        date: "2020-10-10",
+        date: "2020-3-8",
         time: "12:00:00",
         lat: "37.810805",
         lng: "-122.291081"
@@ -31,7 +31,7 @@ ActiveRecord::Base.transaction do
     Show.create!(
         id: "3",
         movie_id: "2",
-        date: "2020-10-10",
+        date: "2020-8-8",
         time: "12:00:00",
         lat: "37.810881",
         lng: "-122.296499"
