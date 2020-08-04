@@ -3,9 +3,7 @@ class Api::ShowsController < ApplicationController
     def index
         shows = bounds ? Show.in_bounds(bounds) : Show.all
 
-        # if params[:startDate] && params[:endDate]
-        #     shows = shows.where(date: date_range)
-        # end 
+        shows = shows.where(date: date)
 
         @shows = shows.includes(:movie)
         render :index
@@ -43,7 +41,7 @@ class Api::ShowsController < ApplicationController
         params[:bounds]
     end 
 
-    def date_range
-        (params[:startDate]..params[:endDate])
+    def date
+        (params[:date])
     end
 end
