@@ -24155,3 +24155,1269 @@ Processing by Api::ShowsController#index as JSON
 Completed 200 OK in 17ms (Views: 15.0ms | ActiveRecord: 0.9ms)
 
 
+Started GET "/api/shows?bounds%5BnorthEast%5D%5Blat%5D=37.8449510725572&bounds%5BnorthEast%5D%5Blng%5D=-122.21214826918316&bounds%5BsouthWest%5D%5Blat%5D=37.77714167607625&bounds%5BsouthWest%5D%5Blng%5D=-122.29797895765972&date=Tue+Aug+04+2020+20%3A25%3A06+GMT-0700+(Pacific+Daylight+Time)" for ::1 at 2020-08-04 20:26:25 -0700
+Processing by Api::ShowsController#index as JSON
+  Parameters: {"bounds"=>{"northEast"=>{"lat"=>"37.8449510725572", "lng"=>"-122.21214826918316"}, "southWest"=>{"lat"=>"37.77714167607625", "lng"=>"-122.29797895765972"}}, "date"=>"Tue Aug 04 2020 20:25:06 GMT-0700 (Pacific Daylight Time)"}
+  Rendering api/shows/index.json.jbuilder
+  [1m[36mShow Load (36.8ms)[0m  [1m[34mSELECT "shows".* FROM "shows" WHERE (lat < '37.8449510725572') AND (lat > '37.77714167607625') AND (lng > '-122.29797895765972') AND (lng < '-122.21214826918316') AND "shows"."date" = $1[0m  [["date", "2020-08-04"]]
+  ↳ app/views/api/shows/index.json.jbuilder:1
+  [1m[36mMovie Load (39.5ms)[0m  [1m[34mSELECT "movies".* FROM "movies" WHERE "movies"."id" = $1[0m  [["id", 1]]
+  ↳ app/views/api/shows/index.json.jbuilder:1
+  Rendered api/movies/_movie.json.jbuilder (0.6ms)
+  Rendered api/shows/_showing.json.jbuilder (3.6ms)
+  Rendered api/movies/_movie.json.jbuilder (0.1ms)
+  Rendered api/shows/_showing.json.jbuilder (2.3ms)
+  Rendered api/shows/index.json.jbuilder (89.0ms)
+Completed 200 OK in 99ms (Views: 21.8ms | ActiveRecord: 76.3ms)
+
+
+Started GET "/api/shows?bounds%5BnorthEast%5D%5Blat%5D=37.83968408301941&bounds%5BnorthEast%5D%5Blng%5D=-122.23554462331855&bounds%5BsouthWest%5D%5Blat%5D=37.77186984750439&bounds%5BsouthWest%5D%5Blng%5D=-122.32137531179511&date=Tue+Aug+04+2020+20%3A25%3A06+GMT-0700+(Pacific+Daylight+Time)" for ::1 at 2020-08-04 20:26:28 -0700
+Processing by Api::ShowsController#index as JSON
+  Parameters: {"bounds"=>{"northEast"=>{"lat"=>"37.83968408301941", "lng"=>"-122.23554462331855"}, "southWest"=>{"lat"=>"37.77186984750439", "lng"=>"-122.32137531179511"}}, "date"=>"Tue Aug 04 2020 20:25:06 GMT-0700 (Pacific Daylight Time)"}
+  Rendering api/shows/index.json.jbuilder
+  [1m[36mShow Load (0.8ms)[0m  [1m[34mSELECT "shows".* FROM "shows" WHERE (lat < '37.83968408301941') AND (lat > '37.77186984750439') AND (lng > '-122.32137531179511') AND (lng < '-122.23554462331855') AND "shows"."date" = $1[0m  [["date", "2020-08-04"]]
+  ↳ app/views/api/shows/index.json.jbuilder:1
+  [1m[36mMovie Load (0.3ms)[0m  [1m[34mSELECT "movies".* FROM "movies" WHERE "movies"."id" = $1[0m  [["id", 1]]
+  ↳ app/views/api/shows/index.json.jbuilder:1
+  Rendered api/movies/_movie.json.jbuilder (0.6ms)
+  Rendered api/shows/_showing.json.jbuilder (3.6ms)
+  Rendered api/movies/_movie.json.jbuilder (0.0ms)
+  Rendered api/shows/_showing.json.jbuilder (1.0ms)
+  Rendered api/shows/index.json.jbuilder (13.5ms)
+Completed 200 OK in 24ms (Views: 22.0ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/api/movies" for ::1 at 2020-08-04 20:26:32 -0700
+Processing by Api::MoviesController#index as JSON
+  [1m[36mMovie Load (0.5ms)[0m  [1m[34mSELECT "movies".* FROM "movies"[0m
+  ↳ app/controllers/api/movies_controller.rb:4
+Completed 200 OK in 3ms (Views: 2.3ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/api/shows?bounds%5BnorthEast%5D%5Blat%5D=37.83968408301941&bounds%5BnorthEast%5D%5Blng%5D=-122.2253091173828&bounds%5BsouthWest%5D%5Blat%5D=37.77186984750439&bounds%5BsouthWest%5D%5Blng%5D=-122.31113980585937&date=Tue+Aug+04+2020+20%3A25%3A06+GMT-0700+(Pacific+Daylight+Time)" for ::1 at 2020-08-04 20:26:33 -0700
+Processing by Api::ShowsController#index as JSON
+  Parameters: {"bounds"=>{"northEast"=>{"lat"=>"37.83968408301941", "lng"=>"-122.2253091173828"}, "southWest"=>{"lat"=>"37.77186984750439", "lng"=>"-122.31113980585937"}}, "date"=>"Tue Aug 04 2020 20:25:06 GMT-0700 (Pacific Daylight Time)"}
+  Rendering api/shows/index.json.jbuilder
+  [1m[36mShow Load (0.7ms)[0m  [1m[34mSELECT "shows".* FROM "shows" WHERE (lat < '37.83968408301941') AND (lat > '37.77186984750439') AND (lng > '-122.31113980585937') AND (lng < '-122.2253091173828') AND "shows"."date" = $1[0m  [["date", "2020-08-04"]]
+  ↳ app/views/api/shows/index.json.jbuilder:1
+  [1m[36mMovie Load (0.3ms)[0m  [1m[34mSELECT "movies".* FROM "movies" WHERE "movies"."id" = $1[0m  [["id", 1]]
+  ↳ app/views/api/shows/index.json.jbuilder:1
+  Rendered api/movies/_movie.json.jbuilder (0.5ms)
+  Rendered api/shows/_showing.json.jbuilder (2.2ms)
+  Rendered api/movies/_movie.json.jbuilder (0.1ms)
+  Rendered api/shows/_showing.json.jbuilder (1.4ms)
+  Rendered api/shows/index.json.jbuilder (10.8ms)
+Completed 200 OK in 22ms (Views: 20.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/api/movies" for ::1 at 2020-08-04 20:27:39 -0700
+Processing by Api::MoviesController#index as JSON
+  [1m[36mMovie Load (28.1ms)[0m  [1m[34mSELECT "movies".* FROM "movies"[0m
+  ↳ app/controllers/api/movies_controller.rb:4
+Completed 200 OK in 31ms (Views: 2.4ms | ActiveRecord: 28.1ms)
+
+
+Started GET "/api/shows?bounds%5BnorthEast%5D%5Blat%5D=37.835348325593905&bounds%5BnorthEast%5D%5Blng%5D=-122.22076965576171&bounds%5BsouthWest%5D%5Blat%5D=37.76753010704273&bounds%5BsouthWest%5D%5Blng%5D=-122.30660034423828&date=Tue+Aug+04+2020+20%3A25%3A06+GMT-0700+(Pacific+Daylight+Time)" for ::1 at 2020-08-04 20:27:39 -0700
+Processing by Api::ShowsController#index as JSON
+  Parameters: {"bounds"=>{"northEast"=>{"lat"=>"37.835348325593905", "lng"=>"-122.22076965576171"}, "southWest"=>{"lat"=>"37.76753010704273", "lng"=>"-122.30660034423828"}}, "date"=>"Tue Aug 04 2020 20:25:06 GMT-0700 (Pacific Daylight Time)"}
+  Rendering api/shows/index.json.jbuilder
+  [1m[36mShow Load (3.3ms)[0m  [1m[34mSELECT "shows".* FROM "shows" WHERE (lat < '37.835348325593905') AND (lat > '37.76753010704273') AND (lng > '-122.30660034423828') AND (lng < '-122.22076965576171') AND "shows"."date" = $1[0m  [["date", "2020-08-04"]]
+  ↳ app/views/api/shows/index.json.jbuilder:1
+  [1m[36mMovie Load (6.6ms)[0m  [1m[34mSELECT "movies".* FROM "movies" WHERE "movies"."id" = $1[0m  [["id", 1]]
+  ↳ app/views/api/shows/index.json.jbuilder:1
+  Rendered api/movies/_movie.json.jbuilder (0.7ms)
+  Rendered api/shows/_showing.json.jbuilder (2.9ms)
+  Rendered api/movies/_movie.json.jbuilder (0.1ms)
+  Rendered api/shows/_showing.json.jbuilder (1.8ms)
+  Rendered api/shows/index.json.jbuilder (60.6ms)
+Completed 200 OK in 69ms (Views: 57.7ms | ActiveRecord: 9.9ms)
+
+
+Started GET "/api/shows?bounds%5BnorthEast%5D%5Blat%5D=37.83724633943563&bounds%5BnorthEast%5D%5Blng%5D=-122.22076965576171&bounds%5BsouthWest%5D%5Blat%5D=37.76942986444377&bounds%5BsouthWest%5D%5Blng%5D=-122.30660034423828&date=Tue+Aug+04+2020+20%3A25%3A06+GMT-0700+(Pacific+Daylight+Time)" for ::1 at 2020-08-04 20:27:42 -0700
+Processing by Api::ShowsController#index as JSON
+  Parameters: {"bounds"=>{"northEast"=>{"lat"=>"37.83724633943563", "lng"=>"-122.22076965576171"}, "southWest"=>{"lat"=>"37.76942986444377", "lng"=>"-122.30660034423828"}}, "date"=>"Tue Aug 04 2020 20:25:06 GMT-0700 (Pacific Daylight Time)"}
+  Rendering api/shows/index.json.jbuilder
+Started GET "/api/shows/19" for ::1 at 2020-08-04 20:27:42 -0700
+  [1m[36mShow Load (42.0ms)[0m  [1m[34mSELECT "shows".* FROM "shows" WHERE (lat < '37.83724633943563') AND (lat > '37.76942986444377') AND (lng > '-122.30660034423828') AND (lng < '-122.22076965576171') AND "shows"."date" = $1[0m  [["date", "2020-08-04"]]
+  ↳ app/views/api/shows/index.json.jbuilder:1
+  [1m[36mMovie Load (13.7ms)[0m  [1m[34mSELECT "movies".* FROM "movies" WHERE "movies"."id" = $1[0m  [["id", 1]]
+Processing by Api::ShowsController#show as JSON
+  ↳ app/views/api/shows/index.json.jbuilder:1
+  Parameters: {"id"=>"19"}
+  [1m[36mShow Load (1.6ms)[0m  [1m[34mSELECT  "shows".* FROM "shows" WHERE "shows"."id" = $1 LIMIT $2[0m  [["id", 19], ["LIMIT", 1]]
+  ↳ app/controllers/api/shows_controller.rb:13
+  Rendered api/movies/_movie.json.jbuilder (0.4ms)
+  Rendered api/shows/_showing.json.jbuilder (4.3ms)
+  Rendering api/shows/show.json.jbuilder
+  Rendered api/movies/_movie.json.jbuilder (0.1ms)
+  Rendered api/shows/_showing.json.jbuilder (9.4ms)
+  [1m[36mMovie Load (0.7ms)[0m  [1m[34mSELECT  "movies".* FROM "movies" WHERE "movies"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered api/shows/index.json.jbuilder (92.0ms)
+  ↳ app/views/api/shows/_showing.json.jbuilder:3
+Completed 200 OK in 100ms (Views: 43.8ms | ActiveRecord: 55.6ms)
+
+
+  Rendered api/movies/_movie.json.jbuilder (0.2ms)
+  Rendered api/shows/_showing.json.jbuilder (5.1ms)
+  Rendered api/shows/show.json.jbuilder (6.8ms)
+Completed 200 OK in 20ms (Views: 15.3ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/" for ::1 at 2020-08-04 20:29:29 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "kcDXhe6dpuQdCWE1KXOdbw"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+  Rendered api/users/_user.json.jbuilder (2.5ms)
+  Rendered static_pages/root.html.erb within layouts/application (39.3ms)
+Completed 200 OK in 237ms (Views: 228.2ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/api/shows/19" for ::1 at 2020-08-04 20:29:30 -0700
+Processing by Api::ShowsController#show as JSON
+  Parameters: {"id"=>"19"}
+  [1m[36mShow Load (2.4ms)[0m  [1m[34mSELECT  "shows".* FROM "shows" WHERE "shows"."id" = $1 LIMIT $2[0m  [["id", 19], ["LIMIT", 1]]
+  ↳ app/controllers/api/shows_controller.rb:13
+  Rendering api/shows/show.json.jbuilder
+  [1m[36mMovie Load (17.6ms)[0m  [1m[34mSELECT  "movies".* FROM "movies" WHERE "movies"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/api/shows/_showing.json.jbuilder:3
+  Rendered api/movies/_movie.json.jbuilder (1.2ms)
+  Rendered api/shows/_showing.json.jbuilder (31.1ms)
+  Rendered api/shows/show.json.jbuilder (35.9ms)
+Completed 200 OK in 53ms (Views: 30.2ms | ActiveRecord: 20.0ms)
+
+
+Started GET "/" for ::1 at 2020-08-04 20:32:12 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "kcDXhe6dpuQdCWE1KXOdbw"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+  Rendered api/users/_user.json.jbuilder (0.6ms)
+  Rendered static_pages/root.html.erb within layouts/application (8.6ms)
+Completed 200 OK in 181ms (Views: 177.8ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/api/shows/19" for ::1 at 2020-08-04 20:32:12 -0700
+Processing by Api::ShowsController#show as JSON
+  Parameters: {"id"=>"19"}
+  [1m[36mShow Load (0.5ms)[0m  [1m[34mSELECT  "shows".* FROM "shows" WHERE "shows"."id" = $1 LIMIT $2[0m  [["id", 19], ["LIMIT", 1]]
+  ↳ app/controllers/api/shows_controller.rb:13
+  Rendering api/shows/show.json.jbuilder
+  [1m[36mMovie Load (44.4ms)[0m  [1m[34mSELECT  "movies".* FROM "movies" WHERE "movies"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/api/shows/_showing.json.jbuilder:3
+  Rendered api/movies/_movie.json.jbuilder (1.3ms)
+  Rendered api/shows/_showing.json.jbuilder (54.6ms)
+  Rendered api/shows/show.json.jbuilder (60.0ms)
+Completed 200 OK in 74ms (Views: 27.6ms | ActiveRecord: 44.9ms)
+
+
+Started GET "/" for ::1 at 2020-08-04 20:41:28 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "kcDXhe6dpuQdCWE1KXOdbw"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+  Rendered api/users/_user.json.jbuilder (1.8ms)
+  Rendered static_pages/root.html.erb within layouts/application (19.9ms)
+Completed 200 OK in 182ms (Views: 174.7ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/api/shows/19" for ::1 at 2020-08-04 20:41:28 -0700
+Processing by Api::ShowsController#show as JSON
+  Parameters: {"id"=>"19"}
+  [1m[36mShow Load (4.4ms)[0m  [1m[34mSELECT  "shows".* FROM "shows" WHERE "shows"."id" = $1 LIMIT $2[0m  [["id", 19], ["LIMIT", 1]]
+  ↳ app/controllers/api/shows_controller.rb:13
+  Rendering api/shows/show.json.jbuilder
+  [1m[36mMovie Load (3.7ms)[0m  [1m[34mSELECT  "movies".* FROM "movies" WHERE "movies"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/api/shows/_showing.json.jbuilder:3
+  Rendered api/movies/_movie.json.jbuilder (1.5ms)
+  Rendered api/shows/_showing.json.jbuilder (21.8ms)
+  Rendered api/shows/show.json.jbuilder (26.3ms)
+Completed 200 OK in 49ms (Views: 36.7ms | ActiveRecord: 8.1ms)
+
+
+Started GET "/" for ::1 at 2020-08-04 20:41:51 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "kcDXhe6dpuQdCWE1KXOdbw"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+  Rendered api/users/_user.json.jbuilder (0.8ms)
+  Rendered static_pages/root.html.erb within layouts/application (6.7ms)
+Completed 200 OK in 116ms (Views: 112.9ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/api/shows/19" for ::1 at 2020-08-04 20:41:51 -0700
+Processing by Api::ShowsController#show as JSON
+  Parameters: {"id"=>"19"}
+  [1m[36mShow Load (2.1ms)[0m  [1m[34mSELECT  "shows".* FROM "shows" WHERE "shows"."id" = $1 LIMIT $2[0m  [["id", 19], ["LIMIT", 1]]
+  ↳ app/controllers/api/shows_controller.rb:13
+  Rendering api/shows/show.json.jbuilder
+  [1m[36mMovie Load (36.8ms)[0m  [1m[34mSELECT  "movies".* FROM "movies" WHERE "movies"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/api/shows/_showing.json.jbuilder:3
+  Rendered api/movies/_movie.json.jbuilder (0.6ms)
+  Rendered api/shows/_showing.json.jbuilder (42.3ms)
+  Rendered api/shows/show.json.jbuilder (52.0ms)
+Completed 200 OK in 67ms (Views: 25.6ms | ActiveRecord: 38.9ms)
+
+
+Started GET "/" for ::1 at 2020-08-04 20:42:04 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "kcDXhe6dpuQdCWE1KXOdbw"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+  Rendered api/users/_user.json.jbuilder (0.5ms)
+  Rendered static_pages/root.html.erb within layouts/application (6.6ms)
+Completed 200 OK in 100ms (Views: 96.7ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/api/shows/19" for ::1 at 2020-08-04 20:42:04 -0700
+Processing by Api::ShowsController#show as JSON
+  Parameters: {"id"=>"19"}
+  [1m[36mShow Load (3.7ms)[0m  [1m[34mSELECT  "shows".* FROM "shows" WHERE "shows"."id" = $1 LIMIT $2[0m  [["id", 19], ["LIMIT", 1]]
+  ↳ app/controllers/api/shows_controller.rb:13
+  Rendering api/shows/show.json.jbuilder
+  [1m[36mMovie Load (3.1ms)[0m  [1m[34mSELECT  "movies".* FROM "movies" WHERE "movies"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/api/shows/_showing.json.jbuilder:3
+  Rendered api/movies/_movie.json.jbuilder (1.7ms)
+  Rendered api/shows/_showing.json.jbuilder (10.1ms)
+  Rendered api/shows/show.json.jbuilder (13.1ms)
+Completed 200 OK in 29ms (Views: 20.3ms | ActiveRecord: 6.9ms)
+
+
+Started GET "/" for ::1 at 2020-08-04 20:42:38 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "kcDXhe6dpuQdCWE1KXOdbw"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+  Rendered api/users/_user.json.jbuilder (0.4ms)
+  Rendered static_pages/root.html.erb within layouts/application (4.8ms)
+Completed 200 OK in 99ms (Views: 95.5ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/api/shows/19" for ::1 at 2020-08-04 20:42:38 -0700
+Processing by Api::ShowsController#show as JSON
+  Parameters: {"id"=>"19"}
+  [1m[36mShow Load (0.7ms)[0m  [1m[34mSELECT  "shows".* FROM "shows" WHERE "shows"."id" = $1 LIMIT $2[0m  [["id", 19], ["LIMIT", 1]]
+  ↳ app/controllers/api/shows_controller.rb:13
+  Rendering api/shows/show.json.jbuilder
+  [1m[36mMovie Load (1.7ms)[0m  [1m[34mSELECT  "movies".* FROM "movies" WHERE "movies"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/api/shows/_showing.json.jbuilder:3
+  Rendered api/movies/_movie.json.jbuilder (0.9ms)
+  Rendered api/shows/_showing.json.jbuilder (6.4ms)
+  Rendered api/shows/show.json.jbuilder (8.5ms)
+Completed 200 OK in 19ms (Views: 15.9ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/" for ::1 at 2020-08-04 20:43:13 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "kcDXhe6dpuQdCWE1KXOdbw"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+  Rendered api/users/_user.json.jbuilder (0.4ms)
+  Rendered static_pages/root.html.erb within layouts/application (4.3ms)
+Completed 200 OK in 87ms (Views: 83.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/api/shows/19" for ::1 at 2020-08-04 20:43:14 -0700
+Processing by Api::ShowsController#show as JSON
+  Parameters: {"id"=>"19"}
+  [1m[36mShow Load (0.5ms)[0m  [1m[34mSELECT  "shows".* FROM "shows" WHERE "shows"."id" = $1 LIMIT $2[0m  [["id", 19], ["LIMIT", 1]]
+  ↳ app/controllers/api/shows_controller.rb:13
+  Rendering api/shows/show.json.jbuilder
+  [1m[36mMovie Load (0.7ms)[0m  [1m[34mSELECT  "movies".* FROM "movies" WHERE "movies"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/api/shows/_showing.json.jbuilder:3
+  Rendered api/movies/_movie.json.jbuilder (0.8ms)
+  Rendered api/shows/_showing.json.jbuilder (5.6ms)
+  Rendered api/shows/show.json.jbuilder (7.8ms)
+Completed 200 OK in 18ms (Views: 14.8ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/" for ::1 at 2020-08-04 20:43:16 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "kcDXhe6dpuQdCWE1KXOdbw"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+  Rendered api/users/_user.json.jbuilder (0.5ms)
+  Rendered static_pages/root.html.erb within layouts/application (5.0ms)
+Completed 200 OK in 52ms (Views: 49.4ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/api/shows/19" for ::1 at 2020-08-04 20:43:16 -0700
+Processing by Api::ShowsController#show as JSON
+  Parameters: {"id"=>"19"}
+  [1m[36mShow Load (43.5ms)[0m  [1m[34mSELECT  "shows".* FROM "shows" WHERE "shows"."id" = $1 LIMIT $2[0m  [["id", 19], ["LIMIT", 1]]
+  ↳ app/controllers/api/shows_controller.rb:13
+  Rendering api/shows/show.json.jbuilder
+  [1m[36mMovie Load (3.3ms)[0m  [1m[34mSELECT  "movies".* FROM "movies" WHERE "movies"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/api/shows/_showing.json.jbuilder:3
+  Rendered api/movies/_movie.json.jbuilder (0.4ms)
+  Rendered api/shows/_showing.json.jbuilder (6.3ms)
+  Rendered api/shows/show.json.jbuilder (7.7ms)
+Completed 200 OK in 66ms (Views: 18.4ms | ActiveRecord: 46.8ms)
+
+
+Started GET "/" for ::1 at 2020-08-04 20:43:45 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "kcDXhe6dpuQdCWE1KXOdbw"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+  Rendered api/users/_user.json.jbuilder (0.5ms)
+  Rendered static_pages/root.html.erb within layouts/application (5.0ms)
+Completed 200 OK in 102ms (Views: 99.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/api/shows/19" for ::1 at 2020-08-04 20:43:46 -0700
+Processing by Api::ShowsController#show as JSON
+  Parameters: {"id"=>"19"}
+  [1m[36mShow Load (16.9ms)[0m  [1m[34mSELECT  "shows".* FROM "shows" WHERE "shows"."id" = $1 LIMIT $2[0m  [["id", 19], ["LIMIT", 1]]
+  ↳ app/controllers/api/shows_controller.rb:13
+  Rendering api/shows/show.json.jbuilder
+  [1m[36mMovie Load (18.3ms)[0m  [1m[34mSELECT  "movies".* FROM "movies" WHERE "movies"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/api/shows/_showing.json.jbuilder:3
+  Rendered api/movies/_movie.json.jbuilder (1.5ms)
+  Rendered api/shows/_showing.json.jbuilder (29.6ms)
+  Rendered api/shows/show.json.jbuilder (32.0ms)
+Completed 200 OK in 60ms (Views: 22.4ms | ActiveRecord: 35.1ms)
+
+
+Started GET "/" for ::1 at 2020-08-04 20:43:54 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "kcDXhe6dpuQdCWE1KXOdbw"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+  Rendered api/users/_user.json.jbuilder (0.8ms)
+  Rendered static_pages/root.html.erb within layouts/application (4.6ms)
+Completed 200 OK in 89ms (Views: 86.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/api/shows/19" for ::1 at 2020-08-04 20:43:55 -0700
+Processing by Api::ShowsController#show as JSON
+  Parameters: {"id"=>"19"}
+  [1m[36mShow Load (0.8ms)[0m  [1m[34mSELECT  "shows".* FROM "shows" WHERE "shows"."id" = $1 LIMIT $2[0m  [["id", 19], ["LIMIT", 1]]
+  ↳ app/controllers/api/shows_controller.rb:13
+  Rendering api/shows/show.json.jbuilder
+  [1m[36mMovie Load (23.9ms)[0m  [1m[34mSELECT  "movies".* FROM "movies" WHERE "movies"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/api/shows/_showing.json.jbuilder:3
+  Rendered api/movies/_movie.json.jbuilder (0.5ms)
+  Rendered api/shows/_showing.json.jbuilder (30.5ms)
+  Rendered api/shows/show.json.jbuilder (37.8ms)
+Completed 200 OK in 54ms (Views: 27.6ms | ActiveRecord: 24.7ms)
+
+
+Started GET "/" for ::1 at 2020-08-04 20:44:37 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "kcDXhe6dpuQdCWE1KXOdbw"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+  Rendered api/users/_user.json.jbuilder (0.9ms)
+  Rendered static_pages/root.html.erb within layouts/application (6.0ms)
+Completed 200 OK in 100ms (Views: 96.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/api/shows/19" for ::1 at 2020-08-04 20:44:37 -0700
+Processing by Api::ShowsController#show as JSON
+  Parameters: {"id"=>"19"}
+  [1m[36mShow Load (61.3ms)[0m  [1m[34mSELECT  "shows".* FROM "shows" WHERE "shows"."id" = $1 LIMIT $2[0m  [["id", 19], ["LIMIT", 1]]
+  ↳ app/controllers/api/shows_controller.rb:13
+  Rendering api/shows/show.json.jbuilder
+  [1m[36mMovie Load (11.7ms)[0m  [1m[34mSELECT  "movies".* FROM "movies" WHERE "movies"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/api/shows/_showing.json.jbuilder:3
+  Rendered api/movies/_movie.json.jbuilder (0.8ms)
+  Rendered api/shows/_showing.json.jbuilder (17.6ms)
+  Rendered api/shows/show.json.jbuilder (20.3ms)
+Completed 200 OK in 94ms (Views: 19.7ms | ActiveRecord: 73.0ms)
+
+
+Started GET "/api/movies" for ::1 at 2020-08-04 20:45:00 -0700
+Processing by Api::MoviesController#index as JSON
+  [1m[36mMovie Load (1.8ms)[0m  [1m[34mSELECT "movies".* FROM "movies"[0m
+  ↳ app/controllers/api/movies_controller.rb:4
+Completed 200 OK in 4ms (Views: 2.2ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/api/shows?bounds%5BnorthEast%5D%5Blat%5D=37.835348325593905&bounds%5BnorthEast%5D%5Blng%5D=-122.22076965576171&bounds%5BsouthWest%5D%5Blat%5D=37.76753010704273&bounds%5BsouthWest%5D%5Blng%5D=-122.30660034423828&date=Tue+Aug+04+2020+20%3A44%3A37+GMT-0700+(Pacific+Daylight+Time)" for ::1 at 2020-08-04 20:45:00 -0700
+Processing by Api::ShowsController#index as JSON
+  Parameters: {"bounds"=>{"northEast"=>{"lat"=>"37.835348325593905", "lng"=>"-122.22076965576171"}, "southWest"=>{"lat"=>"37.76753010704273", "lng"=>"-122.30660034423828"}}, "date"=>"Tue Aug 04 2020 20:44:37 GMT-0700 (Pacific Daylight Time)"}
+  Rendering api/shows/index.json.jbuilder
+  [1m[36mShow Load (1.2ms)[0m  [1m[34mSELECT "shows".* FROM "shows" WHERE (lat < '37.835348325593905') AND (lat > '37.76753010704273') AND (lng > '-122.30660034423828') AND (lng < '-122.22076965576171') AND "shows"."date" = $1[0m  [["date", "2020-08-04"]]
+  ↳ app/views/api/shows/index.json.jbuilder:1
+  [1m[36mMovie Load (0.5ms)[0m  [1m[34mSELECT "movies".* FROM "movies" WHERE "movies"."id" = $1[0m  [["id", 1]]
+  ↳ app/views/api/shows/index.json.jbuilder:1
+  Rendered api/movies/_movie.json.jbuilder (0.4ms)
+  Rendered api/shows/_showing.json.jbuilder (1.8ms)
+  Rendered api/movies/_movie.json.jbuilder (0.0ms)
+  Rendered api/shows/_showing.json.jbuilder (0.9ms)
+  Rendered api/shows/index.json.jbuilder (11.7ms)
+Completed 200 OK in 21ms (Views: 17.9ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/api/shows?bounds%5BnorthEast%5D%5Blat%5D=37.83334381672517&bounds%5BnorthEast%5D%5Blng%5D=-122.26048444071218&bounds%5BsouthWest%5D%5Blat%5D=37.76552375686683&bounds%5BsouthWest%5D%5Blng%5D=-122.34631512918874&date=Tue+Aug+04+2020+20%3A44%3A37+GMT-0700+(Pacific+Daylight+Time)" for ::1 at 2020-08-04 20:45:02 -0700
+Processing by Api::ShowsController#index as JSON
+  Parameters: {"bounds"=>{"northEast"=>{"lat"=>"37.83334381672517", "lng"=>"-122.26048444071218"}, "southWest"=>{"lat"=>"37.76552375686683", "lng"=>"-122.34631512918874"}}, "date"=>"Tue Aug 04 2020 20:44:37 GMT-0700 (Pacific Daylight Time)"}
+  Rendering api/shows/index.json.jbuilder
+  [1m[36mShow Load (2.5ms)[0m  [1m[34mSELECT "shows".* FROM "shows" WHERE (lat < '37.83334381672517') AND (lat > '37.76552375686683') AND (lng > '-122.34631512918874') AND (lng < '-122.26048444071218') AND "shows"."date" = $1[0m  [["date", "2020-08-04"]]
+  ↳ app/views/api/shows/index.json.jbuilder:1
+  [1m[36mMovie Load (0.3ms)[0m  [1m[34mSELECT "movies".* FROM "movies" WHERE "movies"."id" = $1[0m  [["id", 1]]
+  ↳ app/views/api/shows/index.json.jbuilder:1
+  Rendered api/movies/_movie.json.jbuilder (0.4ms)
+  Rendered api/shows/_showing.json.jbuilder (1.7ms)
+  Rendered api/shows/index.json.jbuilder (9.5ms)
+Completed 200 OK in 20ms (Views: 16.2ms | ActiveRecord: 2.8ms)
+
+
+Started GET "/api/shows?bounds%5BnorthEast%5D%5Blat%5D=37.83334381672517&bounds%5BnorthEast%5D%5Blng%5D=-122.22993235353768&bounds%5BsouthWest%5D%5Blat%5D=37.76552375686683&bounds%5BsouthWest%5D%5Blng%5D=-122.31576304201424&date=Tue+Aug+04+2020+20%3A44%3A37+GMT-0700+(Pacific+Daylight+Time)" for ::1 at 2020-08-04 20:45:03 -0700
+Processing by Api::ShowsController#index as JSON
+  Parameters: {"bounds"=>{"northEast"=>{"lat"=>"37.83334381672517", "lng"=>"-122.22993235353768"}, "southWest"=>{"lat"=>"37.76552375686683", "lng"=>"-122.31576304201424"}}, "date"=>"Tue Aug 04 2020 20:44:37 GMT-0700 (Pacific Daylight Time)"}
+  Rendering api/shows/index.json.jbuilder
+  [1m[36mShow Load (0.6ms)[0m  [1m[34mSELECT "shows".* FROM "shows" WHERE (lat < '37.83334381672517') AND (lat > '37.76552375686683') AND (lng > '-122.31576304201424') AND (lng < '-122.22993235353768') AND "shows"."date" = $1[0m  [["date", "2020-08-04"]]
+  ↳ app/views/api/shows/index.json.jbuilder:1
+  [1m[36mMovie Load (0.3ms)[0m  [1m[34mSELECT "movies".* FROM "movies" WHERE "movies"."id" = $1[0m  [["id", 1]]
+  ↳ app/views/api/shows/index.json.jbuilder:1
+  Rendered api/movies/_movie.json.jbuilder (0.4ms)
+  Rendered api/shows/_showing.json.jbuilder (2.0ms)
+  Rendered api/movies/_movie.json.jbuilder (0.0ms)
+  Rendered api/shows/_showing.json.jbuilder (0.9ms)
+  Rendered api/shows/index.json.jbuilder (8.4ms)
+Completed 200 OK in 17ms (Views: 15.3ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/api/shows?bounds%5BnorthEast%5D%5Blat%5D=37.83334381672517&bounds%5BnorthEast%5D%5Blng%5D=-122.22993235353768&bounds%5BsouthWest%5D%5Blat%5D=37.76552375686683&bounds%5BsouthWest%5D%5Blng%5D=-122.31576304201424&date=Wed+Aug+05+2020+00%3A00%3A00+GMT-0700+(Pacific+Daylight+Time)" for ::1 at 2020-08-04 20:45:07 -0700
+Processing by Api::ShowsController#index as JSON
+  Parameters: {"bounds"=>{"northEast"=>{"lat"=>"37.83334381672517", "lng"=>"-122.22993235353768"}, "southWest"=>{"lat"=>"37.76552375686683", "lng"=>"-122.31576304201424"}}, "date"=>"Wed Aug 05 2020 00:00:00 GMT-0700 (Pacific Daylight Time)"}
+  Rendering api/shows/index.json.jbuilder
+  [1m[36mShow Load (5.7ms)[0m  [1m[34mSELECT "shows".* FROM "shows" WHERE (lat < '37.83334381672517') AND (lat > '37.76552375686683') AND (lng > '-122.31576304201424') AND (lng < '-122.22993235353768') AND "shows"."date" = $1[0m  [["date", "2020-08-05"]]
+  ↳ app/views/api/shows/index.json.jbuilder:1
+  Rendered api/shows/index.json.jbuilder (9.1ms)
+Completed 200 OK in 15ms (Views: 8.9ms | ActiveRecord: 5.7ms)
+
+
+Started GET "/api/shows?bounds%5BnorthEast%5D%5Blat%5D=37.83334381672517&bounds%5BnorthEast%5D%5Blng%5D=-122.22993235353768&bounds%5BsouthWest%5D%5Blat%5D=37.76552375686683&bounds%5BsouthWest%5D%5Blng%5D=-122.31576304201424&date=Wed+Aug+05+2020+00%3A00%3A00+GMT-0700+(Pacific+Daylight+Time)" for ::1 at 2020-08-04 20:45:08 -0700
+Processing by Api::ShowsController#index as JSON
+  Parameters: {"bounds"=>{"northEast"=>{"lat"=>"37.83334381672517", "lng"=>"-122.22993235353768"}, "southWest"=>{"lat"=>"37.76552375686683", "lng"=>"-122.31576304201424"}}, "date"=>"Wed Aug 05 2020 00:00:00 GMT-0700 (Pacific Daylight Time)"}
+  Rendering api/shows/index.json.jbuilder
+  [1m[36mShow Load (0.5ms)[0m  [1m[34mSELECT "shows".* FROM "shows" WHERE (lat < '37.83334381672517') AND (lat > '37.76552375686683') AND (lng > '-122.31576304201424') AND (lng < '-122.22993235353768') AND "shows"."date" = $1[0m  [["date", "2020-08-05"]]
+  ↳ app/views/api/shows/index.json.jbuilder:1
+  Rendered api/shows/index.json.jbuilder (2.1ms)
+Completed 200 OK in 8ms (Views: 7.1ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/api/shows?bounds%5BnorthEast%5D%5Blat%5D=37.83334381672517&bounds%5BnorthEast%5D%5Blng%5D=-122.22993235353768&bounds%5BsouthWest%5D%5Blat%5D=37.76552375686683&bounds%5BsouthWest%5D%5Blng%5D=-122.31576304201424&date=Thu+Aug+06+2020+00%3A00%3A00+GMT-0700+(Pacific+Daylight+Time)" for ::1 at 2020-08-04 20:45:09 -0700
+Processing by Api::ShowsController#index as JSON
+  Parameters: {"bounds"=>{"northEast"=>{"lat"=>"37.83334381672517", "lng"=>"-122.22993235353768"}, "southWest"=>{"lat"=>"37.76552375686683", "lng"=>"-122.31576304201424"}}, "date"=>"Thu Aug 06 2020 00:00:00 GMT-0700 (Pacific Daylight Time)"}
+  Rendering api/shows/index.json.jbuilder
+  [1m[36mShow Load (0.5ms)[0m  [1m[34mSELECT "shows".* FROM "shows" WHERE (lat < '37.83334381672517') AND (lat > '37.76552375686683') AND (lng > '-122.31576304201424') AND (lng < '-122.22993235353768') AND "shows"."date" = $1[0m  [["date", "2020-08-06"]]
+  ↳ app/views/api/shows/index.json.jbuilder:1
+  Rendered api/shows/index.json.jbuilder (2.2ms)
+Completed 200 OK in 8ms (Views: 7.1ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/api/shows?bounds%5BnorthEast%5D%5Blat%5D=37.83334381672517&bounds%5BnorthEast%5D%5Blng%5D=-122.22993235353768&bounds%5BsouthWest%5D%5Blat%5D=37.76552375686683&bounds%5BsouthWest%5D%5Blng%5D=-122.31576304201424&date=Fri+Aug+07+2020+00%3A00%3A00+GMT-0700+(Pacific+Daylight+Time)" for ::1 at 2020-08-04 20:45:10 -0700
+Processing by Api::ShowsController#index as JSON
+  Parameters: {"bounds"=>{"northEast"=>{"lat"=>"37.83334381672517", "lng"=>"-122.22993235353768"}, "southWest"=>{"lat"=>"37.76552375686683", "lng"=>"-122.31576304201424"}}, "date"=>"Fri Aug 07 2020 00:00:00 GMT-0700 (Pacific Daylight Time)"}
+  Rendering api/shows/index.json.jbuilder
+  [1m[36mShow Load (0.6ms)[0m  [1m[34mSELECT "shows".* FROM "shows" WHERE (lat < '37.83334381672517') AND (lat > '37.76552375686683') AND (lng > '-122.31576304201424') AND (lng < '-122.22993235353768') AND "shows"."date" = $1[0m  [["date", "2020-08-07"]]
+  ↳ app/views/api/shows/index.json.jbuilder:1
+  Rendered api/shows/index.json.jbuilder (2.4ms)
+Completed 200 OK in 9ms (Views: 7.3ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/api/shows?bounds%5BnorthEast%5D%5Blat%5D=37.83334381672517&bounds%5BnorthEast%5D%5Blng%5D=-122.22993235353768&bounds%5BsouthWest%5D%5Blat%5D=37.76552375686683&bounds%5BsouthWest%5D%5Blng%5D=-122.31576304201424&date=Sat+Aug+08+2020+00%3A00%3A00+GMT-0700+(Pacific+Daylight+Time)" for ::1 at 2020-08-04 20:45:11 -0700
+Processing by Api::ShowsController#index as JSON
+  Parameters: {"bounds"=>{"northEast"=>{"lat"=>"37.83334381672517", "lng"=>"-122.22993235353768"}, "southWest"=>{"lat"=>"37.76552375686683", "lng"=>"-122.31576304201424"}}, "date"=>"Sat Aug 08 2020 00:00:00 GMT-0700 (Pacific Daylight Time)"}
+  Rendering api/shows/index.json.jbuilder
+  [1m[36mShow Load (0.5ms)[0m  [1m[34mSELECT "shows".* FROM "shows" WHERE (lat < '37.83334381672517') AND (lat > '37.76552375686683') AND (lng > '-122.31576304201424') AND (lng < '-122.22993235353768') AND "shows"."date" = $1[0m  [["date", "2020-08-08"]]
+  ↳ app/views/api/shows/index.json.jbuilder:1
+  [1m[36mMovie Load (0.3ms)[0m  [1m[34mSELECT "movies".* FROM "movies" WHERE "movies"."id" = $1[0m  [["id", 2]]
+  ↳ app/views/api/shows/index.json.jbuilder:1
+  Rendered api/movies/_movie.json.jbuilder (0.4ms)
+  Rendered api/shows/_showing.json.jbuilder (1.6ms)
+  Rendered api/shows/index.json.jbuilder (6.0ms)
+Completed 200 OK in 12ms (Views: 10.3ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/api/shows?bounds%5BnorthEast%5D%5Blat%5D=37.83334381672517&bounds%5BnorthEast%5D%5Blng%5D=-122.22993235353768&bounds%5BsouthWest%5D%5Blat%5D=37.76552375686683&bounds%5BsouthWest%5D%5Blng%5D=-122.31576304201424&date=Wed+Aug+05+2020+00%3A00%3A00+GMT-0700+(Pacific+Daylight+Time)" for ::1 at 2020-08-04 20:45:12 -0700
+Processing by Api::ShowsController#index as JSON
+  Parameters: {"bounds"=>{"northEast"=>{"lat"=>"37.83334381672517", "lng"=>"-122.22993235353768"}, "southWest"=>{"lat"=>"37.76552375686683", "lng"=>"-122.31576304201424"}}, "date"=>"Wed Aug 05 2020 00:00:00 GMT-0700 (Pacific Daylight Time)"}
+  Rendering api/shows/index.json.jbuilder
+  [1m[36mShow Load (0.6ms)[0m  [1m[34mSELECT "shows".* FROM "shows" WHERE (lat < '37.83334381672517') AND (lat > '37.76552375686683') AND (lng > '-122.31576304201424') AND (lng < '-122.22993235353768') AND "shows"."date" = $1[0m  [["date", "2020-08-05"]]
+  ↳ app/views/api/shows/index.json.jbuilder:1
+  Rendered api/shows/index.json.jbuilder (2.4ms)
+Completed 200 OK in 8ms (Views: 6.8ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/api/movies" for ::1 at 2020-08-04 20:45:14 -0700
+Processing by Api::MoviesController#index as JSON
+  [1m[36mMovie Load (0.4ms)[0m  [1m[34mSELECT "movies".* FROM "movies"[0m
+  ↳ app/controllers/api/movies_controller.rb:4
+Completed 200 OK in 3ms (Views: 1.6ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/api/shows" for ::1 at 2020-08-04 20:45:26 -0700
+Processing by Api::ShowsController#create as JSON
+  Parameters: {"show"=>{"movie_id"=>"1", "hr"=>"", "min"=>"", "sec"=>"", "date"=>"Wed Aug 05 2020 00:00:00 GMT-0700 (Pacific Daylight Time)", "desc"=>"xdhjfhjefbjh", "lat"=>"37.81259749044459", "lng"=>"-122.27061609987557", "address"=>"568 W Grand Ave, Oakland, CA 94612, USA", "time"=>"12:12:12"}}
+Unpermitted parameters: :hr, :min, :sec
+  [1m[35m (0.8ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/shows_controller.rb:20
+  [1m[36mMovie Load (0.5ms)[0m  [1m[34mSELECT  "movies".* FROM "movies" WHERE "movies"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/shows_controller.rb:20
+  [1m[36mShow Create (5.2ms)[0m  [1m[32mINSERT INTO "shows" ("movie_id", "date", "created_at", "updated_at", "lat", "lng", "desc", "time", "address") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["movie_id", 1], ["date", "2020-08-05"], ["created_at", "2020-08-05 03:45:26.589523"], ["updated_at", "2020-08-05 03:45:26.589523"], ["lat", 37.81259749044459], ["lng", -122.27061609987557], ["desc", "xdhjfhjefbjh"], ["time", "12:12:12"], ["address", "568 W Grand Ave, Oakland, CA 94612, USA"]]
+  ↳ app/controllers/api/shows_controller.rb:20
+  [1m[35m (3.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/shows_controller.rb:20
+  Rendering api/shows/show.json.jbuilder
+  Rendered api/movies/_movie.json.jbuilder (0.5ms)
+  Rendered api/shows/_showing.json.jbuilder (2.5ms)
+  Rendered api/shows/show.json.jbuilder (4.6ms)
+Completed 200 OK in 45ms (Views: 13.7ms | ActiveRecord: 9.5ms)
+
+
+Started GET "/api/movies" for ::1 at 2020-08-04 20:45:26 -0700
+Processing by Api::MoviesController#index as JSON
+  [1m[36mMovie Load (1.2ms)[0m  [1m[34mSELECT "movies".* FROM "movies"[0m
+  ↳ app/controllers/api/movies_controller.rb:4
+Completed 200 OK in 3ms (Views: 1.5ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/api/shows?bounds%5BnorthEast%5D%5Blat%5D=37.835348325593905&bounds%5BnorthEast%5D%5Blng%5D=-122.22076965576171&bounds%5BsouthWest%5D%5Blat%5D=37.76753010704273&bounds%5BsouthWest%5D%5Blng%5D=-122.30660034423828&date=Wed+Aug+05+2020+00%3A00%3A00+GMT-0700+(Pacific+Daylight+Time)" for ::1 at 2020-08-04 20:45:26 -0700
+Processing by Api::ShowsController#index as JSON
+  Parameters: {"bounds"=>{"northEast"=>{"lat"=>"37.835348325593905", "lng"=>"-122.22076965576171"}, "southWest"=>{"lat"=>"37.76753010704273", "lng"=>"-122.30660034423828"}}, "date"=>"Wed Aug 05 2020 00:00:00 GMT-0700 (Pacific Daylight Time)"}
+  Rendering api/shows/index.json.jbuilder
+  [1m[36mShow Load (1.5ms)[0m  [1m[34mSELECT "shows".* FROM "shows" WHERE (lat < '37.835348325593905') AND (lat > '37.76753010704273') AND (lng > '-122.30660034423828') AND (lng < '-122.22076965576171') AND "shows"."date" = $1[0m  [["date", "2020-08-05"]]
+  ↳ app/views/api/shows/index.json.jbuilder:1
+  [1m[36mMovie Load (0.4ms)[0m  [1m[34mSELECT "movies".* FROM "movies" WHERE "movies"."id" = $1[0m  [["id", 1]]
+  ↳ app/views/api/shows/index.json.jbuilder:1
+  Rendered api/movies/_movie.json.jbuilder (0.4ms)
+  Rendered api/shows/_showing.json.jbuilder (2.4ms)
+  Rendered api/shows/index.json.jbuilder (10.6ms)
+Completed 200 OK in 17ms (Views: 14.3ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/api/shows?bounds%5BnorthEast%5D%5Blat%5D=37.835348325593905&bounds%5BnorthEast%5D%5Blng%5D=-122.22076965576171&bounds%5BsouthWest%5D%5Blat%5D=37.76753010704273&bounds%5BsouthWest%5D%5Blng%5D=-122.30660034423828&date=Wed+Aug+05+2020+00%3A00%3A00+GMT-0700+(Pacific+Daylight+Time)" for ::1 at 2020-08-04 20:45:28 -0700
+Processing by Api::ShowsController#index as JSON
+  Parameters: {"bounds"=>{"northEast"=>{"lat"=>"37.835348325593905", "lng"=>"-122.22076965576171"}, "southWest"=>{"lat"=>"37.76753010704273", "lng"=>"-122.30660034423828"}}, "date"=>"Wed Aug 05 2020 00:00:00 GMT-0700 (Pacific Daylight Time)"}
+  Rendering api/shows/index.json.jbuilder
+  [1m[36mShow Load (0.7ms)[0m  [1m[34mSELECT "shows".* FROM "shows" WHERE (lat < '37.835348325593905') AND (lat > '37.76753010704273') AND (lng > '-122.30660034423828') AND (lng < '-122.22076965576171') AND "shows"."date" = $1[0m  [["date", "2020-08-05"]]
+  ↳ app/views/api/shows/index.json.jbuilder:1
+  [1m[36mMovie Load (0.4ms)[0m  [1m[34mSELECT "movies".* FROM "movies" WHERE "movies"."id" = $1[0m  [["id", 1]]
+  ↳ app/views/api/shows/index.json.jbuilder:1
+  Rendered api/movies/_movie.json.jbuilder (0.3ms)
+  Rendered api/shows/_showing.json.jbuilder (1.7ms)
+  Rendered api/shows/index.json.jbuilder (7.8ms)
+Completed 200 OK in 17ms (Views: 15.1ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/api/shows?bounds%5BnorthEast%5D%5Blat%5D=37.835348325593905&bounds%5BnorthEast%5D%5Blng%5D=-122.22076965576171&bounds%5BsouthWest%5D%5Blat%5D=37.76753010704273&bounds%5BsouthWest%5D%5Blng%5D=-122.30660034423828&date=Tue+Aug+04+2020+00%3A00%3A00+GMT-0700+(Pacific+Daylight+Time)" for ::1 at 2020-08-04 20:45:29 -0700
+Processing by Api::ShowsController#index as JSON
+  Parameters: {"bounds"=>{"northEast"=>{"lat"=>"37.835348325593905", "lng"=>"-122.22076965576171"}, "southWest"=>{"lat"=>"37.76753010704273", "lng"=>"-122.30660034423828"}}, "date"=>"Tue Aug 04 2020 00:00:00 GMT-0700 (Pacific Daylight Time)"}
+  Rendering api/shows/index.json.jbuilder
+  [1m[36mShow Load (0.5ms)[0m  [1m[34mSELECT "shows".* FROM "shows" WHERE (lat < '37.835348325593905') AND (lat > '37.76753010704273') AND (lng > '-122.30660034423828') AND (lng < '-122.22076965576171') AND "shows"."date" = $1[0m  [["date", "2020-08-04"]]
+  ↳ app/views/api/shows/index.json.jbuilder:1
+  [1m[36mMovie Load (0.2ms)[0m  [1m[34mSELECT "movies".* FROM "movies" WHERE "movies"."id" = $1[0m  [["id", 1]]
+  ↳ app/views/api/shows/index.json.jbuilder:1
+  Rendered api/movies/_movie.json.jbuilder (0.4ms)
+  Rendered api/shows/_showing.json.jbuilder (1.6ms)
+  Rendered api/movies/_movie.json.jbuilder (0.0ms)
+  Rendered api/shows/_showing.json.jbuilder (0.8ms)
+  Rendered api/shows/index.json.jbuilder (7.8ms)
+Completed 200 OK in 13ms (Views: 12.0ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/api/shows?bounds%5BnorthEast%5D%5Blat%5D=37.835348325593905&bounds%5BnorthEast%5D%5Blng%5D=-122.22076965576171&bounds%5BsouthWest%5D%5Blat%5D=37.76753010704273&bounds%5BsouthWest%5D%5Blng%5D=-122.30660034423828&date=Wed+Aug+05+2020+00%3A00%3A00+GMT-0700+(Pacific+Daylight+Time)" for ::1 at 2020-08-04 20:45:30 -0700
+Processing by Api::ShowsController#index as JSON
+  Parameters: {"bounds"=>{"northEast"=>{"lat"=>"37.835348325593905", "lng"=>"-122.22076965576171"}, "southWest"=>{"lat"=>"37.76753010704273", "lng"=>"-122.30660034423828"}}, "date"=>"Wed Aug 05 2020 00:00:00 GMT-0700 (Pacific Daylight Time)"}
+  Rendering api/shows/index.json.jbuilder
+  [1m[36mShow Load (0.5ms)[0m  [1m[34mSELECT "shows".* FROM "shows" WHERE (lat < '37.835348325593905') AND (lat > '37.76753010704273') AND (lng > '-122.30660034423828') AND (lng < '-122.22076965576171') AND "shows"."date" = $1[0m  [["date", "2020-08-05"]]
+  ↳ app/views/api/shows/index.json.jbuilder:1
+  [1m[36mMovie Load (0.3ms)[0m  [1m[34mSELECT "movies".* FROM "movies" WHERE "movies"."id" = $1[0m  [["id", 1]]
+  ↳ app/views/api/shows/index.json.jbuilder:1
+  Rendered api/movies/_movie.json.jbuilder (0.5ms)
+  Rendered api/shows/_showing.json.jbuilder (1.9ms)
+  Rendered api/shows/index.json.jbuilder (6.8ms)
+Completed 200 OK in 13ms (Views: 11.3ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/api/shows?bounds%5BnorthEast%5D%5Blat%5D=37.835348325593905&bounds%5BnorthEast%5D%5Blng%5D=-122.22076965576171&bounds%5BsouthWest%5D%5Blat%5D=37.76753010704273&bounds%5BsouthWest%5D%5Blng%5D=-122.30660034423828&date=Thu+Aug+06+2020+00%3A00%3A00+GMT-0700+(Pacific+Daylight+Time)" for ::1 at 2020-08-04 20:45:31 -0700
+Processing by Api::ShowsController#index as JSON
+  Parameters: {"bounds"=>{"northEast"=>{"lat"=>"37.835348325593905", "lng"=>"-122.22076965576171"}, "southWest"=>{"lat"=>"37.76753010704273", "lng"=>"-122.30660034423828"}}, "date"=>"Thu Aug 06 2020 00:00:00 GMT-0700 (Pacific Daylight Time)"}
+  Rendering api/shows/index.json.jbuilder
+  [1m[36mShow Load (3.0ms)[0m  [1m[34mSELECT "shows".* FROM "shows" WHERE (lat < '37.835348325593905') AND (lat > '37.76753010704273') AND (lng > '-122.30660034423828') AND (lng < '-122.22076965576171') AND "shows"."date" = $1[0m  [["date", "2020-08-06"]]
+  ↳ app/views/api/shows/index.json.jbuilder:1
+  Rendered api/shows/index.json.jbuilder (6.6ms)
+Completed 200 OK in 15ms (Views: 11.2ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/api/shows?bounds%5BnorthEast%5D%5Blat%5D=37.835348325593905&bounds%5BnorthEast%5D%5Blng%5D=-122.22076965576171&bounds%5BsouthWest%5D%5Blat%5D=37.76753010704273&bounds%5BsouthWest%5D%5Blng%5D=-122.30660034423828&date=Fri+Aug+07+2020+00%3A00%3A00+GMT-0700+(Pacific+Daylight+Time)" for ::1 at 2020-08-04 20:45:32 -0700
+Processing by Api::ShowsController#index as JSON
+  Parameters: {"bounds"=>{"northEast"=>{"lat"=>"37.835348325593905", "lng"=>"-122.22076965576171"}, "southWest"=>{"lat"=>"37.76753010704273", "lng"=>"-122.30660034423828"}}, "date"=>"Fri Aug 07 2020 00:00:00 GMT-0700 (Pacific Daylight Time)"}
+  Rendering api/shows/index.json.jbuilder
+  [1m[36mShow Load (2.0ms)[0m  [1m[34mSELECT "shows".* FROM "shows" WHERE (lat < '37.835348325593905') AND (lat > '37.76753010704273') AND (lng > '-122.30660034423828') AND (lng < '-122.22076965576171') AND "shows"."date" = $1[0m  [["date", "2020-08-07"]]
+  ↳ app/views/api/shows/index.json.jbuilder:1
+  Rendered api/shows/index.json.jbuilder (3.5ms)
+Completed 200 OK in 10ms (Views: 7.5ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/api/shows?bounds%5BnorthEast%5D%5Blat%5D=37.835348325593905&bounds%5BnorthEast%5D%5Blng%5D=-122.22076965576171&bounds%5BsouthWest%5D%5Blat%5D=37.76753010704273&bounds%5BsouthWest%5D%5Blng%5D=-122.30660034423828&date=Sat+Aug+08+2020+00%3A00%3A00+GMT-0700+(Pacific+Daylight+Time)" for ::1 at 2020-08-04 20:45:33 -0700
+Processing by Api::ShowsController#index as JSON
+  Parameters: {"bounds"=>{"northEast"=>{"lat"=>"37.835348325593905", "lng"=>"-122.22076965576171"}, "southWest"=>{"lat"=>"37.76753010704273", "lng"=>"-122.30660034423828"}}, "date"=>"Sat Aug 08 2020 00:00:00 GMT-0700 (Pacific Daylight Time)"}
+  Rendering api/shows/index.json.jbuilder
+  [1m[36mShow Load (0.6ms)[0m  [1m[34mSELECT "shows".* FROM "shows" WHERE (lat < '37.835348325593905') AND (lat > '37.76753010704273') AND (lng > '-122.30660034423828') AND (lng < '-122.22076965576171') AND "shows"."date" = $1[0m  [["date", "2020-08-08"]]
+  ↳ app/views/api/shows/index.json.jbuilder:1
+  [1m[36mMovie Load (0.2ms)[0m  [1m[34mSELECT "movies".* FROM "movies" WHERE "movies"."id" = $1[0m  [["id", 2]]
+  ↳ app/views/api/shows/index.json.jbuilder:1
+  Rendered api/movies/_movie.json.jbuilder (0.4ms)
+  Rendered api/shows/_showing.json.jbuilder (1.7ms)
+  Rendered api/shows/index.json.jbuilder (6.8ms)
+Completed 200 OK in 14ms (Views: 12.1ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/api/shows?bounds%5BnorthEast%5D%5Blat%5D=37.835348325593905&bounds%5BnorthEast%5D%5Blng%5D=-122.22076965576171&bounds%5BsouthWest%5D%5Blat%5D=37.76753010704273&bounds%5BsouthWest%5D%5Blng%5D=-122.30660034423828&date=Sun+Aug+09+2020+00%3A00%3A00+GMT-0700+(Pacific+Daylight+Time)" for ::1 at 2020-08-04 20:45:34 -0700
+Processing by Api::ShowsController#index as JSON
+  Parameters: {"bounds"=>{"northEast"=>{"lat"=>"37.835348325593905", "lng"=>"-122.22076965576171"}, "southWest"=>{"lat"=>"37.76753010704273", "lng"=>"-122.30660034423828"}}, "date"=>"Sun Aug 09 2020 00:00:00 GMT-0700 (Pacific Daylight Time)"}
+  Rendering api/shows/index.json.jbuilder
+  [1m[36mShow Load (4.6ms)[0m  [1m[34mSELECT "shows".* FROM "shows" WHERE (lat < '37.835348325593905') AND (lat > '37.76753010704273') AND (lng > '-122.30660034423828') AND (lng < '-122.22076965576171') AND "shows"."date" = $1[0m  [["date", "2020-08-09"]]
+  ↳ app/views/api/shows/index.json.jbuilder:1
+  Rendered api/shows/index.json.jbuilder (6.2ms)
+Completed 200 OK in 13ms (Views: 7.2ms | ActiveRecord: 4.6ms)
+
+
+Started GET "/api/movies" for ::1 at 2020-08-04 20:45:38 -0700
+Processing by Api::MoviesController#index as JSON
+  [1m[36mMovie Load (0.3ms)[0m  [1m[34mSELECT "movies".* FROM "movies"[0m
+  ↳ app/controllers/api/movies_controller.rb:4
+Completed 200 OK in 2ms (Views: 1.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for ::1 at 2020-08-04 22:13:11 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "kcDXhe6dpuQdCWE1KXOdbw"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+  Rendered api/users/_user.json.jbuilder (2.1ms)
+  Rendered static_pages/root.html.erb within layouts/application (22.2ms)
+Completed 200 OK in 226ms (Views: 218.3ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/api/movies" for ::1 at 2020-08-04 22:13:12 -0700
+Processing by Api::MoviesController#index as JSON
+  [1m[36mMovie Load (0.8ms)[0m  [1m[34mSELECT "movies".* FROM "movies"[0m
+  ↳ app/controllers/api/movies_controller.rb:4
+Completed 200 OK in 5ms (Views: 3.9ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/" for ::1 at 2020-08-04 22:14:10 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "kcDXhe6dpuQdCWE1KXOdbw"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+  Rendered api/users/_user.json.jbuilder (0.6ms)
+  Rendered static_pages/root.html.erb within layouts/application (10.1ms)
+Completed 200 OK in 565ms (Views: 561.5ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/api/movies" for ::1 at 2020-08-04 22:14:11 -0700
+Processing by Api::MoviesController#index as JSON
+  [1m[36mMovie Load (0.5ms)[0m  [1m[34mSELECT "movies".* FROM "movies"[0m
+  ↳ app/controllers/api/movies_controller.rb:4
+Completed 200 OK in 3ms (Views: 1.9ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for ::1 at 2020-08-04 22:15:25 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "kcDXhe6dpuQdCWE1KXOdbw"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+  Rendered api/users/_user.json.jbuilder (0.5ms)
+  Rendered static_pages/root.html.erb within layouts/application (4.6ms)
+Completed 200 OK in 506ms (Views: 502.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/api/movies" for ::1 at 2020-08-04 22:15:26 -0700
+Processing by Api::MoviesController#index as JSON
+  [1m[36mMovie Load (0.3ms)[0m  [1m[34mSELECT "movies".* FROM "movies"[0m
+  ↳ app/controllers/api/movies_controller.rb:4
+Completed 200 OK in 2ms (Views: 1.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for ::1 at 2020-08-04 22:16:04 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "kcDXhe6dpuQdCWE1KXOdbw"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+  Rendered api/users/_user.json.jbuilder (0.5ms)
+  Rendered static_pages/root.html.erb within layouts/application (4.9ms)
+Completed 200 OK in 77ms (Views: 73.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/api/movies" for ::1 at 2020-08-04 22:16:04 -0700
+Processing by Api::MoviesController#index as JSON
+  [1m[36mMovie Load (0.8ms)[0m  [1m[34mSELECT "movies".* FROM "movies"[0m
+  ↳ app/controllers/api/movies_controller.rb:4
+Completed 200 OK in 2ms (Views: 1.3ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/" for ::1 at 2020-08-04 22:17:00 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (10.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "kcDXhe6dpuQdCWE1KXOdbw"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+  Rendered api/users/_user.json.jbuilder (0.6ms)
+  Rendered static_pages/root.html.erb within layouts/application (15.7ms)
+Completed 200 OK in 110ms (Views: 97.7ms | ActiveRecord: 10.3ms)
+
+
+Started GET "/api/movies" for ::1 at 2020-08-04 22:17:00 -0700
+Processing by Api::MoviesController#index as JSON
+  [1m[36mMovie Load (0.4ms)[0m  [1m[34mSELECT "movies".* FROM "movies"[0m
+  ↳ app/controllers/api/movies_controller.rb:4
+Completed 200 OK in 3ms (Views: 1.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for ::1 at 2020-08-04 22:18:45 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "kcDXhe6dpuQdCWE1KXOdbw"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+  Rendered api/users/_user.json.jbuilder (0.6ms)
+  Rendered static_pages/root.html.erb within layouts/application (6.0ms)
+Completed 200 OK in 577ms (Views: 573.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/api/movies" for ::1 at 2020-08-04 22:18:46 -0700
+Processing by Api::MoviesController#index as JSON
+  [1m[36mMovie Load (0.3ms)[0m  [1m[34mSELECT "movies".* FROM "movies"[0m
+  ↳ app/controllers/api/movies_controller.rb:4
+Completed 200 OK in 2ms (Views: 1.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for ::1 at 2020-08-04 22:18:58 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "kcDXhe6dpuQdCWE1KXOdbw"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+  Rendered api/users/_user.json.jbuilder (0.4ms)
+  Rendered static_pages/root.html.erb within layouts/application (4.5ms)
+Completed 200 OK in 983ms (Views: 980.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/api/movies" for ::1 at 2020-08-04 22:18:59 -0700
+Processing by Api::MoviesController#index as JSON
+  [1m[36mMovie Load (0.6ms)[0m  [1m[34mSELECT "movies".* FROM "movies"[0m
+  ↳ app/controllers/api/movies_controller.rb:4
+Completed 200 OK in 3ms (Views: 2.3ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/" for ::1 at 2020-08-04 22:19:48 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "kcDXhe6dpuQdCWE1KXOdbw"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+  Rendered api/users/_user.json.jbuilder (0.5ms)
+  Rendered static_pages/root.html.erb within layouts/application (5.7ms)
+Completed 200 OK in 103ms (Views: 97.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/api/movies" for ::1 at 2020-08-04 22:19:48 -0700
+Processing by Api::MoviesController#index as JSON
+  [1m[36mMovie Load (0.3ms)[0m  [1m[34mSELECT "movies".* FROM "movies"[0m
+  ↳ app/controllers/api/movies_controller.rb:4
+Completed 200 OK in 2ms (Views: 1.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for ::1 at 2020-08-04 22:19:50 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "kcDXhe6dpuQdCWE1KXOdbw"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+  Rendered api/users/_user.json.jbuilder (0.4ms)
+  Rendered static_pages/root.html.erb within layouts/application (4.2ms)
+Completed 200 OK in 46ms (Views: 43.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/api/movies" for ::1 at 2020-08-04 22:19:50 -0700
+Processing by Api::MoviesController#index as JSON
+  [1m[36mMovie Load (0.7ms)[0m  [1m[34mSELECT "movies".* FROM "movies"[0m
+  ↳ app/controllers/api/movies_controller.rb:4
+Completed 200 OK in 3ms (Views: 2.1ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/" for ::1 at 2020-08-04 22:20:30 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "kcDXhe6dpuQdCWE1KXOdbw"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+  Rendered api/users/_user.json.jbuilder (0.6ms)
+  Rendered static_pages/root.html.erb within layouts/application (8.5ms)
+Completed 200 OK in 107ms (Views: 103.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/api/movies" for ::1 at 2020-08-04 22:20:31 -0700
+Processing by Api::MoviesController#index as JSON
+  [1m[36mMovie Load (0.4ms)[0m  [1m[34mSELECT "movies".* FROM "movies"[0m
+  ↳ app/controllers/api/movies_controller.rb:4
+Completed 200 OK in 2ms (Views: 1.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for ::1 at 2020-08-04 22:21:19 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "kcDXhe6dpuQdCWE1KXOdbw"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+  Rendered api/users/_user.json.jbuilder (0.5ms)
+  Rendered static_pages/root.html.erb within layouts/application (5.1ms)
+Completed 200 OK in 92ms (Views: 88.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/api/movies" for ::1 at 2020-08-04 22:21:19 -0700
+Processing by Api::MoviesController#index as JSON
+  [1m[36mMovie Load (0.9ms)[0m  [1m[34mSELECT "movies".* FROM "movies"[0m
+  ↳ app/controllers/api/movies_controller.rb:4
+Completed 200 OK in 3ms (Views: 1.9ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/" for ::1 at 2020-08-04 22:21:20 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "kcDXhe6dpuQdCWE1KXOdbw"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+  Rendered api/users/_user.json.jbuilder (0.4ms)
+  Rendered static_pages/root.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 54ms (Views: 50.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/api/movies" for ::1 at 2020-08-04 22:21:20 -0700
+Processing by Api::MoviesController#index as JSON
+  [1m[36mMovie Load (0.3ms)[0m  [1m[34mSELECT "movies".* FROM "movies"[0m
+  ↳ app/controllers/api/movies_controller.rb:4
+Completed 200 OK in 2ms (Views: 1.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for ::1 at 2020-08-04 22:21:54 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "kcDXhe6dpuQdCWE1KXOdbw"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+  Rendered api/users/_user.json.jbuilder (0.5ms)
+  Rendered static_pages/root.html.erb within layouts/application (7.0ms)
+Completed 200 OK in 133ms (Views: 129.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/api/movies" for ::1 at 2020-08-04 22:21:55 -0700
+Processing by Api::MoviesController#index as JSON
+  [1m[36mMovie Load (0.3ms)[0m  [1m[34mSELECT "movies".* FROM "movies"[0m
+  ↳ app/controllers/api/movies_controller.rb:4
+Completed 200 OK in 2ms (Views: 1.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for ::1 at 2020-08-04 22:22:21 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "kcDXhe6dpuQdCWE1KXOdbw"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+  Rendered api/users/_user.json.jbuilder (0.6ms)
+  Rendered static_pages/root.html.erb within layouts/application (6.0ms)
+Completed 200 OK in 574ms (Views: 570.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/api/movies" for ::1 at 2020-08-04 22:22:22 -0700
+Processing by Api::MoviesController#index as JSON
+  [1m[36mMovie Load (0.5ms)[0m  [1m[34mSELECT "movies".* FROM "movies"[0m
+  ↳ app/controllers/api/movies_controller.rb:4
+Completed 200 OK in 3ms (Views: 1.8ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for ::1 at 2020-08-04 22:22:41 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "kcDXhe6dpuQdCWE1KXOdbw"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+  Rendered api/users/_user.json.jbuilder (0.4ms)
+  Rendered static_pages/root.html.erb within layouts/application (4.2ms)
+Completed 200 OK in 85ms (Views: 81.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/api/movies" for ::1 at 2020-08-04 22:22:41 -0700
+Processing by Api::MoviesController#index as JSON
+  [1m[36mMovie Load (0.3ms)[0m  [1m[34mSELECT "movies".* FROM "movies"[0m
+  ↳ app/controllers/api/movies_controller.rb:4
+Completed 200 OK in 2ms (Views: 1.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for ::1 at 2020-08-04 22:22:55 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "kcDXhe6dpuQdCWE1KXOdbw"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+  Rendered api/users/_user.json.jbuilder (0.4ms)
+  Rendered static_pages/root.html.erb within layouts/application (4.3ms)
+Completed 200 OK in 83ms (Views: 80.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/api/movies" for ::1 at 2020-08-04 22:22:55 -0700
+Processing by Api::MoviesController#index as JSON
+  [1m[36mMovie Load (0.3ms)[0m  [1m[34mSELECT "movies".* FROM "movies"[0m
+  ↳ app/controllers/api/movies_controller.rb:4
+Completed 200 OK in 2ms (Views: 1.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for ::1 at 2020-08-04 22:24:31 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "kcDXhe6dpuQdCWE1KXOdbw"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+  Rendered api/users/_user.json.jbuilder (0.5ms)
+  Rendered static_pages/root.html.erb within layouts/application (5.0ms)
+Completed 200 OK in 98ms (Views: 94.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/api/movies" for ::1 at 2020-08-04 22:24:32 -0700
+Processing by Api::MoviesController#index as JSON
+  [1m[36mMovie Load (0.4ms)[0m  [1m[34mSELECT "movies".* FROM "movies"[0m
+  ↳ app/controllers/api/movies_controller.rb:4
+Completed 200 OK in 2ms (Views: 1.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for ::1 at 2020-08-04 22:25:13 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "kcDXhe6dpuQdCWE1KXOdbw"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+  Rendered api/users/_user.json.jbuilder (0.6ms)
+  Rendered static_pages/root.html.erb within layouts/application (4.2ms)
+Completed 200 OK in 120ms (Views: 117.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/api/movies" for ::1 at 2020-08-04 22:25:13 -0700
+Processing by Api::MoviesController#index as JSON
+  [1m[36mMovie Load (0.4ms)[0m  [1m[34mSELECT "movies".* FROM "movies"[0m
+  ↳ app/controllers/api/movies_controller.rb:4
+Completed 200 OK in 3ms (Views: 1.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for ::1 at 2020-08-04 22:25:55 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (4.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "kcDXhe6dpuQdCWE1KXOdbw"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+  Rendered api/users/_user.json.jbuilder (0.5ms)
+  Rendered static_pages/root.html.erb within layouts/application (10.0ms)
+Completed 200 OK in 181ms (Views: 175.2ms | ActiveRecord: 4.7ms)
+
+
+Started GET "/api/movies" for ::1 at 2020-08-04 22:25:56 -0700
+Processing by Api::MoviesController#index as JSON
+  [1m[36mMovie Load (0.4ms)[0m  [1m[34mSELECT "movies".* FROM "movies"[0m
+  ↳ app/controllers/api/movies_controller.rb:4
+Completed 200 OK in 3ms (Views: 2.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for ::1 at 2020-08-04 22:26:06 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "kcDXhe6dpuQdCWE1KXOdbw"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+  Rendered api/users/_user.json.jbuilder (0.5ms)
+  Rendered static_pages/root.html.erb within layouts/application (4.7ms)
+Completed 200 OK in 54ms (Views: 50.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/api/movies" for ::1 at 2020-08-04 22:26:06 -0700
+Processing by Api::MoviesController#index as JSON
+  [1m[36mMovie Load (0.3ms)[0m  [1m[34mSELECT "movies".* FROM "movies"[0m
+  ↳ app/controllers/api/movies_controller.rb:4
+Completed 200 OK in 2ms (Views: 1.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for ::1 at 2020-08-04 22:26:18 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "kcDXhe6dpuQdCWE1KXOdbw"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+  Rendered api/users/_user.json.jbuilder (0.6ms)
+  Rendered static_pages/root.html.erb within layouts/application (5.5ms)
+Completed 200 OK in 62ms (Views: 59.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/api/movies" for ::1 at 2020-08-04 22:26:18 -0700
+Processing by Api::MoviesController#index as JSON
+  [1m[36mMovie Load (0.4ms)[0m  [1m[34mSELECT "movies".* FROM "movies"[0m
+  ↳ app/controllers/api/movies_controller.rb:4
+Completed 200 OK in 3ms (Views: 1.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for ::1 at 2020-08-04 22:27:19 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "kcDXhe6dpuQdCWE1KXOdbw"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+  Rendered api/users/_user.json.jbuilder (0.6ms)
+  Rendered static_pages/root.html.erb within layouts/application (5.7ms)
+Completed 200 OK in 136ms (Views: 132.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/api/movies" for ::1 at 2020-08-04 22:27:19 -0700
+Processing by Api::MoviesController#index as JSON
+  [1m[36mMovie Load (0.4ms)[0m  [1m[34mSELECT "movies".* FROM "movies"[0m
+  ↳ app/controllers/api/movies_controller.rb:4
+Completed 200 OK in 2ms (Views: 1.4ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/api/shows" for ::1 at 2020-08-04 22:28:46 -0700
+Processing by Api::ShowsController#create as JSON
+  Parameters: {"show"=>{"movie_id"=>"1", "hr"=>"", "min"=>"", "sec"=>"", "date"=>"Tue Aug 04 2020 22:27:19 GMT-0700 (Pacific Daylight Time)", "desc"=>"hello show", "lat"=>"37.811619032466474", "lng"=>"-122.2666032434082", "address"=>"Broadway & Grand Ave, Oakland, CA 94612, USA", "time"=>"12:12:12"}}
+Unpermitted parameters: :hr, :min, :sec
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/shows_controller.rb:20
+  [1m[36mMovie Load (1.9ms)[0m  [1m[34mSELECT  "movies".* FROM "movies" WHERE "movies"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/shows_controller.rb:20
+  [1m[36mShow Create (1.4ms)[0m  [1m[32mINSERT INTO "shows" ("movie_id", "date", "created_at", "updated_at", "lat", "lng", "desc", "time", "address") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["movie_id", 1], ["date", "2020-08-04"], ["created_at", "2020-08-05 05:28:46.962989"], ["updated_at", "2020-08-05 05:28:46.962989"], ["lat", 37.811619032466474], ["lng", -122.2666032434082], ["desc", "hello show"], ["time", "12:12:12"], ["address", "Broadway & Grand Ave, Oakland, CA 94612, USA"]]
+  ↳ app/controllers/api/shows_controller.rb:20
+  [1m[35m (1.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/shows_controller.rb:20
+  Rendering api/shows/show.json.jbuilder
+  Rendered api/movies/_movie.json.jbuilder (0.9ms)
+  Rendered api/shows/_showing.json.jbuilder (5.0ms)
+  Rendered api/shows/show.json.jbuilder (7.4ms)
+Completed 200 OK in 29ms (Views: 13.9ms | ActiveRecord: 5.4ms)
+
+
+Started GET "/api/movies" for ::1 at 2020-08-04 22:28:46 -0700
+Processing by Api::MoviesController#index as JSON
+  [1m[36mMovie Load (1.0ms)[0m  [1m[34mSELECT "movies".* FROM "movies"[0m
+  ↳ app/controllers/api/movies_controller.rb:4
+Completed 200 OK in 3ms (Views: 1.5ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/api/shows?bounds%5BnorthEast%5D%5Blat%5D=37.835348325593905&bounds%5BnorthEast%5D%5Blng%5D=-122.22076965576171&bounds%5BsouthWest%5D%5Blat%5D=37.76753010704273&bounds%5BsouthWest%5D%5Blng%5D=-122.30660034423828&date=Tue+Aug+04+2020+22%3A27%3A19+GMT-0700+(Pacific+Daylight+Time)" for ::1 at 2020-08-04 22:28:47 -0700
+Processing by Api::ShowsController#index as JSON
+  Parameters: {"bounds"=>{"northEast"=>{"lat"=>"37.835348325593905", "lng"=>"-122.22076965576171"}, "southWest"=>{"lat"=>"37.76753010704273", "lng"=>"-122.30660034423828"}}, "date"=>"Tue Aug 04 2020 22:27:19 GMT-0700 (Pacific Daylight Time)"}
+  Rendering api/shows/index.json.jbuilder
+  [1m[36mShow Load (1.6ms)[0m  [1m[34mSELECT "shows".* FROM "shows" WHERE (lat < '37.835348325593905') AND (lat > '37.76753010704273') AND (lng > '-122.30660034423828') AND (lng < '-122.22076965576171') AND "shows"."date" = $1[0m  [["date", "2020-08-04"]]
+  ↳ app/views/api/shows/index.json.jbuilder:1
+  [1m[36mMovie Load (0.4ms)[0m  [1m[34mSELECT "movies".* FROM "movies" WHERE "movies"."id" = $1[0m  [["id", 1]]
+  ↳ app/views/api/shows/index.json.jbuilder:1
+  Rendered api/movies/_movie.json.jbuilder (0.4ms)
+  Rendered api/shows/_showing.json.jbuilder (2.2ms)
+  Rendered api/movies/_movie.json.jbuilder (0.2ms)
+  Rendered api/shows/_showing.json.jbuilder (1.0ms)
+  Rendered api/movies/_movie.json.jbuilder (0.1ms)
+  Rendered api/shows/_showing.json.jbuilder (1.7ms)
+  Rendered api/shows/index.json.jbuilder (15.2ms)
+Completed 200 OK in 22ms (Views: 19.4ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/api/shows?bounds%5BnorthEast%5D%5Blat%5D=37.846464569143414&bounds%5BnorthEast%5D%5Blng%5D=-122.2120149255371&bounds%5BsouthWest%5D%5Blat%5D=37.77865656328994&bounds%5BsouthWest%5D%5Blng%5D=-122.29784561401367&date=Tue+Aug+04+2020+22%3A27%3A19+GMT-0700+(Pacific+Daylight+Time)" for ::1 at 2020-08-04 22:28:49 -0700
+Processing by Api::ShowsController#index as JSON
+  Parameters: {"bounds"=>{"northEast"=>{"lat"=>"37.846464569143414", "lng"=>"-122.2120149255371"}, "southWest"=>{"lat"=>"37.77865656328994", "lng"=>"-122.29784561401367"}}, "date"=>"Tue Aug 04 2020 22:27:19 GMT-0700 (Pacific Daylight Time)"}
+  Rendering api/shows/index.json.jbuilder
+  [1m[36mShow Load (0.6ms)[0m  [1m[34mSELECT "shows".* FROM "shows" WHERE (lat < '37.846464569143414') AND (lat > '37.77865656328994') AND (lng > '-122.29784561401367') AND (lng < '-122.2120149255371') AND "shows"."date" = $1[0m  [["date", "2020-08-04"]]
+  ↳ app/views/api/shows/index.json.jbuilder:1
+  [1m[36mMovie Load (0.4ms)[0m  [1m[34mSELECT "movies".* FROM "movies" WHERE "movies"."id" = $1[0m  [["id", 1]]
+  ↳ app/views/api/shows/index.json.jbuilder:1
+  Rendered api/movies/_movie.json.jbuilder (0.6ms)
+  Rendered api/shows/_showing.json.jbuilder (2.0ms)
+  Rendered api/movies/_movie.json.jbuilder (0.0ms)
+  Rendered api/shows/_showing.json.jbuilder (0.9ms)
+  Rendered api/movies/_movie.json.jbuilder (0.0ms)
+  Rendered api/shows/_showing.json.jbuilder (0.8ms)
+  Rendered api/shows/index.json.jbuilder (10.0ms)
+Completed 200 OK in 17ms (Views: 15.1ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/api/shows?bounds%5BnorthEast%5D%5Blat%5D=37.854558882093606&bounds%5BnorthEast%5D%5Blng%5D=-122.17473888413774&bounds%5BsouthWest%5D%5Blat%5D=37.78675831424264&bounds%5BsouthWest%5D%5Blng%5D=-122.2605695726143&date=Tue+Aug+04+2020+22%3A27%3A19+GMT-0700+(Pacific+Daylight+Time)" for ::1 at 2020-08-04 22:28:51 -0700
+Processing by Api::ShowsController#index as JSON
+  Parameters: {"bounds"=>{"northEast"=>{"lat"=>"37.854558882093606", "lng"=>"-122.17473888413774"}, "southWest"=>{"lat"=>"37.78675831424264", "lng"=>"-122.2605695726143"}}, "date"=>"Tue Aug 04 2020 22:27:19 GMT-0700 (Pacific Daylight Time)"}
+  Rendering api/shows/index.json.jbuilder
+  [1m[36mShow Load (1.0ms)[0m  [1m[34mSELECT "shows".* FROM "shows" WHERE (lat < '37.854558882093606') AND (lat > '37.78675831424264') AND (lng > '-122.2605695726143') AND (lng < '-122.17473888413774') AND "shows"."date" = $1[0m  [["date", "2020-08-04"]]
+  ↳ app/views/api/shows/index.json.jbuilder:1
+  [1m[36mMovie Load (0.4ms)[0m  [1m[34mSELECT "movies".* FROM "movies" WHERE "movies"."id" = $1[0m  [["id", 1]]
+  ↳ app/views/api/shows/index.json.jbuilder:1
+  Rendered api/movies/_movie.json.jbuilder (0.4ms)
+  Rendered api/shows/_showing.json.jbuilder (1.9ms)
+  Rendered api/shows/index.json.jbuilder (8.9ms)
+Completed 200 OK in 17ms (Views: 15.0ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/api/shows?bounds%5BnorthEast%5D%5Blat%5D=37.85295075366925&bounds%5BnorthEast%5D%5Blng%5D=-122.20727024422136&bounds%5BsouthWest%5D%5Blat%5D=37.785148707973754&bounds%5BsouthWest%5D%5Blng%5D=-122.29310093269793&date=Tue+Aug+04+2020+22%3A27%3A19+GMT-0700+(Pacific+Daylight+Time)" for ::1 at 2020-08-04 22:28:51 -0700
+Processing by Api::ShowsController#index as JSON
+  Parameters: {"bounds"=>{"northEast"=>{"lat"=>"37.85295075366925", "lng"=>"-122.20727024422136"}, "southWest"=>{"lat"=>"37.785148707973754", "lng"=>"-122.29310093269793"}}, "date"=>"Tue Aug 04 2020 22:27:19 GMT-0700 (Pacific Daylight Time)"}
+  Rendering api/shows/index.json.jbuilder
+  [1m[36mShow Load (0.7ms)[0m  [1m[34mSELECT "shows".* FROM "shows" WHERE (lat < '37.85295075366925') AND (lat > '37.785148707973754') AND (lng > '-122.29310093269793') AND (lng < '-122.20727024422136') AND "shows"."date" = $1[0m  [["date", "2020-08-04"]]
+  ↳ app/views/api/shows/index.json.jbuilder:1
+  [1m[36mMovie Load (0.4ms)[0m  [1m[34mSELECT "movies".* FROM "movies" WHERE "movies"."id" = $1[0m  [["id", 1]]
+  ↳ app/views/api/shows/index.json.jbuilder:1
+  Rendered api/movies/_movie.json.jbuilder (0.3ms)
+  Rendered api/shows/_showing.json.jbuilder (1.5ms)
+  Rendered api/movies/_movie.json.jbuilder (0.0ms)
+  Rendered api/shows/_showing.json.jbuilder (0.8ms)
+  Rendered api/movies/_movie.json.jbuilder (0.0ms)
+  Rendered api/shows/_showing.json.jbuilder (0.8ms)
+  Rendered api/shows/index.json.jbuilder (10.1ms)
+Completed 200 OK in 18ms (Views: 16.5ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/api/shows/19" for ::1 at 2020-08-04 22:29:13 -0700
+Processing by Api::ShowsController#show as JSON
+  Parameters: {"id"=>"19"}
+  [1m[36mShow Load (10.7ms)[0m  [1m[34mSELECT  "shows".* FROM "shows" WHERE "shows"."id" = $1 LIMIT $2[0m  [["id", 19], ["LIMIT", 1]]
+  ↳ app/controllers/api/shows_controller.rb:13
+  Rendering api/shows/show.json.jbuilder
+  [1m[36mMovie Load (0.4ms)[0m  [1m[34mSELECT  "movies".* FROM "movies" WHERE "movies"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/api/shows/_showing.json.jbuilder:3
+  Rendered api/movies/_movie.json.jbuilder (0.4ms)
+  Rendered api/shows/_showing.json.jbuilder (3.2ms)
+  Rendered api/shows/show.json.jbuilder (4.9ms)
+Completed 200 OK in 28ms (Views: 12.9ms | ActiveRecord: 11.1ms)
+
+
+Started GET "/api/movies" for ::1 at 2020-08-04 22:29:17 -0700
+Processing by Api::MoviesController#index as JSON
+  [1m[36mMovie Load (0.3ms)[0m  [1m[34mSELECT "movies".* FROM "movies"[0m
+  ↳ app/controllers/api/movies_controller.rb:4
+Completed 200 OK in 2ms (Views: 1.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/api/shows?bounds%5BnorthEast%5D%5Blat%5D=37.835348325593905&bounds%5BnorthEast%5D%5Blng%5D=-122.22076965576171&bounds%5BsouthWest%5D%5Blat%5D=37.76753010704273&bounds%5BsouthWest%5D%5Blng%5D=-122.30660034423828&date=Tue+Aug+04+2020+22%3A27%3A19+GMT-0700+(Pacific+Daylight+Time)" for ::1 at 2020-08-04 22:29:17 -0700
+Processing by Api::ShowsController#index as JSON
+  Parameters: {"bounds"=>{"northEast"=>{"lat"=>"37.835348325593905", "lng"=>"-122.22076965576171"}, "southWest"=>{"lat"=>"37.76753010704273", "lng"=>"-122.30660034423828"}}, "date"=>"Tue Aug 04 2020 22:27:19 GMT-0700 (Pacific Daylight Time)"}
+  Rendering api/shows/index.json.jbuilder
+  [1m[36mShow Load (0.7ms)[0m  [1m[34mSELECT "shows".* FROM "shows" WHERE (lat < '37.835348325593905') AND (lat > '37.76753010704273') AND (lng > '-122.30660034423828') AND (lng < '-122.22076965576171') AND "shows"."date" = $1[0m  [["date", "2020-08-04"]]
+  ↳ app/views/api/shows/index.json.jbuilder:1
+  [1m[36mMovie Load (0.4ms)[0m  [1m[34mSELECT "movies".* FROM "movies" WHERE "movies"."id" = $1[0m  [["id", 1]]
+  ↳ app/views/api/shows/index.json.jbuilder:1
+  Rendered api/movies/_movie.json.jbuilder (0.5ms)
+  Rendered api/shows/_showing.json.jbuilder (1.9ms)
+  Rendered api/movies/_movie.json.jbuilder (0.1ms)
+  Rendered api/shows/_showing.json.jbuilder (1.8ms)
+  Rendered api/movies/_movie.json.jbuilder (0.0ms)
+  Rendered api/shows/_showing.json.jbuilder (1.1ms)
+  Rendered api/shows/index.json.jbuilder (12.5ms)
+Completed 200 OK in 23ms (Views: 19.7ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/api/shows?bounds%5BnorthEast%5D%5Blat%5D=37.8276693846268&bounds%5BnorthEast%5D%5Blng%5D=-122.23409643639673&bounds%5BsouthWest%5D%5Blat%5D=37.75984411278401&bounds%5BsouthWest%5D%5Blng%5D=-122.31992712487329&date=Tue+Aug+04+2020+22%3A27%3A19+GMT-0700+(Pacific+Daylight+Time)" for ::1 at 2020-08-04 22:29:19 -0700
+Processing by Api::ShowsController#index as JSON
+  Parameters: {"bounds"=>{"northEast"=>{"lat"=>"37.8276693846268", "lng"=>"-122.23409643639673"}, "southWest"=>{"lat"=>"37.75984411278401", "lng"=>"-122.31992712487329"}}, "date"=>"Tue Aug 04 2020 22:27:19 GMT-0700 (Pacific Daylight Time)"}
+  Rendering api/shows/index.json.jbuilder
+  [1m[36mShow Load (0.6ms)[0m  [1m[34mSELECT "shows".* FROM "shows" WHERE (lat < '37.8276693846268') AND (lat > '37.75984411278401') AND (lng > '-122.31992712487329') AND (lng < '-122.23409643639673') AND "shows"."date" = $1[0m  [["date", "2020-08-04"]]
+  ↳ app/views/api/shows/index.json.jbuilder:1
+  [1m[36mMovie Load (0.5ms)[0m  [1m[34mSELECT "movies".* FROM "movies" WHERE "movies"."id" = $1[0m  [["id", 1]]
+  ↳ app/views/api/shows/index.json.jbuilder:1
+  Rendered api/movies/_movie.json.jbuilder (0.3ms)
+  Rendered api/shows/_showing.json.jbuilder (1.6ms)
+  Rendered api/movies/_movie.json.jbuilder (0.0ms)
+  Rendered api/shows/_showing.json.jbuilder (0.8ms)
+  Rendered api/movies/_movie.json.jbuilder (0.1ms)
+  Rendered api/shows/_showing.json.jbuilder (1.4ms)
+  Rendered api/shows/index.json.jbuilder (11.2ms)
+Completed 200 OK in 21ms (Views: 18.5ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/api/shows?bounds%5BnorthEast%5D%5Blat%5D=37.846029013348186&bounds%5BnorthEast%5D%5Blng%5D=-122.22036352624048&bounds%5BsouthWest%5D%5Blat%5D=37.778220607293456&bounds%5BsouthWest%5D%5Blng%5D=-122.30619421471704&date=Tue+Aug+04+2020+22%3A27%3A19+GMT-0700+(Pacific+Daylight+Time)" for ::1 at 2020-08-04 22:29:19 -0700
+Processing by Api::ShowsController#index as JSON
+  Parameters: {"bounds"=>{"northEast"=>{"lat"=>"37.846029013348186", "lng"=>"-122.22036352624048"}, "southWest"=>{"lat"=>"37.778220607293456", "lng"=>"-122.30619421471704"}}, "date"=>"Tue Aug 04 2020 22:27:19 GMT-0700 (Pacific Daylight Time)"}
+  Rendering api/shows/index.json.jbuilder
+  [1m[36mShow Load (0.7ms)[0m  [1m[34mSELECT "shows".* FROM "shows" WHERE (lat < '37.846029013348186') AND (lat > '37.778220607293456') AND (lng > '-122.30619421471704') AND (lng < '-122.22036352624048') AND "shows"."date" = $1[0m  [["date", "2020-08-04"]]
+  ↳ app/views/api/shows/index.json.jbuilder:1
+  [1m[36mMovie Load (0.3ms)[0m  [1m[34mSELECT "movies".* FROM "movies" WHERE "movies"."id" = $1[0m  [["id", 1]]
+  ↳ app/views/api/shows/index.json.jbuilder:1
+  Rendered api/movies/_movie.json.jbuilder (0.3ms)
+  Rendered api/shows/_showing.json.jbuilder (1.5ms)
+  Rendered api/movies/_movie.json.jbuilder (0.1ms)
+  Rendered api/shows/_showing.json.jbuilder (1.2ms)
+  Rendered api/movies/_movie.json.jbuilder (0.0ms)
+  Rendered api/shows/_showing.json.jbuilder (0.8ms)
+  Rendered api/shows/index.json.jbuilder (10.0ms)
+Completed 200 OK in 18ms (Views: 16.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/api/shows?bounds%5BnorthEast%5D%5Blat%5D=37.84494456913125&bounds%5BnorthEast%5D%5Blng%5D=-122.24988928307641&bounds%5BsouthWest%5D%5Blat%5D=37.77713516667492&bounds%5BsouthWest%5D%5Blng%5D=-122.33571997155298&date=Tue+Aug+04+2020+22%3A27%3A19+GMT-0700+(Pacific+Daylight+Time)" for ::1 at 2020-08-04 22:29:21 -0700
+Processing by Api::ShowsController#index as JSON
+  Parameters: {"bounds"=>{"northEast"=>{"lat"=>"37.84494456913125", "lng"=>"-122.24988928307641"}, "southWest"=>{"lat"=>"37.77713516667492", "lng"=>"-122.33571997155298"}}, "date"=>"Tue Aug 04 2020 22:27:19 GMT-0700 (Pacific Daylight Time)"}
+  Rendering api/shows/index.json.jbuilder
+  [1m[36mShow Load (0.6ms)[0m  [1m[34mSELECT "shows".* FROM "shows" WHERE (lat < '37.84494456913125') AND (lat > '37.77713516667492') AND (lng > '-122.33571997155298') AND (lng < '-122.24988928307641') AND "shows"."date" = $1[0m  [["date", "2020-08-04"]]
+  ↳ app/views/api/shows/index.json.jbuilder:1
+  [1m[36mMovie Load (0.3ms)[0m  [1m[34mSELECT "movies".* FROM "movies" WHERE "movies"."id" = $1[0m  [["id", 1]]
+  ↳ app/views/api/shows/index.json.jbuilder:1
+  Rendered api/movies/_movie.json.jbuilder (0.5ms)
+  Rendered api/shows/_showing.json.jbuilder (2.0ms)
+  Rendered api/movies/_movie.json.jbuilder (0.0ms)
+  Rendered api/shows/_showing.json.jbuilder (0.8ms)
+  Rendered api/movies/_movie.json.jbuilder (0.0ms)
+  Rendered api/shows/_showing.json.jbuilder (0.8ms)
+  Rendered api/shows/index.json.jbuilder (10.4ms)
+Completed 200 OK in 19ms (Views: 16.9ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/api/shows?bounds%5BnorthEast%5D%5Blat%5D=37.84467345558529&bounds%5BnorthEast%5D%5Blng%5D=-122.26543921027292&bounds%5BsouthWest%5D%5Blat%5D=37.77686380403006&bounds%5BsouthWest%5D%5Blng%5D=-122.35126989874948&date=Tue+Aug+04+2020+22%3A27%3A19+GMT-0700+(Pacific+Daylight+Time)" for ::1 at 2020-08-04 22:29:21 -0700
+Processing by Api::ShowsController#index as JSON
+  Parameters: {"bounds"=>{"northEast"=>{"lat"=>"37.84467345558529", "lng"=>"-122.26543921027292"}, "southWest"=>{"lat"=>"37.77686380403006", "lng"=>"-122.35126989874948"}}, "date"=>"Tue Aug 04 2020 22:27:19 GMT-0700 (Pacific Daylight Time)"}
+  Rendering api/shows/index.json.jbuilder
+  [1m[36mShow Load (5.2ms)[0m  [1m[34mSELECT "shows".* FROM "shows" WHERE (lat < '37.84467345558529') AND (lat > '37.77686380403006') AND (lng > '-122.35126989874948') AND (lng < '-122.26543921027292') AND "shows"."date" = $1[0m  [["date", "2020-08-04"]]
+  ↳ app/views/api/shows/index.json.jbuilder:1
+  [1m[36mMovie Load (0.3ms)[0m  [1m[34mSELECT "movies".* FROM "movies" WHERE "movies"."id" = $1[0m  [["id", 1]]
+  ↳ app/views/api/shows/index.json.jbuilder:1
+  Rendered api/movies/_movie.json.jbuilder (1.9ms)
+  Rendered api/shows/_showing.json.jbuilder (15.4ms)
+  Rendered api/shows/index.json.jbuilder (29.7ms)
+Completed 200 OK in 40ms (Views: 33.5ms | ActiveRecord: 5.5ms)
+
+
+Started GET "/api/shows?bounds%5BnorthEast%5D%5Blat%5D=37.84034039381652&bounds%5BnorthEast%5D%5Blng%5D=-122.24106948744098&bounds%5BsouthWest%5D%5Blat%5D=37.77252676125419&bounds%5BsouthWest%5D%5Blng%5D=-122.32690017591754&date=Tue+Aug+04+2020+22%3A27%3A19+GMT-0700+(Pacific+Daylight+Time)" for ::1 at 2020-08-04 22:29:22 -0700
+Processing by Api::ShowsController#index as JSON
+  Parameters: {"bounds"=>{"northEast"=>{"lat"=>"37.84034039381652", "lng"=>"-122.24106948744098"}, "southWest"=>{"lat"=>"37.77252676125419", "lng"=>"-122.32690017591754"}}, "date"=>"Tue Aug 04 2020 22:27:19 GMT-0700 (Pacific Daylight Time)"}
+  Rendering api/shows/index.json.jbuilder
+  [1m[36mShow Load (1.5ms)[0m  [1m[34mSELECT "shows".* FROM "shows" WHERE (lat < '37.84034039381652') AND (lat > '37.77252676125419') AND (lng > '-122.32690017591754') AND (lng < '-122.24106948744098') AND "shows"."date" = $1[0m  [["date", "2020-08-04"]]
+  ↳ app/views/api/shows/index.json.jbuilder:1
+  [1m[36mMovie Load (0.7ms)[0m  [1m[34mSELECT "movies".* FROM "movies" WHERE "movies"."id" = $1[0m  [["id", 1]]
+  ↳ app/views/api/shows/index.json.jbuilder:1
+  Rendered api/movies/_movie.json.jbuilder (1.7ms)
+  Rendered api/shows/_showing.json.jbuilder (20.8ms)
+  Rendered api/movies/_movie.json.jbuilder (0.2ms)
+  Rendered api/shows/_showing.json.jbuilder (3.1ms)
+  Rendered api/movies/_movie.json.jbuilder (0.1ms)
+  Rendered api/shows/_showing.json.jbuilder (3.0ms)
+  Rendered api/shows/index.json.jbuilder (48.8ms)
+Completed 200 OK in 80ms (Views: 74.9ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/api/shows?bounds%5BnorthEast%5D%5Blat%5D=37.845349997130704&bounds%5BnorthEast%5D%5Blng%5D=-122.2659813776903&bounds%5BsouthWest%5D%5Blat%5D=37.777540967184095&bounds%5BsouthWest%5D%5Blng%5D=-122.35181206616686&date=Tue+Aug+04+2020+22%3A27%3A19+GMT-0700+(Pacific+Daylight+Time)" for ::1 at 2020-08-04 22:29:24 -0700
+Processing by Api::ShowsController#index as JSON
+  Parameters: {"bounds"=>{"northEast"=>{"lat"=>"37.845349997130704", "lng"=>"-122.2659813776903"}, "southWest"=>{"lat"=>"37.777540967184095", "lng"=>"-122.35181206616686"}}, "date"=>"Tue Aug 04 2020 22:27:19 GMT-0700 (Pacific Daylight Time)"}
+  Rendering api/shows/index.json.jbuilder
+  [1m[36mShow Load (21.2ms)[0m  [1m[34mSELECT "shows".* FROM "shows" WHERE (lat < '37.845349997130704') AND (lat > '37.777540967184095') AND (lng > '-122.35181206616686') AND (lng < '-122.2659813776903') AND "shows"."date" = $1[0m  [["date", "2020-08-04"]]
+  ↳ app/views/api/shows/index.json.jbuilder:1
+  [1m[36mMovie Load (22.3ms)[0m  [1m[34mSELECT "movies".* FROM "movies" WHERE "movies"."id" = $1[0m  [["id", 1]]
+  ↳ app/views/api/shows/index.json.jbuilder:1
+  Rendered api/movies/_movie.json.jbuilder (1.3ms)
+  Rendered api/shows/_showing.json.jbuilder (6.5ms)
+  Rendered api/shows/index.json.jbuilder (65.2ms)
+Completed 200 OK in 94ms (Views: 48.5ms | ActiveRecord: 43.4ms)
+
+
+Started GET "/api/shows?bounds%5BnorthEast%5D%5Blat%5D=37.84341419128563&bounds%5BnorthEast%5D%5Blng%5D=-122.2352444280724&bounds%5BsouthWest%5D%5Blat%5D=37.775603382739384&bounds%5BsouthWest%5D%5Blng%5D=-122.32107511654897&date=Tue+Aug+04+2020+22%3A27%3A19+GMT-0700+(Pacific+Daylight+Time)" for ::1 at 2020-08-04 22:29:25 -0700
+Processing by Api::ShowsController#index as JSON
+  Parameters: {"bounds"=>{"northEast"=>{"lat"=>"37.84341419128563", "lng"=>"-122.2352444280724"}, "southWest"=>{"lat"=>"37.775603382739384", "lng"=>"-122.32107511654897"}}, "date"=>"Tue Aug 04 2020 22:27:19 GMT-0700 (Pacific Daylight Time)"}
+  Rendering api/shows/index.json.jbuilder
+  [1m[36mShow Load (21.1ms)[0m  [1m[34mSELECT "shows".* FROM "shows" WHERE (lat < '37.84341419128563') AND (lat > '37.775603382739384') AND (lng > '-122.32107511654897') AND (lng < '-122.2352444280724') AND "shows"."date" = $1[0m  [["date", "2020-08-04"]]
+  ↳ app/views/api/shows/index.json.jbuilder:1
+  [1m[36mMovie Load (0.7ms)[0m  [1m[34mSELECT "movies".* FROM "movies" WHERE "movies"."id" = $1[0m  [["id", 1]]
+  ↳ app/views/api/shows/index.json.jbuilder:1
+  Rendered api/movies/_movie.json.jbuilder (1.4ms)
+  Rendered api/shows/_showing.json.jbuilder (6.3ms)
+  Rendered api/movies/_movie.json.jbuilder (0.2ms)
+  Rendered api/shows/_showing.json.jbuilder (5.0ms)
+  Rendered api/movies/_movie.json.jbuilder (0.2ms)
+  Rendered api/shows/_showing.json.jbuilder (4.3ms)
+  Rendered api/shows/index.json.jbuilder (60.5ms)
+Completed 200 OK in 89ms (Views: 65.3ms | ActiveRecord: 21.7ms)
+
+
+Started GET "/" for ::1 at 2020-08-04 22:29:35 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "kcDXhe6dpuQdCWE1KXOdbw"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+  Rendered api/users/_user.json.jbuilder (1.7ms)
+  Rendered static_pages/root.html.erb within layouts/application (18.2ms)
+Completed 200 OK in 752ms (Views: 742.2ms | ActiveRecord: 0.8ms)
+
+
