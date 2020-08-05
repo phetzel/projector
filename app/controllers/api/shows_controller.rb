@@ -33,7 +33,8 @@ class Api::ShowsController < ApplicationController
             :date,
             :lat,
             :lng,
-            :desc
+            :desc,
+            :address
         )
     end
 

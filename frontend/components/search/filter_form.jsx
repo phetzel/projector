@@ -19,12 +19,12 @@ class FilterForm extends React.Component {
             <div className="filter-form">
                 <h1>Filters</h1>
 
-                <label>Date
-                    <Calendar 
-                        value={this.state.date} 
-                        className={'react-calendar'}
-                        onChange={(value, event) => this.update(value)} />
-                </label>
+                <h6>Date</h6>
+                <Calendar 
+                    value={this.state.date} 
+                    className={'react-calendar'}
+                    onChange={(value, event) => this.update(value)} />
+                    
             </div>
         )
     }

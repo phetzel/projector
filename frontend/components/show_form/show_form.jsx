@@ -1,6 +1,8 @@
 import React from 'react';
 import { withRouter } from 'react-router';
 
+import Calendar from 'react-calendar';
+
 class ShowForm extends React.Component {
     constructor(props) {
         super(props);
@@ -8,8 +10,10 @@ class ShowForm extends React.Component {
 
         this.state = {
             movie_id: "1",
-            time: '',
-            date: '',
+            hr: '',
+            min: '',
+            sec: '',
+            date: new Date(),
             desc: '',
             lat: this.coords.lat,
             lng: this.coords.lng
@@ -17,6 +21,11 @@ class ShowForm extends React.Component {
 
         this.handleSubmit = this.handleSubmit.bind(this);
         this.navigateToSearch = this.navigateToSearch.bind(this);
+        this.getAddress();
+    }
+
+    componentDidMount() {
+        this.props.fetchMovies();
     }
 
     navigateToSearch() {
@@ -29,10 +38,24 @@ class ShowForm extends React.Component {
         })
     }
 
+    updateDate(date) {
+        this.setState({date});
+    }
+
     handleSubmit(e) {
         e.preventDefault();
         this.props.createShow(this.state);
         this.navigateToSearch();
+    }
+
+    getAddress() {
+        const { lat, lng } = this.props;
+        let url = `https://maps.googleapis.com/maps/api/geocode/json?latlng=${lat},${lng}&key=${window.googleAPIKey}`;
+        fetch(url)
+            .then(response => response.json())
+            .then(data => {
+                this.setState({address: data.results[0].formatted_address});
+            })
     }
 
     render() {
@@ -40,8 +63,21 @@ class ShowForm extends React.Component {
 
         return (
             <div className="show-form-container">
+                <h1>Create a Show</h1>
                 
                 <form className="show-form" onSubmit={this.handleSubmit}>
+                    
+
+                    <label className="show-field">
+                        Date
+                        <Calendar 
+                            value={this.state.date}
+                            className={'react-calendar'}
+                            onChange={(value, event) => this.updateDate(value)}
+                        />
+                    </label>
+
+                    <br/>
 
                     <label className="show-field">
                         Time
@@ -52,23 +88,12 @@ class ShowForm extends React.Component {
                             className="show-field"
                         />
                     </label>
-                    
-
-                    <label className="show-field">
-                        Date
-                        <input 
-                            type="text" 
-                            value={date}
-                            onChange={this.update('date')}
-                            className="show-field" 
-                        />
-                    </label>
 
                     <br/>
 
                     <label className="show-field">
                         Description
-                        <input
+                        <textarea
                             type="textfield"
                             value={desc}
                             onChange={this.update('desc')}
@@ -78,7 +103,7 @@ class ShowForm extends React.Component {
 
                     <br/>
 
-                    <label className="show-field">
+                    {/* <label className="show-field">
                         Lat
                         <input
                             type="text"
@@ -98,7 +123,9 @@ class ShowForm extends React.Component {
                             onChange={this.update('lng')}
                             className="show-field"
                         />
-                    </label>
+                    </label> */}
+
+                    <p>{this.state.address}</p>
 
                     <br/>
 

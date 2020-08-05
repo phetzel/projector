@@ -17,6 +17,9 @@ class ShowDetail extends React.Component {
             <div className="show-detail">
                 <h1>{movie.title}</h1>
 
+                <h6>Address</h6>
+                <p>{show.address}</p>
+
                 <div className="show-detail-when">
                     <div className="show-detail-date">
                         <h6>Date</h6>
