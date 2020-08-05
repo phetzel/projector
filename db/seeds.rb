@@ -16,7 +16,8 @@ ActiveRecord::Base.transaction do
         date: "2020-8-3",
         time: "12:00:00",
         lat: "37.817980",
-        lng: "-122.278220"
+        lng: "-122.278220",
+        address: "whatever"
     )
     
     Show.create!(
@@ -25,7 +26,8 @@ ActiveRecord::Base.transaction do
         date: "2020-3-8",
         time: "12:00:00",
         lat: "37.810805",
-        lng: "-122.291081"
+        lng: "-122.291081",
+        address: "whatever"
     )
 
     Show.create!(
@@ -34,7 +36,8 @@ ActiveRecord::Base.transaction do
         date: "2020-8-8",
         time: "12:00:00",
         lat: "37.810881",
-        lng: "-122.296499"
+        lng: "-122.296499",
+        address: "whatever"
     )
 
     Movie.destroy_all

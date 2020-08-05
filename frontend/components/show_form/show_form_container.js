@@ -1,6 +1,7 @@
 import { connect } from 'react-redux';
 
 import { createShow } from '../../actions/show_actions';
+import { fetchMovies } from '../../actions/movie_actions';
 import ShowForm from './show_form';
 
 const mSTP = (state, { location }) => ({
@@ -9,6 +10,7 @@ const mSTP = (state, { location }) => ({
 });
 
 const mDTP = dispatch => ({
+    fetchMovies: () => dispatch(fetchMovies()),
     createShow: show => dispatch(createShow(show))
 });
 

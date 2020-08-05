@@ -1,3 +1,5 @@
+import ReactDOMServer from 'react-dom/server';
+
 export default class MarkerManager {
     constructor(map, handleClick) {
         this.map = map;
@@ -25,6 +27,18 @@ export default class MarkerManager {
             map: this.map,
             showId: show.id
         })
+
+        const infoWindow = new google.maps.InfoWindow({
+            content: 'Click for more info',
+            map: this.map
+        });
+
+        marker.addListener('mouseover', function () {
+            infoWindow.open(this.map, this);
+        });
+        marker.addListener('mouseout', function () {
+            infoWindow.close();
+        });
 
         marker.addListener('click', () => this.handleClick(show));
         this.markers[marker.showId] = marker;

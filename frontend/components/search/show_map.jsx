@@ -8,6 +8,7 @@ const getCoordsObj = latLng => ({
     lng: latLng.lng()
 });
 
+
 class ShowMap extends React.Component {
     componentDidMount() {
         const { single, shows, showId, fetchShow, fetchMovies } = this.props;
@@ -32,7 +33,9 @@ class ShowMap extends React.Component {
 
         const map = this.refs.map;
         this.map = new google.maps.Map(map, mapOptions);
-        this.MarkerManager = new MarkerManager(this.map, this.handleMarkerClick.bind(this));
+        this.MarkerManager = new MarkerManager(
+                                this.map, 
+                                this.handleMarkerClick.bind(this));
 
         if (single) {
             fetchShow(showId);
@@ -76,6 +79,7 @@ class ShowMap extends React.Component {
         });
     }
 
+
     handleMarkerClick(show) {
         if (!this.props.single) {
             this.props.history.push({
@@ -86,6 +90,7 @@ class ShowMap extends React.Component {
             });
         }
     }
+
 
     render() {
         return (
