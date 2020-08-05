@@ -64,8 +64,10 @@ class ShowForm extends React.Component {
         return (
             <div className="show-form-container">
                 <h1>Create a Show</h1>
+
+                <p>{this.state.address}</p>
                 
-                <form className="show-form" onSubmit={this.handleSubmit}>
+                <form className="show-form">
                     
 
                     <label className="show-field">
@@ -77,31 +79,31 @@ class ShowForm extends React.Component {
                         />
                     </label>
 
-                    <br/>
-
-                    <label className="show-field">
-                        Time
+                    <div className="show-form-right">
+                        <label className="show-field">
+                            Time
+                            <br/>
                         <input
-                            type="text"
-                            value={time}
-                            onChange={this.update('time')}
-                            className="show-field"
-                        />
-                    </label>
+                                type="text"
+                                value={time}
+                                onChange={this.update('time')}
+                                className="show-field"
+                            />
+                        </label>
 
-                    <br/>
+                        <br />
 
-                    <label className="show-field">
-                        Description
-                        <textarea
-                            type="textfield"
-                            value={desc}
-                            onChange={this.update('desc')}
-                            className="show-field"
-                        />
-                    </label>
-
-                    <br/>
+                        <label className="show-field">
+                            Description
+                            <br/>
+                            <textarea
+                                type="textfield"
+                                value={desc}
+                                onChange={this.update('desc')}
+                                className="show-field"
+                            />
+                        </label>
+                    </div>
 
                     {/* <label className="show-field">
                         Lat
@@ -125,17 +127,13 @@ class ShowForm extends React.Component {
                         />
                     </label> */}
 
-                    <p>{this.state.address}</p>
-
-                    <br/>
-
-                    <input 
-                        type="submit"
-                        className="create-show"
-                        value="Create a show" 
-                    />
                 </form>
 
+                <button
+                    className="create-button"
+                    onClick={this.handleSubmit}>
+                    Create Show
+                </button>
                 <button 
                     className="back-button" 
                     onClick={this.navigateToSearch}>
