@@ -8,6 +8,20 @@
 
 
 ActiveRecord::Base.transaction do
+    Movie.destroy_all
+
+    Movie.create!(
+        id: "1",
+        title: "Titanic",
+        run_time: "1:10:00"
+    )
+
+    Movie.create!(
+        id: "2",
+        title: "Air Bud",
+        run_time: "2:10:00"
+    )
+    
     Show.destroy_all
 
     Show.create!(
@@ -38,19 +52,5 @@ ActiveRecord::Base.transaction do
         lat: "37.810881",
         lng: "-122.296499",
         address: "whatever"
-    )
-
-    Movie.destroy_all
-
-    Movie.create!(
-        id: "1",
-        title: "Titanic",
-        run_time: "1:10:00"
-    )
-
-    Movie.create!(
-        id: "2",
-        title: "Air Bud",
-        run_time: "2:10:00"
     )
 end 
