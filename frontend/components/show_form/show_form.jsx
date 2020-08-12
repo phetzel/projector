@@ -9,7 +9,7 @@ class ShowForm extends React.Component {
         this.coords = { lat: props.lat, lng: props.lng };
 
         this.state = {
-            movie_id: '1',
+            movie_id: '',
             hr: '',
             min: '',
             sec: '',
@@ -64,7 +64,7 @@ class ShowForm extends React.Component {
 
     render() {
         const { time, date, desc, lat, lng } = this.state;
-        const { movies } = this.props;
+        const { movies, openModal } = this.props;
 
 
         return (
@@ -115,15 +115,21 @@ class ShowForm extends React.Component {
                         </label>
                     </div>
 
-                    <label>Select Movie
-                        <br/>
-                        <select onChange={(e) => this.updateMovie(e)} required>
-                            <option value="" disabled selected={true}>Select A movie</option>
-                            {movies.map((movie, idx) => (
-                                <option value={movie.id} key={idx}>{movie.title}</option>
-                            ))}
-                        </select>
-                    </label>
+                    <div className="show-form-right">
+                        <label>Select A Movie
+                            <br/>
+                            <select onChange={(e) => this.updateMovie(e)} required>
+                                <option value="" disabled selected={true}>Select A movie</option>
+                                {movies.map((movie, idx) => (
+                                    <option value={movie.id} key={idx}>{movie.title}</option>
+                                ))}
+                            </select>
+                        </label>
+
+                        <h6>Or
+                            <a onClick={() => openModal()}>Add A New Movie</a>
+                        </h6>
+                    </div>
 
                 </form>
 

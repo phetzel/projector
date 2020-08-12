@@ -4,6 +4,7 @@ import { connect } from 'react-redux';
 import { closeModal } from '../../actions/modal_actions';
 import LoginFormContainer from '../session_form/login_form_container';
 import SignupFormContainer from '../session_form/signup_form_container';
+import MovieFormContainer from '../movie_form/movie_form_container';
 
 
 const Modal = ({ modal, closeModal }) => {
@@ -18,6 +19,9 @@ const Modal = ({ modal, closeModal }) => {
             break;
         case 'signup':
             component = <SignupFormContainer />;
+            break;
+        case 'add movie':
+            component = <MovieFormContainer />;
             break;
         default:
             return null;
