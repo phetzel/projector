@@ -59,6 +59,9 @@
 //show-form 
 .show-form-container {
     margin: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .show-form {
@@ -70,11 +73,13 @@
     font-size: 50px;
 }
 
-.show-form-right {
+.show-form-mid {
+    margin-top: 25px;
     margin-left: 50px;
 }
 
-.show-form input, .show-form textarea {
+.show-form input, .show-form textarea,
+.show-form select {
     margin: 25px;
 }
 
