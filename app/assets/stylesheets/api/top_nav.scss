@@ -3,6 +3,12 @@
     height: 75px;
     display: flex;
     justify-content: space-between;
+    position: fixed;
+    z-index: 1000;
+    width: 100%;
+    display: absolute;
+    top: 0;
+    left: 0;
 }
 
 .nav button {

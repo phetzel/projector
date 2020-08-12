@@ -9,7 +9,7 @@ class ShowForm extends React.Component {
         this.coords = { lat: props.lat, lng: props.lng };
 
         this.state = {
-            movie_id: "1",
+            movie_id: '1',
             hr: '',
             min: '',
             sec: '',
@@ -42,6 +42,10 @@ class ShowForm extends React.Component {
         this.setState({date});
     }
 
+    updateMovie(e) {
+        this.setState({ movie_id: e.currentTarget.value });
+    }
+
     handleSubmit(e) {
         e.preventDefault();
         this.props.createShow(this.state);
@@ -60,6 +64,8 @@ class ShowForm extends React.Component {
 
     render() {
         const { time, date, desc, lat, lng } = this.state;
+        const { movies } = this.props;
+
 
         return (
             <div className="show-form-container">
@@ -72,14 +78,15 @@ class ShowForm extends React.Component {
 
                     <label className="show-field">
                         Date
+                        <br/>
                         <Calendar 
-                            value={this.state.date}
+                            value={date}
                             className={'react-calendar'}
                             onChange={(value, event) => this.updateDate(value)}
                         />
                     </label>
 
-                    <div className="show-form-right">
+                    <div className="show-form-mid">
                         <label className="show-field">
                             Time
                             <br/>
@@ -88,57 +95,50 @@ class ShowForm extends React.Component {
                                 value={time}
                                 onChange={this.update('time')}
                                 className="show-field"
+                                required
                             />
                         </label>
 
                         <br />
 
                         <label className="show-field">
-                            Description
+                            Additional Venue Details
                             <br/>
                             <textarea
                                 type="textfield"
                                 value={desc}
                                 onChange={this.update('desc')}
                                 className="show-field"
+                                cols="40"
+                                rows="10"
                             />
                         </label>
                     </div>
 
-                    {/* <label className="show-field">
-                        Lat
-                        <input
-                            type="text"
-                            value={lat}
-                            onChange={this.update('lat')}
-                            className="show-field"
-                        />
+                    <label>Select Movie
+                        <br/>
+                        <select onChange={(e) => this.updateMovie(e)} required>
+                            <option value="" disabled selected={true}>Select A movie</option>
+                            {movies.map((movie, idx) => (
+                                <option value={movie.id} key={idx}>{movie.title}</option>
+                            ))}
+                        </select>
                     </label>
-
-                    <br/>
-
-                    <label className="show-field">
-                        Lng
-                        <input
-                            type="text"
-                            value={lng}
-                            onChange={this.update('lng')}
-                            className="show-field"
-                        />
-                    </label> */}
 
                 </form>
 
-                <button
-                    className="create-button"
-                    onClick={this.handleSubmit}>
-                    Create Show
-                </button>
-                <button 
-                    className="back-button" 
-                    onClick={this.navigateToSearch}>
-                    Back to Map
-                </button>
+                <div className="show-form-buttons">
+                    <button
+                        className="create-button"
+                        onClick={this.handleSubmit}>
+                        Create Show
+                    </button>
+                    <button
+                        className="back-button"
+                        onClick={this.navigateToSearch}>
+                        Back to Map
+                    </button>
+                </div>
 
             </div>
         )
