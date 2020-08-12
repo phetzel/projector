@@ -15,7 +15,7 @@ class Api::MoviesController < ApplicationController
         if @movie.save
             render json: @movie 
         else 
-            render json: @movies.errors.full_messages, status: 422 
+            render json: @movie.errors.full_messages, status: 422 
         end 
     end 
 

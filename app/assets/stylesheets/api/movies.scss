@@ -1,0 +1,53 @@
+.movie-form-container h1 {
+  color: #197096;
+  font-family: Proxima Nova, sans-serif;
+  font-weight: 600;
+  font-size: 36px;
+  margin-bottom: 20px;
+}
+
+.movie-form label {
+    font-size: 12px;
+    font-weight: 300;
+    color: #aaa;
+    font-family: Proxima Nova,sans-serif;
+}
+
+.movie-form input {
+    display: block;
+    background-color: #bacae9;
+    color:  #197096;
+    border: none;
+    border-bottom: 4px solid #eee;
+    height: 30px;
+    width: 100%;
+}
+
+.movie-form input:focus {
+    outline: none;
+    border-bottom: 4px solid #197096;
+}
+
+.movie-submit {
+    color: #ff8a47;
+    font-size: 14px;
+    font-weight: 700;
+    height: 48px;
+    border: none;
+    border-radius: 36px;
+    box-sizing: border-box;
+    cursor: pointer;
+    padding: 0 28.8px;
+}
+
+.movie-form-container a {
+    color: #28a5dc;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 400;
+    font-family: Proxima Nova,sans-serif;
+}
+
+.movie-form-container a:hover {
+    text-decoration: underline;
+}

@@ -78,16 +78,28 @@
     margin-left: 50px;
 }
 
+.show-form-right {
+    margin-top: 25px;
+}
+
 .show-form input, .show-form textarea,
-.show-form select {
+.show-form select, .show-form a {
     margin: 25px;
 }
 
-.show-form label {
+.show-form label, .show-form h6 {
     font-size: 25px;
     margin: 10px 0;
     color: #224768;
     margin-top: 20px;
+}
+
+.show-form a {
+    display: block;
+    font-size: 20px;
+    color: blue;
+    cursor: pointer;
+    text-decoration: underline;
 }
 
 .create-button {
