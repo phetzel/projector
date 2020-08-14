@@ -9,6 +9,7 @@ class LoginForm extends React.Component {
         };
 
         this.handleSubmit = this.handleSubmit.bind(this);
+        this.handleAdminLogin = this.handleAdminLogin.bind(this);
     }
 
     update(field) {
@@ -20,6 +21,17 @@ class LoginForm extends React.Component {
     handleSubmit(e) {
         e.preventDefault();
         const user = Object.assign({}, this.state);
+        this.props.login(user)
+            .then(this.props.closeModal)
+    }
+
+    handleAdminLogin(e) {
+        e.preventDefault();
+        const user = Object.assign({}, {
+            email: 'admin',
+            password: 'admin1'
+        });
+
         this.props.login(user)
             .then(this.props.closeModal)
     }
@@ -63,6 +75,8 @@ class LoginForm extends React.Component {
                     <br/>
 
                     <input className="login-submit" type="submit" value="Log In" />
+
+                    <button onClick={this.handleAdminLogin}>Demo Admin Login</button>
 
                     {this.renderErrors()}
 

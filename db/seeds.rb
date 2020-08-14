@@ -8,6 +8,14 @@
 
 
 ActiveRecord::Base.transaction do
+    User.destroy_all
+
+    User.create!(
+        id: "1",
+        email: "admin",
+        password: "admin1"
+    )
+    
     Movie.destroy_all
 
     Movie.create!(
