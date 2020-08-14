@@ -6,16 +6,62 @@ import { displayTimeDay, displayTimeLength, revDate } from '../../util/data_util
 class ShowDetail extends React.Component {
     constructor(props) {
         super(props);
+
+        this.handleAttend = this.handleAttend.bind(this);
+        this.handleUnattend = this.handleUnattend.bind(this);
+    }
+
+    handleAttend() {
+        const { attendShow, show } = this.props;
+        attendShow(show.id);
+    }
+
+    handleUnattend() {
+        const { unattendShow, show, userId } = this.props;
+        let followId;
+
+        show.attending.forEach(att => {
+            if (att.user_id === userId) {
+                followId = att.id;
+            }
+        });
+
+        unattendShow(followId);
+    }
+
+    handleAttendRender() {
+        const { show, userId } = this.props;
+        let alreadyAttending = false;
+
+        if (show) {
+            if (show.attending.some(att => att.user_id === userId)) {
+                alreadyAttending = true;
+            }
+        }
+
+        return alreadyAttending ? (
+            <button onClick={this.handleUnattend} className="unattend"> Unattend</button >
+        ) : (
+                <button onClick={this.handleAttend} className="attend"> Attend</button >
+        )
     }
 
     render() {
-        const { show } = this.props;
+        const { show, userId } = this.props;
         const movie = show ? show.movie : null;
 
+        const attendPanel = show && userId ? (
+            <div className="show-detail-attend">
+                <p>Attending: { show.attending.length }</p>
+                {this.handleAttendRender()}
+            </div>
+        ) : null;
 
         const showList = show && movie ? (
             <div className="show-detail">
                 <h1>{movie.title}</h1>
+
+                {attendPanel}
 
                 <h6>Address</h6>
                 <p>{show.address}</p>
