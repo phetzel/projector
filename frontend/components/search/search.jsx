@@ -1,22 +1,65 @@
 import React from 'react';
 
-import ShowIndex from './show_index';
 import ShowMap from './show_map';
 import FilterForm from './filter_form';
+import Directions from './directions';
 
-const Search = ({ shows, updateFilter, fetchMovies }) => (
-    <div className="search">
+class Search extends React.Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            pane: 1
+        }
+    }
 
-        <ShowMap 
-            shows={shows}
-            updateFilter={updateFilter} 
-            single={false} 
-            fetchMovies={fetchMovies}/>
+    setPane(num) {
+        this.setState({pane: num});
+        console.log(num);
+    }
 
-        <FilterForm updateFilter={updateFilter} />
+    render() {
+        const { shows, updateFilter, fetchMovies } = this.props;
 
-        {/* <ShowIndex shows={shows} /> */}
-    </div>
-);
+        const paneDisplay = this.state.pane === 1 ? (
+            <Directions />
+        ) : <FilterForm updateFilter={updateFilter} />;
+
+        const active = this.state.pane === 1 ? ["active", "not-active"] : ["not-active", "active"];
+
+        return (
+            <div className="search">
+
+                <ShowMap
+                    shows={shows}
+                    updateFilter={updateFilter}
+                    single={false}
+                    fetchMovies={fetchMovies} />
+
+                <div className="search-panes">
+                    <ul className="search-panes-headers">
+                        <li 
+                            onClick={() => this.setPane(1)} 
+                            className="directions-tab"
+                            id={active[0]}>
+                            Directions
+                        </li>
+
+                        <li 
+                            onClick={() => this.setPane(2)} 
+                            className="filters-tab"
+                            id={active[1]}>
+                            Filters
+                        </li>
+                    </ul>
+                    <div className="search-panes-content">
+                        {paneDisplay}
+                    </div>
+                </div>
+
+            </div>
+        )
+    }
+};
+
 
 export default Search;

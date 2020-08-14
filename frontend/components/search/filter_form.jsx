@@ -17,8 +17,6 @@ class FilterForm extends React.Component {
     render() {
         return (
             <div className="filter-form">
-                <h1>Filters</h1>
-
                 <h6>Date</h6>
                 <Calendar 
                     value={this.state.date} 
