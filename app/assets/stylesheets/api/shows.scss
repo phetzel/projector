@@ -56,6 +56,39 @@
     margin-left: 50px;
 }
 
+.show-detail-attend {
+    display: flex;
+    height: 50px;
+
+}
+
+.show-detail-attend p {
+    margin-right: 30px;
+}
+
+.show-detail-attend button {
+    font-size: 14px;
+    font-weight: 700;
+    height: 48px;
+    border: none;
+    border-radius: 36px;
+    box-sizing: border-box;
+    color: #fff;
+    cursor: pointer;
+    padding: 5px 14.4px;
+    width: 90px;
+    outline: none;
+}
+
+.unattend {
+    background-color: #f54245;
+}
+
+.attend {
+    background-color: #4bf542;
+}
+
+
 //show-form 
 .show-form-container {
     margin: 50px;
@@ -100,6 +133,10 @@
     color: blue;
     cursor: pointer;
     text-decoration: underline;
+}
+
+.show-form-container p {
+    margin-top: 10px;
 }
 
 .create-button {

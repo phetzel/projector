@@ -71,7 +71,7 @@ class ShowForm extends React.Component {
             <div className="show-form-container">
                 <h1>Create a Show</h1>
 
-                <p>{this.state.address}</p>
+                <p>@   {this.state.address}</p>
                 
                 <form className="show-form">
                     
@@ -119,7 +119,7 @@ class ShowForm extends React.Component {
                         <label>Select A Movie
                             <br/>
                             <select onChange={(e) => this.updateMovie(e)} required>
-                                <option value="" disabled selected={true}>Select A movie</option>
+                                <option value="" disabled selected={true}>Select A Movie</option>
                                 {movies.map((movie, idx) => (
                                     <option value={movie.id} key={idx}>{movie.title}</option>
                                 ))}
