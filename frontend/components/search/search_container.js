@@ -7,7 +7,8 @@ import Search from './search';
 
 
 const mSTP = state => ({
-    shows: asArray(state.entities)
+    shows: asArray(state.entities),
+    userId: state.session.id
 });
 
 const mDTP = dispatch => ({
