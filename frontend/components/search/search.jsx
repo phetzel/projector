@@ -18,7 +18,7 @@ class Search extends React.Component {
     }
 
     render() {
-        const { shows, updateFilter, fetchMovies } = this.props;
+        const { shows, updateFilter, fetchMovies, userId } = this.props;
 
         const paneDisplay = this.state.pane === 1 ? (
             <Directions />
@@ -33,7 +33,8 @@ class Search extends React.Component {
                     shows={shows}
                     updateFilter={updateFilter}
                     single={false}
-                    fetchMovies={fetchMovies} />
+                    fetchMovies={fetchMovies} 
+                    userId={userId}/>
 
                 <div className="search-panes">
                     <ul className="search-panes-headers">

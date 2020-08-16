@@ -73,10 +73,12 @@ class ShowMap extends React.Component {
     }
 
     handleClick(coords) {
-        this.props.history.push({
-            pathname: 'shows/new',
-            search: `lat=${coords.lat}&lng=${coords.lng}`
-        });
+        if (this.props.userId === 1) {
+            this.props.history.push({
+                pathname: 'shows/new',
+                search: `lat=${coords.lat}&lng=${coords.lng}`
+            });
+        }
     }
 
 

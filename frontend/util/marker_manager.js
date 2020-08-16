@@ -1,4 +1,4 @@
-import ReactDOMServer from 'react-dom/server';
+import { displayTimeDay } from './data_util';
 
 export default class MarkerManager {
     constructor(map, handleClick) {
@@ -26,10 +26,17 @@ export default class MarkerManager {
             position,
             map: this.map,
             showId: show.id
-        })
+        });
+
+        const infoContent = 
+            '<div id="info-content">' +
+                `<h6>${show.movie.title}</h6>` +
+                `<p>${displayTimeDay(show.time)}` +
+                `<p>${show.address}` +
+            '</div>'
 
         const infoWindow = new google.maps.InfoWindow({
-            content: 'Click for more info',
+            content: infoContent,
             map: this.map
         });
 

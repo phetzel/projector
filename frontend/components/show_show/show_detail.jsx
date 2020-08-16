@@ -42,7 +42,7 @@ class ShowDetail extends React.Component {
         return alreadyAttending ? (
             <button onClick={this.handleUnattend} className="unattend"> Unattend</button >
         ) : (
-                <button onClick={this.handleAttend} className="attend"> Attend</button >
+            <button onClick={this.handleAttend} className="attend"> Attend</button >
         )
     }
 
@@ -50,7 +50,7 @@ class ShowDetail extends React.Component {
         const { show, userId } = this.props;
         const movie = show ? show.movie : null;
 
-        const attendPanel = show && userId ? (
+        const attendPanel = show.attending && userId ? (
             <div className="show-detail-attend">
                 <p>Attending: { show.attending.length }</p>
                 {this.handleAttendRender()}
