@@ -14,17 +14,17 @@ class Search extends React.Component {
 
     setPane(num) {
         this.setState({pane: num});
-        console.log(num);
+        this.props.updatePane(num);
     }
 
     render() {
-        const { shows, updateFilter, fetchMovies, userId } = this.props;
+        const { shows, updateFilter, fetchMovies, userId, pane } = this.props;
 
         const paneDisplay = this.state.pane === 1 ? (
             <Directions />
         ) : <FilterForm updateFilter={updateFilter} />;
 
-        const active = this.state.pane === 1 ? ["active", "not-active"] : ["not-active", "active"];
+        const active = this.state.pane  === 1 ? ["active", "not-active"] : ["not-active", "active"];
 
         return (
             <div className="search">
