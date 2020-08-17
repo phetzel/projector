@@ -39,3 +39,15 @@ export const logout = () => dispatch => (
     dispatch(logoutCurrentUser())
   ))
 );
+
+//Pane 
+export const CHANGE_PANE = 'CHANGE_PANE';
+
+const changePane = pane => ({
+  type: CHANGE_PANE,
+  pane
+});
+
+export const updatePane = pane => dispatch => (
+  dispatch(changePane(pane))
+);
