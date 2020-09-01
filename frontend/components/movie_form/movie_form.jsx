@@ -1,5 +1,12 @@
 import React from 'react';
 
+const GENRES = [
+    'Action',
+    'Comedy',
+    'Documentary',
+    'Horror'
+]
+
 class MovieForm extends React.Component {
     constructor(props) {
         super(props);
@@ -7,7 +14,8 @@ class MovieForm extends React.Component {
         this.state = {
             title: '',
             run_time: '',
-            desc: ''
+            desc: '',
+            genre: ''
         }
 
         this.handleSubmit = this.handleSubmit.bind(this);
@@ -17,6 +25,10 @@ class MovieForm extends React.Component {
         return e => this.setState({
             [field]: e.target.value
         })
+    }
+
+    updateGenre(e) {
+        this.setState({ genre: e.currentTarget.value });
     }
 
     handleSubmit(e) {
@@ -48,6 +60,17 @@ class MovieForm extends React.Component {
                     </label>
 
                     <br/>
+
+                    <label>Genre
+                        <select onChange={(e) => this.updateGenre(e)}>
+                            <option value="" disabled selected={true}>Select A Genre</option>
+                            {
+                                GENRES.map((genre, idx) => (
+                                    <option value={genre} key={idx}>{genre}</option>
+                                ))
+                            }
+                        </select>
+                    </label>
 
                     <label>Movie Description
                         <br/>

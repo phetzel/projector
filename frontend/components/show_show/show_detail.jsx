@@ -77,8 +77,17 @@ class ShowDetail extends React.Component {
                     </div>
                 </div>
 
-                <h6>Runtime</h6>
-                <p>{displayTimeLength(movie.run_time)}</p>
+                <div className="show-detail-movie">
+                    <div className="show-detail-runtime">
+                        <h6>Runtime</h6>
+                        <p>{displayTimeLength(movie.run_time)}</p>
+                    </div>
+                    <div className="show-detail-genre">
+                        <h6>Genre</h6>
+                        <p>{movie.genre}</p>
+                    </div>
+                </div>
+
                 <h6>Movie Description:</h6>
                 <p>{movie.desc}</p>
                 <h6>Additional Venue Details:</h6>
