@@ -21,13 +21,15 @@ ActiveRecord::Base.transaction do
     Movie.create!(
         id: "1",
         title: "Titanic",
-        run_time: "1:10:00"
+        run_time: "1:10:00",
+        genre: "Horror"
     )
 
     Movie.create!(
         id: "2",
         title: "Air Bud",
-        run_time: "2:10:00"
+        run_time: "2:10:00",
+        genre: "Action"
     )
     
     Show.destroy_all
@@ -35,27 +37,27 @@ ActiveRecord::Base.transaction do
     Show.create!(
         id: "1",
         movie_id: "1",
-        date: "2020-8-3",
+        date: "2020-9-1",
         time: "12:00:00",
         lat: "37.817980",
         lng: "-122.278220",
-        address: "whatever"
+        address: "123 Street"
     )
     
     Show.create!(
         id: "2",
         movie_id: "1",
-        date: "2020-3-8",
+        date: "2020-2-9",
         time: "12:00:00",
         lat: "37.810805",
         lng: "-122.291081",
-        address: "whatever"
+        address: "456 Avenue"
     )
 
     Show.create!(
         id: "3",
         movie_id: "2",
-        date: "2020-8-8",
+        date: "2020-3-9",
         time: "12:00:00",
         lat: "37.810881",
         lng: "-122.296499",
