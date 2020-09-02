@@ -2,10 +2,15 @@ class Api::ShowsController < ApplicationController
 
     def index
         shows = bounds ? Show.in_bounds(bounds) : Show.all
-
         shows = shows.where(date: date)
 
-        @shows = shows.includes(:movie)
+        shows = shows.includes(:movie)
+
+        if genre != ""
+            shows = shows.select{ |show| show.movie.genre  == genre }
+        end 
+
+        @shows = shows
         render :index
     end 
 
@@ -43,6 +48,10 @@ class Api::ShowsController < ApplicationController
     end 
 
     def date
-        (params[:date])
+        params[:date]
     end
+
+    def genre
+        params[:genre]
+    end 
 end
