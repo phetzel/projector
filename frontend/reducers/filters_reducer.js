@@ -2,7 +2,8 @@ import { UPDATE_FILTER } from '../actions/filter_actions';
 
 const defaultFilters = Object.freeze({
     bounds: {},
-    date: new Date()
+    date: new Date(),
+    genre: ''
 });
 
 const filtersReducer = (state = defaultFilters, action) => {

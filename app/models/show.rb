@@ -14,6 +14,9 @@ class Show < ApplicationRecord
       .where("lng < ?", bounds[:northEast][:lng])
   end
 
+  def genre
+    self.movie.genre
+  end
   
 end
 

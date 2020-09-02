@@ -2,6 +2,8 @@
     padding: 50px;
     background-color: #D4C9ED;
     height: calc(85% - 36px);
+    display: flex;
+    justify-content: space-between;
 }
 
 .filter-form h1 {
@@ -14,4 +16,8 @@
     font-size: 25px;
     margin: 10px 0;
     color: #224768;
+}
+
+.filter-form select {
+    margin-left: 15px;
 }
