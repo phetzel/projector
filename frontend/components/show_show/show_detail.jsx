@@ -50,7 +50,7 @@ class ShowDetail extends React.Component {
         const { show, userId } = this.props;
         const movie = show ? show.movie : null;
 
-        const attendPanel = show.attending && userId ? (
+        const attendPanel = show && show.attending && userId ? (
             <div className="show-detail-attend">
                 <p>Attending: { show.attending.length }</p>
                 {this.handleAttendRender()}
