@@ -16,10 +16,15 @@
     margin-top: 25px;
     margin-left: 100px;
     height: 90%;
+    width: 50%;
 }
 
 .user-shows-lists {
     display: flex;
+}
+
+.user-shows-past, .user-shows-future {
+    width: 50%;
 }
 
 .user-shows-lists ul {
@@ -37,6 +42,16 @@
 
 .user-show-li {
     margin: 20px 50px;
+    cursor: pointer;
+    width: 400px;
+}
+
+.user-show-li:hover {
+    background-color: #F0F1FA;
+    padding-left: 5px;
+    p {
+        padding-left: 10px;
+    }
 }
 
 .user-show-li h6 {
