@@ -1,3 +1,58 @@
 // Place all the styles related to the api/users controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.user {
+    margin: 150px 0 0 50px;
+    display: flex;
+    height: 500px;
+}
+
+.user img {
+    height: 150px;
+}
+
+.user-shows {
+    margin-top: 25px;
+    margin-left: 100px;
+    height: 90%;
+}
+
+.user-shows-lists {
+    display: flex;
+}
+
+.user-shows-lists ul {
+    max-height: 450px;
+    overflow: scroll;
+}
+
+.user-shows h3 {
+    color: #197096;
+    font-family: Proxima Nova, sans-serif;
+    font-weight: 500;
+    font-size: 30px;
+    margin-bottom: 15px;
+}
+
+.user-show-li {
+    margin: 20px 50px;
+}
+
+.user-show-li h6 {
+    font-family: Proxima Nova, sans-serif;
+    font-size: 20px;
+}
+
+.user-show-li-details {
+    margin-top: 10px;
+}
+
+.user-show-li-when {
+    display: flex;
+    margin-top: 5px;
+}
+
+.user-show-li-when p {
+    margin-right: 10px;
+}

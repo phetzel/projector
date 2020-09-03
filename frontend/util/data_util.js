@@ -18,7 +18,7 @@ export const displayTimeDay = time => {
 
     const seconds = splitTime[2].substring(0,2);
 
-    return `${hours}:${splitTime[1]}:${seconds} ${ap}`;
+    return `${hours}:${splitTime[1]} ${ap}`;
 }
 
 export const displayTimeLength = time => {
@@ -36,7 +36,7 @@ export const displayTimeLength = time => {
 
 export const revDate = date => {
     const newDate = date.split('-');
-    return `${newDate[2]}-${newDate[1]}-${newDate[0]}`;
+    return `${newDate[1]}-${newDate[2]}-${newDate[0]}`;
 }
 
 
