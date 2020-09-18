@@ -15,6 +15,7 @@ ActiveRecord::Base.transaction do
         email: "admin",
         password: "admin1"
     )
+<<<<<<< HEAD
 
     User.create!(
         id: "2",
@@ -33,6 +34,8 @@ ActiveRecord::Base.transaction do
         email: "lastguy",
         password: "123456"
     )
+=======
+>>>>>>> 6f667586c35845e558cdaf889cbc48a61e1e3774
     
     Movie.destroy_all
 
@@ -40,16 +43,21 @@ ActiveRecord::Base.transaction do
         id: "1",
         title: "Titanic",
         run_time: "1:10:00",
+<<<<<<< HEAD
         genre: "Horror",
         desc: "A fun family cruise gets turned upside down by a sneaky iceburg. "
                 # Titanic is the first in the legendary horror triledge, which includes 
                 # Titanic 2: Electric Boogaloo, and Jaws Vs. Titanic: The Crossover Movie!
+=======
+        genre: "Horror"
+>>>>>>> 6f667586c35845e558cdaf889cbc48a61e1e3774
     )
 
     Movie.create!(
         id: "2",
         title: "Air Bud",
         run_time: "2:10:00",
+<<<<<<< HEAD
         genre: "Action",
         desc: " An actual real life dog disregards all youth sporting 
             regulations on his way to many sports comebacks"
@@ -72,13 +80,20 @@ ActiveRecord::Base.transaction do
         title: "Funny",
         run_time: "2:11:40",
         genre: "Comedy"
+=======
+        genre: "Action"
+>>>>>>> 6f667586c35845e558cdaf889cbc48a61e1e3774
     )
     
     Show.destroy_all
 
     Show.create!(
         id: "1",
+<<<<<<< HEAD
         movie_id: "3",
+=======
+        movie_id: "1",
+>>>>>>> 6f667586c35845e558cdaf889cbc48a61e1e3774
         date: "2020-9-1",
         time: "12:00:00",
         lat: "37.817980",
@@ -89,7 +104,11 @@ ActiveRecord::Base.transaction do
     Show.create!(
         id: "2",
         movie_id: "1",
+<<<<<<< HEAD
         date: "2020-9-2",
+=======
+        date: "2020-2-9",
+>>>>>>> 6f667586c35845e558cdaf889cbc48a61e1e3774
         time: "12:00:00",
         lat: "37.810805",
         lng: "-122.291081",
@@ -99,13 +118,20 @@ ActiveRecord::Base.transaction do
     Show.create!(
         id: "3",
         movie_id: "2",
+<<<<<<< HEAD
         date: "2020-9-3",
+=======
+        date: "2020-3-9",
+>>>>>>> 6f667586c35845e558cdaf889cbc48a61e1e3774
         time: "12:00:00",
         lat: "37.810881",
         lng: "-122.296499",
         address: "whatever"
     )
+<<<<<<< HEAD
 
     Follow.destroy_all
     Friend.destroy_all
+=======
+>>>>>>> 6f667586c35845e558cdaf889cbc48a61e1e3774
 end 
