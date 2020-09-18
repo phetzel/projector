@@ -10,11 +10,14 @@ class Api::UsersController < ApplicationController
         end 
     end
 
+<<<<<<< HEAD
     def index
         @users = User.all
         render :index
     end
 
+=======
+>>>>>>> 6f667586c35845e558cdaf889cbc48a61e1e3774
     def show
         @user = User.find(params[:id])
     end
