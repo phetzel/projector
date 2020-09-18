@@ -15,6 +15,24 @@ ActiveRecord::Base.transaction do
         email: "admin",
         password: "admin1"
     )
+
+    User.create!(
+        id: "2",
+        email: "guy",
+        password: "123456"
+    )
+
+    User.create!(
+        id: "3",
+        email: "otherguy",
+        password: "123456"
+    )
+
+    User.create!(
+        id: "4",
+        email: "lastguy",
+        password: "123456"
+    )
     
     Movie.destroy_all
 
@@ -22,21 +40,45 @@ ActiveRecord::Base.transaction do
         id: "1",
         title: "Titanic",
         run_time: "1:10:00",
-        genre: "Horror"
+        genre: "Horror",
+        desc: "A fun family cruise gets turned upside down by a sneaky iceburg. "
+                # Titanic is the first in the legendary horror triledge, which includes 
+                # Titanic 2: Electric Boogaloo, and Jaws Vs. Titanic: The Crossover Movie!
     )
 
     Movie.create!(
         id: "2",
         title: "Air Bud",
         run_time: "2:10:00",
-        genre: "Action"
+        genre: "Action",
+        desc: " An actual real life dog disregards all youth sporting 
+            regulations on his way to many sports comebacks"
+    )
+
+    Movie.create!(
+        id: "3",
+        title: "Ken Burns: Baseball, the Civil War, and Vietnam combo mix",
+        run_time: "11:11:40",
+        genre: "Documentary",
+        desc: "Highlights of some of documentary pioneer Ken Burn's greatest works."
+    #         For the first time ever, watch parts of all three of these works intertwined.
+    #         This allows proper appreciation for the vast array of accents that Ken 
+    #         puts on when he reads someones private letters.
+    #         What's that? Oh just the maestro slowly zooming in on a photo. A can't miss.
+    )
+
+    Movie.create!(
+        id: "4",
+        title: "Funny",
+        run_time: "2:11:40",
+        genre: "Comedy"
     )
     
     Show.destroy_all
 
     Show.create!(
         id: "1",
-        movie_id: "1",
+        movie_id: "3",
         date: "2020-9-1",
         time: "12:00:00",
         lat: "37.817980",
@@ -47,7 +89,7 @@ ActiveRecord::Base.transaction do
     Show.create!(
         id: "2",
         movie_id: "1",
-        date: "2020-2-9",
+        date: "2020-9-2",
         time: "12:00:00",
         lat: "37.810805",
         lng: "-122.291081",
@@ -57,10 +99,13 @@ ActiveRecord::Base.transaction do
     Show.create!(
         id: "3",
         movie_id: "2",
-        date: "2020-3-9",
+        date: "2020-9-3",
         time: "12:00:00",
         lat: "37.810881",
         lng: "-122.296499",
         address: "whatever"
     )
+
+    Follow.destroy_all
+    Friend.destroy_all
 end 

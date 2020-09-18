@@ -8,8 +8,10 @@ class User < ApplicationRecord
     after_initialize :ensure_session_token
 
     has_many :follows
+    has_many :friends
 
     has_many :shows, through: :follows, source: :show
+    has_many :companions, through: :friends, source: :friend
 
 
     def self.find_by_credentials(email, password)
