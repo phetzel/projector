@@ -9,15 +9,10 @@ class UserIndex extends React.Component {
     }
 
     componentDidMount() {
-        const { fetchUser, id } = this.props;
+        const { fetchUser, id, updateUsersFilter } = this.props;
         
-        this.handleAsync();
+        updateUsersFilter('userEmail', '');
         fetchUser(id);
-    }
-
-    handleAsync(type) {
-        const { fetchUsers } = this.props;
-        return fetchUsers();
     }
 
     isFriend(user) {
@@ -35,26 +30,38 @@ class UserIndex extends React.Component {
         return already;
     }
 
+    handleSearch(e) {
+        const { updateUsersFilter } = this.props;
+        updateUsersFilter('userEmail', e.currentTarget.value);
+    }
+
     render() {
         const { users, befriend, unfriend } = this.props;
 
         return (
-            <div>
+            <div className="user-index">
+
                 <h1>Search</h1>
-                <input type="text"/>
-                <ul>
-                    {
-                        users.map((user, idx) => (
-                            <UserIndexItem 
-                                key={idx} 
-                                user={user} 
-                                befriend={befriend}
-                                unfriend={unfriend}
-                                friended={this.isFriend(user)}
-                            />
-                        ))
-                    }
-                </ul>
+                <input 
+                    type="text"
+                    onChange={(e) => this.handleSearch(e)}
+                    placeholder="Search By Email"/>
+
+                <div className="user-index-results">
+                    <ul>
+                        {
+                            users.map((user, idx) => (
+                                <UserIndexItem
+                                    key={idx}
+                                    user={user}
+                                    befriend={befriend}
+                                    unfriend={unfriend}
+                                    friended={this.isFriend(user)}
+                                />
+                            ))
+                        }
+                    </ul>
+                </div>
             </div>
         )
     }

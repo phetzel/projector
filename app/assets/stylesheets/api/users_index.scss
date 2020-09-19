@@ -1,0 +1,27 @@
+.user-index {
+    margin: 150px 50px;
+}
+
+.user-index h1 {
+    color: #197096;
+    font-family: Proxima Nova, sans-serif;
+    font-weight: 500;
+    font-size: 45px;
+    margin-bottom: 5px;
+}
+
+.user-index input {
+    width: 75%;
+    margin-left: 75px;
+    border: 0;
+    border-bottom: 2px solid gray;
+    outline: 0;
+    font-size: 1.3rem;
+    padding: 7px;
+    margin-bottom: 40px;
+}
+
+.user-index-results {
+    display: flex;
+    justify-content: center;
+}

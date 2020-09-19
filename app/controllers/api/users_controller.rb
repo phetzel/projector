@@ -10,25 +10,30 @@ class Api::UsersController < ApplicationController
         end 
     end
 
-<<<<<<< HEAD
     def index
-        @users = User.all
+        
+        if user_email != ""
+            users = User.all
+            @users = users.where('email LIKE ?', "%#{user_email}%")
+                .or(users.where(id: current_user))
+        else
+            @users = User.where(id: current_user)
+        end
+
         render :index
     end
 
-=======
->>>>>>> 6f667586c35845e558cdaf889cbc48a61e1e3774
     def show
         @user = User.find(params[:id])
     end
 
-    def index
-        @users = User.all
-    end 
 
     private
     def user_params
         params.require(:user).permit(:email, :password)
     end
 
+    def user_email
+        params[:userEmail]
+    end 
 end

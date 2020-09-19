@@ -18,11 +18,7 @@ class UserShowListItem extends React.Component {
             lat: `${show.lat}`,
             lng: `${show.lng}`
         });
-<<<<<<< HEAD
     }
-=======
-}
->>>>>>> 6f667586c35845e558cdaf889cbc48a61e1e3774
 
     render() {
         const { show } = this.props;
