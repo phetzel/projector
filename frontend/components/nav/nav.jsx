@@ -18,12 +18,9 @@ class Nav extends React.Component {
 
         const loggedIn = () => (
             <nav className="nav-logged-in">
-<<<<<<< HEAD
                 <Link className="nav-user" to={`/user/${currentUser.id}`}>
-=======
-                <Link className="nav-user" to="/user">
->>>>>>> 6f667586c35845e558cdaf889cbc48a61e1e3774
-                    <p>{currentUser.email}</p>
+                    {/* <p>{currentUser.email}</p> */}
+                    <p>&#127968;</p>
                 </Link>
                 <button
                     className="user-nav"
