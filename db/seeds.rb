@@ -6,6 +6,7 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
+require 'faker'
 
 ActiveRecord::Base.transaction do
     User.destroy_all
@@ -15,27 +16,17 @@ ActiveRecord::Base.transaction do
         email: "admin",
         password: "admin1"
     )
-<<<<<<< HEAD
 
-    User.create!(
-        id: "2",
-        email: "guy",
-        password: "123456"
-    )
+    x = 2
+    while x <= 50
+        User.create!(
+            id: x,
+            email: Faker::Internet.safe_email,
+            password: Faker::Internet.password(min_length: 8)
+        )
+        x += 1
+    end 
 
-    User.create!(
-        id: "3",
-        email: "otherguy",
-        password: "123456"
-    )
-
-    User.create!(
-        id: "4",
-        email: "lastguy",
-        password: "123456"
-    )
-=======
->>>>>>> 6f667586c35845e558cdaf889cbc48a61e1e3774
     
     Movie.destroy_all
 
@@ -43,21 +34,16 @@ ActiveRecord::Base.transaction do
         id: "1",
         title: "Titanic",
         run_time: "1:10:00",
-<<<<<<< HEAD
         genre: "Horror",
         desc: "A fun family cruise gets turned upside down by a sneaky iceburg. "
                 # Titanic is the first in the legendary horror triledge, which includes 
                 # Titanic 2: Electric Boogaloo, and Jaws Vs. Titanic: The Crossover Movie!
-=======
-        genre: "Horror"
->>>>>>> 6f667586c35845e558cdaf889cbc48a61e1e3774
     )
 
     Movie.create!(
         id: "2",
         title: "Air Bud",
         run_time: "2:10:00",
-<<<<<<< HEAD
         genre: "Action",
         desc: " An actual real life dog disregards all youth sporting 
             regulations on his way to many sports comebacks"
@@ -65,73 +51,140 @@ ActiveRecord::Base.transaction do
 
     Movie.create!(
         id: "3",
-        title: "Ken Burns: Baseball, the Civil War, and Vietnam combo mix",
+        title: "Ken Burns: Combo Mix",
         run_time: "11:11:40",
         genre: "Documentary",
         desc: "Highlights of some of documentary pioneer Ken Burn's greatest works."
-    #         For the first time ever, watch parts of all three of these works intertwined.
-    #         This allows proper appreciation for the vast array of accents that Ken 
-    #         puts on when he reads someones private letters.
-    #         What's that? Oh just the maestro slowly zooming in on a photo. A can't miss.
     )
 
     Movie.create!(
         id: "4",
-        title: "Funny",
+        title: "Mr. Bean",
         run_time: "2:11:40",
-        genre: "Comedy"
-=======
-        genre: "Action"
->>>>>>> 6f667586c35845e558cdaf889cbc48a61e1e3774
+        genre: "Comedy",
+        desc: "A European man goes about his normal life"
     )
     
     Show.destroy_all
 
-    Show.create!(
-        id: "1",
-<<<<<<< HEAD
-        movie_id: "3",
-=======
-        movie_id: "1",
->>>>>>> 6f667586c35845e558cdaf889cbc48a61e1e3774
-        date: "2020-9-1",
-        time: "12:00:00",
-        lat: "37.817980",
-        lng: "-122.278220",
-        address: "123 Street"
-    )
-    
-    Show.create!(
-        id: "2",
-        movie_id: "1",
-<<<<<<< HEAD
-        date: "2020-9-2",
-=======
-        date: "2020-2-9",
->>>>>>> 6f667586c35845e558cdaf889cbc48a61e1e3774
-        time: "12:00:00",
-        lat: "37.810805",
-        lng: "-122.291081",
-        address: "456 Avenue"
-    )
+    LOCATIONS = [
+        ["37.81590577007779", "-122.29408293546018", "1689 20th St, Oakland, CA 94607, USA"],
+        ["37.80721551868806", "-122.26354732586731", "274 19th St, Oakland, CA 94612, USA"],
+        ["37.761708235486665", "-122.23999438887596", "1343 Broadway, Alameda, CA 94501, USA"],
+        ["37.774857747654195", "-122.29770008981659", "167 W Oriskany Ave, Alameda, CA 94501, USA"],
+        ["37.774831403529475", "-122.37250833995935", "750 Avenue E, San Francisco, CA 94130, USA"],
+        ["37.774831403529475", "-122.50927288427883", "715 48th Ave, San Francisco, CA 94121, USA"],
+        ["37.7666605482608", "-122.48604710814286", "1017 Martin Luther King Jr Dr, San Francisco, CA 94122, USA"],
+        ["37.742349918001054", "-122.49610480071176", "2392 38th Ave, San Francisco, CA 94116, USA"],
+        ["37.75496281744379", "-122.41637300400932", "1141 S Van Ness Ave, San Francisco, CA 94110, USA"],
+        ["37.79743792804442", "-122.39868307116583", "Sydney G. Walton Square, San Francisco, CA 94111, USA"],
+        ["37.87022365917184", "-122.27776118498203", "1687 Addison St, Berkeley, CA 94703, USA"],
+        ["37.8801505188811", "-122.28528883076898", "1409 Hopkins St, Berkeley, CA 94702, USA"]
+    ]
 
-    Show.create!(
-        id: "3",
-        movie_id: "2",
-<<<<<<< HEAD
-        date: "2020-9-3",
-=======
-        date: "2020-3-9",
->>>>>>> 6f667586c35845e558cdaf889cbc48a61e1e3774
-        time: "12:00:00",
-        lat: "37.810881",
-        lng: "-122.296499",
-        address: "whatever"
-    )
-<<<<<<< HEAD
+    TIMES = ["12:00:00", "18:00:00", "20:00:00", "22:00:00"]
+
+    x = 1
+
+    while x < 150
+        time = TIMES.sample
+        location = LOCATIONS.sample
+        day = x % 31
+        if day == 0
+            day = 1
+        end
+
+        Show.create!(
+            id: x,
+            movie_id: 1 + rand(4),
+            date: "2020-9-#{day}",
+            time: time,
+            lat: location[0],
+            lng: location[1],
+            address: location[2]
+        )
+
+        x += 1
+    end
+
+    while x < 300
+        time = TIMES.sample
+        location = LOCATIONS.sample
+        day = x % 31
+        if day == 0
+            day = 1
+        end
+
+
+        Show.create!(
+            id: x,
+            movie_id: 1 + rand(4),
+            date: "2020-10-#{day}",
+            time: time,
+            lat: location[0],
+            lng: location[1],
+            address: location[2]
+        )
+
+        x += 1
+    end
+
+    while x < 450
+        time = TIMES.sample
+        location = LOCATIONS.sample
+        day = x % 31
+        if day == 0
+            day = 1
+        end
+
+        Show.create!(
+            id: x,
+            movie_id: 1 + rand(4),
+            date: "2020-11-#{day}",
+            time: time,
+            lat: location[0],
+            lng: location[1],
+            address: location[2]
+        )
+
+        x += 1
+    end
+
+    while x <= 600
+        time = TIMES.sample
+        location = LOCATIONS.sample
+        day = x % 31
+        if day == 0
+            day = 1
+        end
+
+        Show.create!(
+            id: x,
+            movie_id: 1 + rand(4),
+            date: "2020-12-#{day}",
+            time: time,
+            lat: location[0],
+            lng: location[1],
+            address: location[2]
+        )
+
+        x += 1
+    end
+    
 
     Follow.destroy_all
+
+    x = 1
+    
+    while x <= 200
+        Follow.create!(
+            id: x,
+            user_id: 1 + rand(50),
+            show_id: 1 + rand(600)
+        )
+        
+        x += 1
+    end
+
     Friend.destroy_all
-=======
->>>>>>> 6f667586c35845e558cdaf889cbc48a61e1e3774
 end 

@@ -10,11 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-<<<<<<< HEAD
 ActiveRecord::Schema.define(version: 2020_09_04_002049) do
-=======
-ActiveRecord::Schema.define(version: 2020_09_01_175044) do
->>>>>>> 6f667586c35845e558cdaf889cbc48a61e1e3774
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -26,7 +22,6 @@ ActiveRecord::Schema.define(version: 2020_09_01_175044) do
     t.datetime "updated_at", null: false
   end
 
-<<<<<<< HEAD
   create_table "friends", force: :cascade do |t|
     t.integer "user_id", null: false
     t.integer "friend_id", null: false
@@ -34,8 +29,6 @@ ActiveRecord::Schema.define(version: 2020_09_01_175044) do
     t.datetime "updated_at", null: false
   end
 
-=======
->>>>>>> 6f667586c35845e558cdaf889cbc48a61e1e3774
   create_table "movies", force: :cascade do |t|
     t.string "title", null: false
     t.time "run_time", null: false
