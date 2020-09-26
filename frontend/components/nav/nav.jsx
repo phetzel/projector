@@ -18,8 +18,10 @@ class Nav extends React.Component {
 
         const loggedIn = () => (
             <nav className="nav-logged-in">
+                <Link className="nav-user" to={`/users/add`}>
+                    <p>&#128269;</p>
+                </Link>
                 <Link className="nav-user" to={`/user/${currentUser.id}`}>
-                    {/* <p>{currentUser.email}</p> */}
                     <p>&#127968;</p>
                 </Link>
                 <button

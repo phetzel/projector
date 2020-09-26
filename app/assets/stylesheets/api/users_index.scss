@@ -1,5 +1,8 @@
 .user-index {
-    margin: 150px 50px;
+    margin: 150px 0px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .user-index h1 {
@@ -7,12 +10,11 @@
     font-family: Proxima Nova, sans-serif;
     font-weight: 500;
     font-size: 45px;
-    margin-bottom: 5px;
+    margin-bottom: 15px;
 }
 
 .user-index input {
     width: 75%;
-    margin-left: 75px;
     border: 0;
     border-bottom: 2px solid gray;
     outline: 0;
@@ -24,4 +26,56 @@
 .user-index-results {
     display: flex;
     justify-content: center;
+}
+
+
+.user-index-results li {
+    margin-top: 10px;
+    width: 350px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.user-index-item button {
+    box-shadow: 0px 10px 14px -7px #276873;
+	background: linear-gradient(to bottom, #599bb3 5%, #408c99 100%);
+	background-color: #599bb3;
+	border-radius: 8px;
+	display: inline-block;
+	cursor: pointer;
+	color: #ffffff;
+	font-family: Arial;
+	font-size: 12px;
+	font-weight: bold;
+	padding: 3px 9px;
+	text-decoration: none;
+    text-shadow: 0px 1px 0px #3d768a;
+}
+
+.user-index-nav button {
+    box-shadow: 0px 10px 14px -7px #276873;
+	background: linear-gradient(to bottom, #599bb3 5%, #408c99 100%);
+	background-color: #599bb3;
+	border-radius: 8px;
+	display: inline-block;
+	cursor: pointer;
+	color: #ffffff;
+	font-family: Arial;
+	font-size: 15px;
+	font-weight: bold;
+	padding: 9px 27px;
+	text-decoration: none;
+    text-shadow: 0px 1px 0px #3d768a;
+    margin: 20px 10px
+}
+
+.user-index-nav button:hover, .user-index-item button:hover {
+    background: linear-gradient(to bottom, #408c99 5%, #599bb3 100%);
+	background-color: #408c99;
+}
+
+.user-index-nav button:active, .user-index-item button:hover {
+    outline: none;
+	position: relative;
+	top: 1px;
 }
