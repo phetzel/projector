@@ -14,8 +14,8 @@ class Api::UsersController < ApplicationController
         
         if user_email != ""
             users = User.all
-            @users = users.where('email LIKE ?', "%#{user_email}%")
-                .or(users.where(id: current_user))
+            @users = users.where(id: current_user)
+                .or(users.where('email LIKE ?', "%#{user_email}%")).limit(10)
         else
             @users = User.where(id: current_user)
         end

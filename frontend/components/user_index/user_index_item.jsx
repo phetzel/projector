@@ -22,7 +22,6 @@ class UserIndexItem extends React.Component {
 
     render() {
         const { user, friended } = this.props;
-        console.log(friended);
         const friend = friended ? (
             <button onClick={this.handleRemove}>Remove</button>
         ) : (
@@ -30,7 +29,7 @@ class UserIndexItem extends React.Component {
         )
 
         return (
-            <li>
+            <li className = "user-index-item">
                 {user.email}
                 {friend}
             </li>
