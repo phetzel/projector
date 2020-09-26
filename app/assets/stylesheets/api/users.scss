@@ -9,15 +9,22 @@
     height: 500px;
 }
 
+.user-info h1 {
+    max-width: 200px;
+    overflow: hidden;
+    font-size: 25px;
+    margin-top: 20px;
+}
+
 .user img {
     height: 150px;
 }
 
 .user-shows {
     margin-top: 25px;
-    margin-left: 100px;
+    margin-left: 50px;
     height: 90%;
-    width: 66%;
+    width: 60%;
 }
 
 .user-shows-lists {
@@ -59,7 +66,7 @@
     color: #197096;
     font-family: Proxima Nova, sans-serif;
     font-weight: 500;
-    font-size: 30px;
+    font-size: 25px;
     margin-bottom: 15px;
 }
 
@@ -77,9 +84,14 @@
     }
 }
 
-.user-show-li h6 {
+.user-show-li h5 {
     font-family: Proxima Nova, sans-serif;
     font-size: 20px;
+}
+
+.user-show-li h6 {
+    font-family: Proxima Nova, sans-serif;
+    font-size: 15px;
 }
 
 .user-show-li-details {
