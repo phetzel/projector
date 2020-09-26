@@ -12,8 +12,8 @@ class UserShowListItem extends React.Component {
 
     handleClick() {
         const { show } = this.props;
-        this.props.history.push({
-            pathname: `shows/${show.id}`,
+        this.props.history.replace({
+            pathname: `/shows/${show.id}`,
             search: `lat=${show.lat}&lng=${show.lng}`,
             lat: `${show.lat}`,
             lng: `${show.lng}`
@@ -24,7 +24,7 @@ class UserShowListItem extends React.Component {
         const { show } = this.props;
         return (
             <li className="user-show-li" onClick={this.handleClick}>
-                <h6>{show.movie.title}</h6>
+                <h5>{show.movie.title}</h5>
                 <div className="user-show-li-details">
                     <p>{show.address}</p>
 
