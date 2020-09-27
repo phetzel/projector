@@ -17,6 +17,10 @@ class Show < ApplicationRecord
   def genre
     self.movie.genre
   end
+
+  def self.in_timeframe(time)
+
+  end
   
 end
 

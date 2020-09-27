@@ -10,6 +10,18 @@ class Api::ShowsController < ApplicationController
             shows = shows.select{ |show| show.movie.genre  == genre }
         end 
 
+        if time == "Morning"
+            shows = shows.select{ |show| show.time.strftime('%H:%M:%S') < '12:00:00' }
+        end
+
+        if time == "Afternoon"
+            shows = shows.select{ |show| show.time.strftime('%H:%M:%S') >= '12:00:00' && show.time.strftime('%H:%M:%S') < '20:00:00' }
+        end 
+
+        if time == "Night"
+            shows = shows.select{ |show| show.time.strftime('%H:%M:%S') >= '20:00:00' }
+        end
+        
         @shows = shows
         render :index
     end 
@@ -54,4 +66,8 @@ class Api::ShowsController < ApplicationController
     def genre
         params[:genre]
     end 
+
+    def time
+        params[:time]
+    end
 end

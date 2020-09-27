@@ -20,4 +20,11 @@
 
 .filter-form select {
     margin-left: 15px;
+    margin-bottom: 30px;
+}
+
+.filter-form-dropdown {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }

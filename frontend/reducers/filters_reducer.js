@@ -4,6 +4,7 @@ const defaultFilters = Object.freeze({
     bounds: {},
     date: new Date(),
     genre: '',
+    time: '',
     userEmail: ''
 });
 
