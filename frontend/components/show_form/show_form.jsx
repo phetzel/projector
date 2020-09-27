@@ -1,6 +1,7 @@
 import React from 'react';
 import { withRouter } from 'react-router';
 
+
 import Calendar from 'react-calendar';
 
 class ShowForm extends React.Component {
@@ -10,9 +11,7 @@ class ShowForm extends React.Component {
 
         this.state = {
             movie_id: '',
-            hr: '',
-            min: '',
-            sec: '',
+            time: '12:00:00',
             date: new Date(),
             desc: '',
             lat: this.coords.lat,
@@ -35,12 +34,30 @@ class ShowForm extends React.Component {
     update(field) {
         return e => this.setState({
             [field]: e.target.value
-        })
+        });
+    }
+
+    updateTime(field) {
+        const { time } = this.state;
+        let timeArr = time.split(':');
+
+        return e => {
+            if (field === 'hours') {
+                timeArr[0] = e.target.value;
+            } else if (field === 'minutes') {
+                timeArr[1] = e.target.value;
+            }
+
+            this.setState({
+                time: timeArr.join(':')
+            });
+        }
     }
 
     updateDate(date) {
         this.setState({date});
     }
+
 
     updateMovie(e) {
         this.setState({ movie_id: e.currentTarget.value });
@@ -48,6 +65,8 @@ class ShowForm extends React.Component {
 
     handleSubmit(e) {
         e.preventDefault();
+
+
         this.props.createShow(this.state);
         this.navigateToSearch();
     }
@@ -62,9 +81,12 @@ class ShowForm extends React.Component {
             })
     }
 
+
     render() {
-        const { time, date, desc, lat, lng } = this.state;
+        const { date, desc, time}  = this.state;
         const { movies, openModal } = this.props;
+
+        const timeArr = time.split(':');
 
 
         return (
@@ -90,13 +112,23 @@ class ShowForm extends React.Component {
                         <label className="show-field">
                             Time
                             <br/>
-                        <input
-                                type="text"
-                                value={time}
-                                onChange={this.update('time')}
-                                className="show-field"
-                                required
-                            />
+
+                            <input
+                                    type="text"
+                                    value={timeArr[0]}
+                                    onChange={this.updateTime('hours')}
+                                    className="show-field"
+                                    required
+                                />
+
+                            <input
+                                    type="text"
+                                    value={timeArr[1]}
+                                    onChange={this.updateTime('minutes')}
+                                    className="show-field"
+                                    required
+                                />
+
                         </label>
 
                         <br />
