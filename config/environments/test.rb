@@ -1,4 +1,5 @@
 Rails.application.configure do
+  config.logger = ActiveSupport::Logger.new(config.paths['log'].first, 1, 50.megabytes)
   # Settings specified here will take precedence over those in config/application.rb.
 
   # The test environment is used exclusively to run your application's
