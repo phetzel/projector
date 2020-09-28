@@ -67,8 +67,8 @@ class ShowForm extends React.Component {
         e.preventDefault();
 
 
-        this.props.createShow(this.state);
-        this.navigateToSearch();
+        this.props.createShow(this.state)
+            .then(this.navigateToSearch);
     }
 
     getAddress() {
@@ -81,6 +81,17 @@ class ShowForm extends React.Component {
             })
     }
 
+    renderErrors() {
+        return (
+            <ul>
+                {this.props.errors.map((error, i) => (
+                    <li key={`error-${i}`} className="errors">
+                        {error}
+                    </li>
+                ))}
+            </ul>
+        );
+    }
 
     render() {
         const { date, desc, time}  = this.state;
@@ -164,6 +175,8 @@ class ShowForm extends React.Component {
                     </div>
 
                 </form>
+
+                {this.renderErrors()}
 
                 <div className="show-form-buttons">
                     <button

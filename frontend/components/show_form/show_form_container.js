@@ -9,7 +9,8 @@ import ShowForm from './show_form';
 const mSTP = (state, { location }) => ({
     lat: new URLSearchParams(location.search).get('lat'),
     lng: new URLSearchParams(location.search).get('lng'),
-    movies: asMoviesArray(state.entities)
+    movies: asMoviesArray(state.entities),
+    errors: state.errors.showErrors
 });
 
 const mDTP = dispatch => ({
