@@ -9,7 +9,8 @@ class UserFriendListItem extends React.Component {
     }
 
     handleClick() {
-        const { friend } = this.props;
+        const { friend, fetchUser } = this.props;
+        fetchUser(friend.id);
         this.props.history.push({
             pathname: `${friend.id}`
         });

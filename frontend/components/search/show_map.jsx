@@ -27,7 +27,7 @@ class ShowMap extends React.Component {
         } else {
             mapOptions = {
                 center: { lat: 37.801447, lng: -122.263685 },
-                zoom: 13
+                zoom: 8
             };
         }
 

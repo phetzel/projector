@@ -15,13 +15,13 @@ class UserShow extends React.Component {
         this.props.fetchUser(this.props.userId);
     }
 
-    componentDidUpdate() {
+    componentDidMount() {
         this.props.fetchUser(this.props.userId);
     }
 
 
     render() {
-        const { user, currentUser } = this.props;
+        const { user, currentUser, fetchUser } = this.props;
         const { today } = this.state;
 
         let passed = [];
@@ -52,7 +52,8 @@ class UserShow extends React.Component {
                             user.friends.map((friend, idx) => (
                                 <UserFriendListItem
                                     key={idx}
-                                    friend={friend} />
+                                    friend={friend} 
+                                    fetchUser={fetchUser}/>
                             ))
                         }
                     </ul>
