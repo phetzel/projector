@@ -4,6 +4,7 @@ import { followShow, unfollowShow } from '../util/follow_api_util';
 export const RECEIVE_SHOWS = "RECEIVE_SHOWS";
 export const RECEIVE_SHOW = "RECEIVE_SHOW";
 export const RECEIVE_SHOW_ERRORS = 'RECEIVE_SHOW_ERRORS';
+export const CLEAR_SHOW_ERRORS = "CLEAR_SHOW_ERRORS";
 
 const receiveShows = shows => ({
     type: RECEIVE_SHOWS,
@@ -18,6 +19,10 @@ const receiveShow = show => ({
 export const receiveErrors = errors => ({
     type: RECEIVE_SHOW_ERRORS,
     errors
+});
+
+export const clearErrors = () => ({
+    type: CLEAR_SHOW_ERRORS
 });
 
 export const fetchShows = filters => dispatch => (

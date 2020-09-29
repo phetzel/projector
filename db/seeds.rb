@@ -86,14 +86,19 @@ ActiveRecord::Base.transaction do
         ["37.97480008408769", "-122.0547834337739", "2090 Meridian Park Blvd, Concord, CA 94520, USA"],
         ["37.6897567511862", "-121.92027466031111", "7417 Stonedale Dr, Pleasanton, CA 94588, USA"],
         ["37.44417966371825", "-122.14865468448544", "618 Kingsley Ave, Palo Alto, CA 94301, USA"],
-        ["37.6460085365556", "-122.42393470543962", "11 Portola Ave, South San Francisco, CA 94080, USA"]
+        ["37.6460085365556", "-122.42393470543962", "11 Portola Ave, South San Francisco, CA 94080, USA"],
+        ["38.58292031127301", "-121.48910055734075", "630 12th St, Sacramento, CA 95814, USA"],
+        ["38.59574678401575", "-121.49953438049316", "328 Bannon St, Sacramento, CA 95811, USA"],
+        ["38.45823057841933", "-122.73000313049316", "347 Coddingtown Center, Santa Rosa, CA 95401, USA"],
+        ["37.80835609220777", "-121.20934268495783", "598 Tara Ct, Manteca, CA 95336, USA"],
+        ["37.32524965533875", "-121.89411002536559", "412 Auzerais Ave, San Jose, CA 95126, USA"],
     ]
 
     TIMES = ["10:00:00", "13:00:00", "17:00:00", "20:00:00", "22:00:00"]
 
     x = 1
 
-    while x < 150
+    while x < 200
         time = TIMES.sample
         location = LOCATIONS.sample
         day = x % 31
@@ -114,7 +119,7 @@ ActiveRecord::Base.transaction do
         x += 1
     end
 
-    while x < 300
+    while x < 400
         time = TIMES.sample
         location = LOCATIONS.sample
         day = x % 31
@@ -136,7 +141,7 @@ ActiveRecord::Base.transaction do
         x += 1
     end
 
-    while x < 450
+    while x < 600
         time = TIMES.sample
         location = LOCATIONS.sample
         day = x % 31
@@ -157,7 +162,7 @@ ActiveRecord::Base.transaction do
         x += 1
     end
 
-    while x <= 600
+    while x <= 800
         time = TIMES.sample
         location = LOCATIONS.sample
         day = x % 31
