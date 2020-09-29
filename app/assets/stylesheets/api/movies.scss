@@ -1,3 +1,13 @@
+.movie-form-container {
+    margin: 25px 0;
+}
+.movie-form {
+    width: 800px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 .movie-form-container h1 {
   color: #197096;
   font-family: Proxima Nova, sans-serif;
@@ -7,20 +17,20 @@
 }
 
 .movie-form label {
-    font-size: 12px;
+    font-size: 18px;
     font-weight: 300;
     color: #aaa;
     font-family: Proxima Nova,sans-serif;
 }
 
-.movie-form input {
+.movie-input {
     display: block;
     background-color: #bacae9;
     color:  #197096;
     border: none;
     border-bottom: 4px solid #eee;
     height: 30px;
-    width: 100%;
+    width: 400px;
 }
 
 .movie-form input:focus {
@@ -28,26 +38,45 @@
     border-bottom: 4px solid #197096;
 }
 
+.movie-form-mid {
+    display: flex;
+    width: 600px;
+    justify-content: space-around;
+    margin: 25px 0;
+}
+.movie-form-mid label {
+    display: flex;
+    flex-direction: column;
+}
+
+
+.movie-time select {
+    border: none;
+    border-bottom: 2px solid black;
+    background-color: #DCDCDC;
+    height: 30px;
+    appearance: none;
+    font-size: 100%;
+    cursor: pointer;
+    padding: 2.5px;
+    border-radius: 5%;
+}
+
+.movie-form textarea {
+    width: 400px;
+    height: 75px;
+}
+
 .movie-submit {
-    color: #ff8a47;
-    font-size: 14px;
-    font-weight: 700;
+    background-color: #256F49;
+    font-size: 12px;
+    font-weight: 600;
     height: 48px;
     border: none;
     border-radius: 36px;
     box-sizing: border-box;
+    color: #fff;
     cursor: pointer;
-    padding: 0 28.8px;
-}
-
-.movie-form-container a {
-    color: #28a5dc;
-    cursor: pointer;
-    font-size: 14px;
-    font-weight: 400;
-    font-family: Proxima Nova,sans-serif;
-}
-
-.movie-form-container a:hover {
-    text-decoration: underline;
+    padding: 15px 14.4px;
+    width: 91.2x;
 }

@@ -76,8 +76,6 @@ class ShowForm extends React.Component {
         const { time } = this.state;
         let timeArr = time.split(':');
 
-        console.log(time);
-
         return e => {
             if (field === 'hours') {
                 timeArr[0] = e.target.value;
@@ -173,9 +171,9 @@ class ShowForm extends React.Component {
                                     }
                                 </select>
 
-                            :
+                                :
 
-                            <select onChange={this.updateTime('minutes')}>
+                                <select onChange={this.updateTime('minutes')}>
                                     {
                                         minutes.map(m => (
                                             <option value={m} key={m}>{m}</option>
