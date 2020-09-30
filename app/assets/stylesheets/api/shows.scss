@@ -237,6 +237,6 @@
     width: 91.2x;
 }
 
-.show-form button:focus {
+.show-form-container button:focus, .show-form-container button:active  {
     outline: none;
 }

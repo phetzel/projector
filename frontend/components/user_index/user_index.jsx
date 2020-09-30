@@ -38,9 +38,10 @@ class UserIndex extends React.Component {
     }
 
     handleSearch(e) {
-        const { updateUsersFilter } = this.props;
+        const { updateUsersFilter, fetchUser, id } = this.props;
         this.setState({ input: e.currentTarget.value })
         updateUsersFilter('userEmail', e.currentTarget.value);
+        fetchUser(id);
     }
 
     handleProfile() {

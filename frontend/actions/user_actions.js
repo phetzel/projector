@@ -20,7 +20,7 @@ export const fetchUser = id => dispatch => (
     ))
 );
 
-export const fetchUsers = filters => dispatch => (
+export const fetchUsers = (filters) => dispatch => (
     APIUtil.fetchUsers(filters).then(users => (
         dispatch(receiveUsers(users))
     ))
