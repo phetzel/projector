@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 
 import UserShowListItem from './user_show_list_item';
 import UserFriendListItem from './user_friend_list_item';
+import { openModal } from '../../actions/modal_actions';
 
 class UserShow extends React.Component {
     constructor(props) {
@@ -19,16 +20,27 @@ class UserShow extends React.Component {
         this.props.fetchUser(this.props.userId);
     }
 
-
     render() {
-        const { user, currentUser, fetchUser } = this.props;
+        const { user, currentUser, fetchUser, openModal, userId } = this.props;
         const { today } = this.state;
+        const own = currentUser === userId;
 
         let passed = [];
         let future = [];
         let friends = null;
         let email = null;
-        let self = null;;
+        let self = null;
+        let image = own ? (
+            <img
+                className="user-info-own"
+                src={window.avatar}
+                alt="Avatar"
+                onClick={openModal} />
+        ) : (
+            <img
+                src={window.avatar}
+                alt="Avatar" />
+        );
 
         if (user) {
 
@@ -67,6 +79,15 @@ class UserShow extends React.Component {
                     </Link>
                 );
             }
+
+            if (user.photoUrl) {
+                own ? 
+                    image = <img 
+                        src={user.photoUrl} 
+                        onClick={openModal} 
+                        className="user-info-own"/> : 
+                    image = <img src={user.photoUrl} />;
+            }
         }
 
         const showings = (
@@ -100,7 +121,7 @@ class UserShow extends React.Component {
         return (
             <div className="user">
                 <div className="user-info">
-                    <img src={window.avatar} alt="Avatar" />
+                    {image}
                     <h1>{email}</h1>
                 </div>
 

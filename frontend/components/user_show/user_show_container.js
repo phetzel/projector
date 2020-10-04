@@ -1,6 +1,7 @@
 import { connect } from 'react-redux';
 
 import { fetchUser } from '../../actions/user_actions';
+import { openModal } from '../../actions/modal_actions';
 import UserShow from './user_show';
 
 const mSTP = (state, {match}) => {
@@ -13,7 +14,8 @@ const mSTP = (state, {match}) => {
 };
 
 const mDTP = dispatch => ({
-    fetchUser: id => dispatch(fetchUser(id))
+    fetchUser: id => dispatch(fetchUser(id)),
+    openModal: () => dispatch(openModal('user-photo'))
 })
 
 export default connect(

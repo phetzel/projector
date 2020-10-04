@@ -18,8 +18,9 @@ class UserIndex extends React.Component {
     componentDidMount() {
         const { fetchUser, id, updateUsersFilter } = this.props;
         
-        updateUsersFilter('userEmail', '');
-        fetchUser(id);
+        updateUsersFilter('userEmail', '').then(
+            fetchUser(id)
+        );
     }
 
     isFriend(user) {
@@ -40,8 +41,9 @@ class UserIndex extends React.Component {
     handleSearch(e) {
         const { updateUsersFilter, fetchUser, id } = this.props;
         this.setState({ input: e.currentTarget.value })
-        updateUsersFilter('userEmail', e.currentTarget.value);
-        fetchUser(id);
+        updateUsersFilter('userEmail', e.currentTarget.value).then(
+            fetchUser(id)
+        );
     }
 
     handleProfile() {

@@ -18,6 +18,15 @@
 
 .user img {
     height: 150px;
+    width: 150px;
+}
+
+.user-info-own {
+    cursor: pointer;
+}
+
+.user-info-own:hover {
+    box-shadow: 1px 1px 1px 1px;
 }
 
 .user-shows {

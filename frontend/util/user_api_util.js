@@ -3,7 +3,7 @@ export const fetchUser = id => (
         method: 'GET',
         url: `api/users/${id}`
     })
-)
+);
 
 export const fetchUsers = data => (
     $.ajax({
@@ -11,4 +11,14 @@ export const fetchUsers = data => (
         url: `api/users`,
         data
     })
-)
+);
+
+export const updateUser = (formData, id) => (
+    $.ajax({
+        method: 'PATCH',
+        url: `api/users/${id}`,
+        data: formData,
+        contentType: false,
+        processData: false
+    })
+);

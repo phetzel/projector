@@ -13,6 +13,8 @@ class User < ApplicationRecord
     has_many :shows, through: :follows, source: :show
     has_many :companions, through: :friends, source: :friend
 
+    has_one_attached :photo
+
 
     def self.find_by_credentials(email, password)
         user = User.find_by(email: email)

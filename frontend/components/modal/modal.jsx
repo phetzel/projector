@@ -5,6 +5,8 @@ import { closeModal } from '../../actions/modal_actions';
 import LoginFormContainer from '../session_form/login_form_container';
 import SignupFormContainer from '../session_form/signup_form_container';
 import MovieFormContainer from '../movie_form/movie_form_container';
+import UserPhotoFormContainer from '../user_photo_form/user_photo_form_container';
+
 
 
 const Modal = ({ modal, closeModal }) => {
@@ -22,6 +24,9 @@ const Modal = ({ modal, closeModal }) => {
             break;
         case 'add movie':
             component = <MovieFormContainer />;
+            break;
+        case 'user-photo':
+            component = <UserPhotoFormContainer />;
             break;
         default:
             return null;

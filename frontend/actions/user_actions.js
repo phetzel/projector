@@ -26,6 +26,12 @@ export const fetchUsers = (filters) => dispatch => (
     ))
 );
 
+export const updateUser = (formData, id) => dispatch => (
+    APIUtil.updateUser(formData, id).then(user => (
+        dispatch(receiveUser(user))
+    ))
+);
+
 export const befriend = id => dispatch => (
     addFriend(id)
         .then(user => dispatch(receiveUser(user)))
