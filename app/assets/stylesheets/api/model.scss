@@ -13,16 +13,16 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-    background-color: #fff;
-    border-radius: 24px;
-    min-width: 300px;
-    max-width: 80vw;
-    min-height: 300px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around; 
-    align-items: center;
-    font-family: Proxima Nova, sans-serif;
+  background-color: #fff;
+  border-radius: 24px;
+  min-width: 300px;
+  max-width: 80vw;
+  min-height: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  font-family: Proxima Nova, sans-serif;
 }
 
 //login and create account
@@ -36,58 +36,58 @@
 }
 
 .login-form label {
-    font-size: 12px;
-    font-weight: 300;
-    color: #aaa;
-    font-family: Proxima Nova,sans-serif;
+  font-size: 12px;
+  font-weight: 300;
+  color: #aaa;
+  font-family: Proxima Nova, sans-serif;
 }
 
 .login-form input {
-    display: block;
-    background-color: #bacae9;
-    color:  #197096;
-    border: none;
-    border-bottom: 4px solid #eee;
-    height: 30px;
-    width: 100%;
+  display: block;
+  background-color: #bacae9;
+  color: #197096;
+  border: none;
+  border-bottom: 4px solid #eee;
+  height: 30px;
+  width: 100%;
 }
 
 .login-form input:focus {
-    outline: none;
-    border-bottom: 4px solid #197096;
+  outline: none;
+  border-bottom: 4px solid #197096;
 }
 
 .login-submit {
-    color: #ff8a47;
-    font-size: 14px;
-    font-weight: 700;
-    height: 48px;
-    border: none;
-    border-radius: 36px;
-    box-sizing: border-box;
-    cursor: pointer;
-    padding: 0 28.8px;
+  color: #ff8a47;
+  font-size: 14px;
+  font-weight: 700;
+  height: 48px;
+  border: none;
+  border-radius: 36px;
+  box-sizing: border-box;
+  cursor: pointer;
+  padding: 0 28.8px;
 }
 
 .login-form-container a {
-    color: #28a5dc;
-    cursor: pointer;
-    font-size: 14px;
-    font-weight: 400;
-    font-family: Proxima Nova,sans-serif;
+  color: #28a5dc;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 400;
+  font-family: Proxima Nova, sans-serif;
 }
 
 .login-form-container a:hover {
-    text-decoration: underline;
+  text-decoration: underline;
 }
 
 .errors {
-    color: rgb(187, 0, 0);
-    font-family: "Proxima Nova", sans-serif;
-    font-size: 12px;
-    font-style: italic;
-    font-weight: 400;
-    text-align: center;
+  color: rgb(187, 0, 0);
+  font-family: "Proxima Nova", sans-serif;
+  font-size: 12px;
+  font-style: italic;
+  font-weight: 400;
+  text-align: center;
 }
 
 .errors li {
@@ -95,20 +95,20 @@
 }
 
 .login-form button {
-    display: block;
-    background-color: #bacae9;
-    color:  #197096;
-    border: none;
-    border-bottom: 4px solid #eee;
-    height: 30px;
-    width: 100%;
-    border-radius: 36px;
-    margin: 10px 0;
-    font-size: 14px;
-    font-weight: 700;
-    cursor: pointer;
+  display: block;
+  background-color: #bacae9;
+  color: #197096;
+  border: none;
+  border-bottom: 4px solid #eee;
+  height: 30px;
+  width: 100%;
+  border-radius: 36px;
+  margin: 10px 0;
+  font-size: 14px;
+  font-weight: 700;
+  cursor: pointer;
 }
 
 .login-form button {
-    outline: none;
+  outline: none;
 }

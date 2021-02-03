@@ -11,19 +11,23 @@ require 'faker'
 ActiveRecord::Base.transaction do
     User.destroy_all
 
-    User.create!(
+    user = User.create!(
         id: "1",
         email: "admin",
         password: "admin1"
     )
+    
+    # file = File.open('app/assets/images/robot-avatar.png')
+    # user.photo.attach(io: file, filename: 'robot-avatar.png')
 
     x = 2
     while x <= 50
-        User.create!(
+        user = User.create!(
             id: x,
             email: Faker::Internet.safe_email,
             password: Faker::Internet.password(min_length: 8)
         )
+
         x += 1
     end 
 
@@ -109,7 +113,7 @@ ActiveRecord::Base.transaction do
         Show.create!(
             id: x,
             movie_id: 1 + rand(4),
-            date: "2020-9-#{day}",
+            date: "2021-1-#{day}",
             time: time,
             lat: location[0],
             lng: location[1],
@@ -122,7 +126,7 @@ ActiveRecord::Base.transaction do
     while x < 400
         time = TIMES.sample
         location = LOCATIONS.sample
-        day = x % 31
+        day = x % 28
         if day == 0
             day = 1
         end
@@ -131,7 +135,7 @@ ActiveRecord::Base.transaction do
         Show.create!(
             id: x,
             movie_id: 1 + rand(4),
-            date: "2020-10-#{day}",
+            date: "2021-2-#{day}",
             time: time,
             lat: location[0],
             lng: location[1],
@@ -152,7 +156,7 @@ ActiveRecord::Base.transaction do
         Show.create!(
             id: x,
             movie_id: 1 + rand(4),
-            date: "2020-11-#{day}",
+            date: "2021-3-#{day}",
             time: time,
             lat: location[0],
             lng: location[1],
